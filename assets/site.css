@@ -156,6 +156,11 @@ a.ph:hover img{transform:scale(1.02)}
   .prow{flex-wrap:wrap}
   .prow > .ph:first-child{flex-basis:100%}
 }
+@media (max-width:640px){
+  .prow.many{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}
+  .prow.many > .ph{aspect-ratio:var(--w) / var(--h)}
+  .prow.many > .ph:first-child:nth-last-child(odd){grid-column:1 / -1}
+}
 
 /* ---------- featured projects ---------- */
 .lead-project{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:var(--g)}
@@ -163,6 +168,7 @@ a.ph:hover img{transform:scale(1.02)}
 .lead-project .side .ph{aspect-ratio:auto;height:100%}
 .project-meta{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 32px;margin-top:18px}
 .project-meta h3{font-stretch:118%;font-weight:600;font-size:clamp(20px,1.3vw + 12px,30px);text-transform:uppercase;letter-spacing:.02em;line-height:1.15}
+.project-meta h3 a{display:inline-flex;align-items:center;min-height:44px}
 .project-meta h3 a:hover{color:var(--accent)}
 .project-meta p{color:var(--fg-2);max-width:60ch;margin-top:6px}
 @media (max-width:700px){
