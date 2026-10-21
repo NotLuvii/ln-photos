@@ -92,7 +92,7 @@ ul,ol{padding:0;list-style:none}
 .hero{position:relative;display:grid;grid-template-columns:minmax(0,42fr) minmax(0,58fr);min-height:clamp(620px,90svh,960px);background:var(--bg)}
 .hero-text{display:flex;flex-direction:column;justify-content:flex-end;gap:0;padding:calc(var(--header-h) + 48px) clamp(28px,3.4vw,56px) clamp(36px,5vh,64px) max(var(--gut),env(safe-area-inset-left,0px));min-width:0}
 .hero h1{font-size:clamp(36px,3.75vw,66px);margin:18px 0 20px}
-@media (min-width:1024px) and (max-width:1280px){.hero{grid-template-columns:minmax(0,45fr) minmax(0,55fr)}}
+@media (min-width:1024px) and (max-width:1280px){.hero{grid-template-columns:minmax(0,45fr) minmax(0,55fr);min-height:clamp(560px,76svh,900px)}}
 .hero .lead{max-width:34ch}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 .hero-media{position:relative;overflow:hidden;background:var(--bg-2);min-height:100%}
@@ -226,12 +226,19 @@ a.ph:hover img{transform:scale(1.02)}
 @media (max-width:860px){.about{grid-template-columns:minmax(0,1fr)}}
 
 /* ---------- contact ---------- */
-.contact{position:relative;overflow:hidden;padding-block:clamp(72px,10vw,150px);border-top:1px solid var(--line)}
-.contact-bg{position:absolute;inset:0}
-.contact-bg img{width:100%;height:100%;object-fit:cover;opacity:.4}
-.contact::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,12,.96) 0%,rgba(11,11,12,.82) 45%,rgba(11,11,12,.2) 100%)}
-.contact .container{position:relative;z-index:1}
-.contact h2{font-size:clamp(40px,5.6vw,96px);margin:14px 0 20px}
+/* text beside an uncropped photo, so the whole car shows at every width */
+.contact{position:relative;padding-block:clamp(64px,8vw,128px);border-top:1px solid var(--line);background:var(--bg-2)}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);gap:40px clamp(32px,5vw,88px);align-items:center}
+.contact-copy{min-width:0}
+.contact h2{font-size:clamp(40px,4.6vw,84px);margin:14px 0 20px}
+.contact-photo{margin:0;min-width:0}
+.contact-photo > a{display:block;background:var(--bg-3)}
+.contact-photo img{width:100%;height:auto;transition:opacity .3s}
+.contact-photo > a:hover img{opacity:.88}
+.contact-photo figcaption{margin-top:12px}
+.contact-photo figcaption a{display:inline-flex;align-items:center;min-height:32px;color:var(--fg-2)}
+.contact-photo figcaption a:hover{color:var(--accent)}
+@media (max-width:900px){.contact-grid{grid-template-columns:minmax(0,1fr)}.contact h2{font-size:clamp(40px,9vw,72px)}}
 .contact p{max-width:44ch;color:var(--fg-2)}
 .contact ul{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
 .contact li{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line-2);padding:8px 12px;background:rgba(11,11,12,.5)}
@@ -338,7 +345,8 @@ a.ph:hover img{transform:scale(1.02)}
 .pager a.next{grid-template-columns:minmax(0,1fr) auto;text-align:right}
 .pager .thumb{width:clamp(72px,8vw,112px);aspect-ratio:3/4;overflow:hidden;background:var(--bg-3)}
 .pager .thumb img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
-.pager a:hover .thumb img{transform:scale(1.06)}
+.pager .thumb.contain img{object-fit:contain}
+.pager a:hover .thumb img{transform:scale(1.03)}
 .pager .t{display:block;font-stretch:112%;font-weight:600;font-size:clamp(16px,1.1vw + 8px,22px);text-transform:uppercase;letter-spacing:.03em;line-height:1.2;margin-top:6px;transition:color .2s}
 .pager a:hover .t{color:var(--accent)}
 @media (max-width:640px){.pager{grid-template-columns:minmax(0,1fr)}.pager a + a{border-left:0;border-top:1px solid var(--line);padding-left:0}}
