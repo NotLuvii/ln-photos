@@ -17,8 +17,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/site.css">
-<link rel="preload" as="image" media="(min-width:600px)" imagesrcset="img/YA5020-sm.webp 900w, img/YA5020-lg.webp 1800w, img/YA5020-xl.webp 2700w, img/YA5020-xxl.webp 3600w" imagesizes="min(100vw, 1680px)" fetchpriority="high">
-<link rel="preload" as="image" media="(max-width:599px)" imagesrcset="img/YA5011-sm.webp 720w, img/YA5011-lg.webp 1440w, img/YA5011-xl.webp 2160w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" media="(orientation:landscape)" imagesrcset="img/YA5020-sm.webp 900w, img/YA5020-lg.webp 1800w, img/YA5020-xl.webp 2700w, img/YA5020-xxl.webp 3600w" imagesizes="max(100vw, (100vh - 56px) * 2.351)" fetchpriority="high">
+<link rel="preload" as="image" media="(orientation:portrait)" imagesrcset="img/YA5012-sm.webp 506w, img/YA5012-lg.webp 1013w, img/YA5012-xl.webp 1519w, img/YA5012-xxl.webp 2400w" imagesizes="max(100vw, (100vh - 56px) * 0.563)" fetchpriority="high">
 <script>
 /* Interactive layouts switch on immediately; if site.js has not started within 3s, fall back to the static layout. */
 (function(d){d.className='js';setTimeout(function(){if(!window.LN_READY){d.className='no-js js-failed';}},3000);})(document.documentElement);
@@ -42,19 +42,22 @@
 </header>
 <main id="main">
   <section class="hero" aria-labelledby="hero-title">
-    <div class="hero-intro">
-      <p class="eyebrow"><span class="eb">Automotive photography</span><span class="eb-sep"> · </span><span class="eb">New Brunswick, Canada</span></p>
-      <h1 class="h-hero" id="hero-title">Every build.<br> A closer look.</h1>
-      <p class="lede">Car features, rolling shots, and show coverage across New&nbsp;Brunswick.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="#work">View the work</a>
-        <a class="btn btn-secondary" href="#contact">Book a shoot</a>
+    <div class="hero-pin">
+      <div class="hero-intro">
+        <p class="eyebrow"><span class="eb">Automotive photography</span><span class="eb-sep"> · </span><span class="eb">New Brunswick, Canada</span></p>
+        <h1 class="h-hero" id="hero-title">Every build.<br> A closer look.</h1>
+        <p class="lede">Car features, rolling shots, and show coverage across New&nbsp;Brunswick.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#work">View the work</a>
+          <a class="btn btn-secondary" href="#contact">Book a shoot</a>
+        </div>
       </div>
+      <figure class="hero-fig">
+        <a class="hero-frame" style="--ar-l:2.3511;--ar-p:0.5627;--fx-l:0.024;--fy-l:0.822;--fx-p:0.432;--fy-p:0.875" href="img/YA5020-lg.webp" data-lightbox="hero" data-title="YFC Autofest 2025" data-date="June 2025" data-w="3000" data-h="1276" data-alt="A slammed yellow Audi Q5 with a roof box, parked with a red Honda Civic and a silver coupe at YFC Autofest 2025" data-project="work/yfc-autofest-2025/" aria-label="View larger: A slammed yellow Audi Q5 with a roof box, parked with a red Honda Civic and a silver coupe at YFC Autofest 2025" data-p-href="img/YA5012-lg.webp" data-p-w="3104" data-p-h="5516" data-p-alt="A slammed yellow Audi Q5 with a roof box in front of a brick wall under storm clouds, YFC Autofest 2025" data-lb-label="photograph"><picture><source media="(orientation:portrait)" srcset="img/YA5012-sm.webp 506w, img/YA5012-lg.webp 1013w, img/YA5012-xl.webp 1519w, img/YA5012-xxl.webp 2400w" sizes="max(100vw, (100vh - 56px) * 0.563)" width="3104" height="5516"><img src="img/YA5020-sm.webp" srcset="img/YA5020-sm.webp 900w, img/YA5020-lg.webp 1800w, img/YA5020-xl.webp 2700w, img/YA5020-xxl.webp 3600w" sizes="max(100vw, (100vh - 56px) * 2.351)" width="3000" height="1276" alt="A slammed yellow Audi Q5 with a roof box at YFC Autofest 2025" fetchpriority="high" loading="eager" decoding="async" style="background-color:#6e614d;"></picture></a>
+        <div class="hero-scrim" aria-hidden="true"></div>
+        <figcaption class="hero-cap"><a href="work/yfc-autofest-2025/">YFC Autofest 2025</a><span>June 2025</span></figcaption>
+      </figure>
     </div>
-    <figure class="hero-stage stage-w">
-      <a class="hero-frame" style="--ar-d:3000 / 1276;--ar-m:4000 / 5000" href="img/YA5020-lg.webp" data-lightbox="hero" data-title="YFC Autofest 2025" data-date="June 2025" data-w="3000" data-h="1276" data-alt="A slammed yellow Audi Q5 with a roof box, parked with a red Honda Civic and a silver coupe at YFC Autofest 2025" data-project="work/yfc-autofest-2025/" aria-label="View larger: A slammed yellow Audi Q5 with a roof box, parked with a red Honda Civic and a silver coupe at YFC Autofest 2025" data-lb-label="photograph"><picture><source media="(max-width:599px)" srcset="img/YA5011-sm.webp 720w, img/YA5011-lg.webp 1440w, img/YA5011-xl.webp 2160w" sizes="100vw" width="4000" height="5000"><img src="img/YA5020-sm.webp" srcset="img/YA5020-sm.webp 900w, img/YA5020-lg.webp 1800w, img/YA5020-xl.webp 2700w, img/YA5020-xxl.webp 3600w" sizes="min(100vw, 1680px)" width="3000" height="1276" alt="A slammed yellow Audi Q5 with a roof box, parked with a red Honda Civic and a silver coupe at YFC Autofest 2025" fetchpriority="high" loading="eager" decoding="async" style="background-color:#6e614d;"></picture></a>
-      <figcaption class="stage-cap"><a href="work/yfc-autofest-2025/">YFC Autofest 2025</a><span>June 2025</span></figcaption>
-    </figure>
   </section>
   <section class="section sig" id="mx5" aria-labelledby="sig-title">
     <div class="wrap sig-head reveal">

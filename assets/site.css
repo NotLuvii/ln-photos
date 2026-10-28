@@ -126,28 +126,62 @@ a:hover .i-chev{transform:translateX(2px)}
 .sec-link{flex:none}
 .more-link{display:none;margin-top:40px}
 
-/* ---------- hero: centred introduction, then one dominant photograph ---------- */
-.hero{padding-top:clamp(24px,1vw + 18px,48px);text-align:center}
-.hero-intro{max-width:1040px;margin-inline:auto;padding-inline:var(--gut)}
-.hero .h-hero{margin-top:12px}
-.hero .lede{margin:clamp(12px,.8vw + 8px,18px) auto 0;max-width:34ch}
-@media (min-width:1024px){.hero .lede{max-width:none}}
-.hero .actions{margin-top:clamp(22px,.6vw + 16px,30px)}
-.hero-stage{margin:clamp(24px,1.2vw + 14px,36px) auto 0}
-/* one stage width for the hero and the lighting chapter. On desktop it grows with the window but is held back
-   on short screens, so the whole car in the hero usually sits inside the first viewport. */
+/* ---------- hero: one full-screen photograph with the introduction in the middle ----------
+   The frame is laid out at the size that covers the screen, shifted by the photo's focus point so the whole
+   car stays in view. Where motion is allowed, the pin is sticky and site.js scales that same frame down into
+   a rounded card as you scroll, so the full photograph shows before the page moves on. Without JavaScript,
+   with reduced motion, or on short windows it stays a still, full-screen hero. */
+.hero{--sh:calc(100vh - var(--nav-h));text-align:center}
+@supports (height:100svh){.hero{--sh:calc(100svh - var(--nav-h))}}
+/* the pin is at least one screen tall and grows with the introduction (large text settings never clip it);
+   the photo layer fills it and is the size container for the cover maths below */
+.hero-pin{position:relative;display:flex;flex-direction:column;justify-content:center;min-height:max(var(--sh),440px);overflow:hidden;background:#000}
+.hero-fig{position:absolute;inset:0;margin:0;overflow:hidden;container-type:size}
+.hero-frame{--A:var(--ar-l);--fx:var(--fx-l);--fy:var(--fy-l);position:absolute;inset:0;display:block;overflow:hidden;background:#0c0b0a;transform-origin:0 0;cursor:zoom-in;outline-offset:-6px}
+@media (orientation:portrait){.hero-frame{--A:var(--ar-p);--fx:var(--fx-p);--fy:var(--fy-p)}}
+.hero-frame picture{display:contents}
+.hero-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:calc(var(--fx) * 100%) calc(var(--fy) * 100%)}
+@supports (width:1cqw){
+  .hero-frame{--fw:max(100cqw,100cqh * var(--A));--fh:max(100cqh,100cqw / var(--A));inset:auto;width:var(--fw);height:var(--fh);
+    left:calc((100cqw - var(--fw)) * var(--fx));top:calc((100cqh - var(--fh)) * var(--fy))}
+}
+/* keeps the type readable over bright skies and walls; it lifts as the photo pulls back */
+.hero-scrim{position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(ellipse 74% 62% at 50% 44%,rgba(0,0,0,.56),rgba(0,0,0,.28) 64%,rgba(0,0,0,.12)),
+  linear-gradient(rgba(0,0,0,.28),rgba(0,0,0,0) 28%,rgba(0,0,0,0) 74%,rgba(0,0,0,.42))}
+.hero-intro{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:clamp(20px,4vh,48px) var(--gut) clamp(64px,9vh,104px);pointer-events:none;transform-origin:50% 45%}
+.hero-intro > *{max-width:1040px;pointer-events:auto}
+.hero-intro .eyebrow{color:rgba(255,255,255,.94);text-shadow:0 1px 14px rgba(0,0,0,.4)}
+.hero-intro .h-hero{margin-top:12px;color:#fff;text-shadow:0 2px 32px rgba(0,0,0,.28)}
+.hero-intro .lede{margin:clamp(12px,.8vw + 8px,18px) auto 0;max-width:34ch;color:rgba(255,255,255,.9);text-shadow:0 1px 18px rgba(0,0,0,.35)}
+@media (min-width:1024px){.hero-intro .lede{max-width:none}}
+.hero-intro .actions{margin-top:clamp(22px,.6vw + 16px,30px)}
+.hero-intro .btn-secondary{background:rgba(0,0,0,.3);box-shadow:inset 0 0 0 1px rgba(255,255,255,.4)}
+.hero-intro .btn-secondary:hover{background:rgba(0,0,0,.42)}
+.hero-cap{position:absolute;left:0;right:0;bottom:clamp(14px,2.4vh,28px);z-index:2;display:flex;flex-wrap:wrap;justify-content:center;gap:2px 10px;padding-inline:var(--gut);font-size:.875rem;line-height:1.5;color:rgba(255,255,255,.76);text-shadow:0 1px 12px rgba(0,0,0,.5);pointer-events:none}
+.hero-cap > *{pointer-events:auto}
+.hero-cap a{color:#fff;font-weight:500}
+.hero-cap a:hover{text-decoration:underline;text-underline-offset:.22em}
+@media (prefers-reduced-motion:no-preference) and (min-height:560px){
+  @supports (width:1cqw){
+    .js .hero{height:calc(var(--sh) * 1.8)}
+    .js .hero-pin{position:sticky;top:var(--nav-h)}
+    .js .hero.is-static{height:auto}
+    .js .hero.is-static .hero-pin{position:relative;top:auto}
+    .js .hero-frame{will-change:transform}
+    .js .hero-cap{top:0;bottom:auto;opacity:0;color:var(--fg-3);text-shadow:none}
+    .js .hero-cap a{color:var(--fg)}
+  }
+}
+@media print{.hero{height:auto!important}.hero-pin{position:relative!important}}
+
+/* one stage width for the lighting chapter. On desktop it grows with the window but is held back on short
+   screens, so the photograph and the tabs fit in one view. */
 .stage-w{width:min(100% - 2 * var(--gut),var(--wide))}
 @media (min-width:1024px){
   .stage-w{width:min(100% - 2 * var(--gut),var(--wide),max(var(--content),(100vh - 340px - 8.6vw) * 2.55))}
   @supports (height:100svh){.stage-w{width:min(100% - 2 * var(--gut),var(--wide),max(var(--content),(100svh - 340px - 8.6vw) * 2.55))}}
 }
-.hero-frame{display:block;aspect-ratio:var(--ar-d,2.35);border-radius:var(--r-lg);overflow:hidden;background:#0c0b0a;cursor:zoom-in}
-.hero-frame picture{display:contents}
-.hero-frame img{width:100%;height:100%;object-fit:cover}
-@media (max-width:599px){.hero-stage{width:100%}.hero-frame{aspect-ratio:var(--ar-m,1);border-radius:0}}
-.stage-cap{display:flex;flex-wrap:wrap;justify-content:center;gap:2px 10px;margin-top:14px;padding-inline:var(--gut);font-size:.875rem;line-height:1.5;color:var(--fg-3)}
-.stage-cap a{color:var(--fg);font-weight:500}
-.stage-cap a:hover{text-decoration:underline;text-underline-offset:.22em}
 
 /* ---------- signature chapter: lighting tabs ---------- */
 .sig-head{text-align:center;max-width:calc(980px + 2 * var(--gut))}

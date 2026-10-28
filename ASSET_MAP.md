@@ -5,8 +5,8 @@ Widths are the real pixel widths of the published variants. Crops use the car bo
 
 | Slot | Image | Project | Source px | Published widths | Source | Notes |
 |---|---|---|---|---|---|---|
-| Hero | `YA5020` | YFC Autofest 2025 | 3000×1276 | 900, 1800, 2700, 3600 | Library original `2025\YFC\Autofest\Edited\DSC00483-Enhanced-NR-2.jpg` (6000×2553) | tablets and desktops, shown whole at 2.35:1 |
-| Hero (phones) | `YA5011` | YFC Autofest 2025 | 4000×5000 | 720, 1440, 2160 | Library original `2025\YFC\Autofest\Edited\DSC00468.jpg` (4000×5000) | same Audi, portrait frame, shown whole |
+| Hero | `YA5020` | YFC Autofest 2025 | 3000×1276 | 900, 1800, 2700, 3600 | Library original `2025\YFC\Autofest\Edited\DSC00483-Enhanced-NR-2.jpg` (6000×2553) | landscape screens: fills the screen, then shown whole as you scroll |
+| Hero (portrait screens) | `YA5012` | YFC Autofest 2025 | 3104×5516 | 506, 1013, 1519, 2400 | Library original `2025\YFC\Autofest\Edited\DSC00469.jpg` (3104×5516) | same Audi, portrait frame, same behaviour |
 | Lighting · Daylight | `SS002` | Mazda MX-5 Miata (NA) | 2700×1149 | 900, 1800, 2700 | Library original `2025\Savanna Sharp\Edited\car-10.jpg` (2700×1149) | 2.35:1 stage, 3:2 on phones |
 | Lighting · Golden hour | `SS013` | Mazda MX-5 Miata (NA) | 2700×1149 | 900, 1800, 2700 | Library original `2025\Savanna Sharp\Edited\car-20.jpg` (2700×1149) | 2.35:1 stage, 3:2 on phones |
 | Lighting · Dusk | `SS028` | Mazda MX-5 Miata (NA) | 2700×1149 | 900, 1800, 2700 | Library original `2025\Savanna Sharp\Edited\car-34.jpg` (2700×1149) | 2.35:1 stage, 3:2 on phones |

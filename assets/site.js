@@ -171,6 +171,87 @@
     });
   });
 
+  /* ---------- hero: scrolling pulls the full-screen photograph back into a rounded frame ----------
+     Scroll-linked, so the scroll itself is the timing (linear). Only transform and opacity change per frame,
+     set straight on each element. CSS decides whether it runs: the pin is only sticky when motion is allowed,
+     the window is tall enough and container units exist. */
+  run('hero', function () {
+    var hero = $('.hero'), pin = hero && $('.hero-pin', hero); if (!pin) return;
+    var fig = $('.hero-fig', pin), frame = $('.hero-frame', pin), intro = $('.hero-intro', pin), scrim = $('.hero-scrim', pin), cap = $('.hero-cap', pin);
+    if (!fig || !frame || !intro || !scrim || !cap) return;
+    var portraitMQ = window.matchMedia('(orientation: portrait)');
+    var listen = function (mq, fn) { if (mq.addEventListener) mq.addEventListener('change', fn); else if (mq.addListener) mq.addListener(fn); };
+    var clamp = function (v) { return v < 0 ? 0 : v > 1 ? 1 : v; };
+
+    /* the viewer opens the frame that is on screen */
+    var attrs = function (p) {
+      return { href: frame.getAttribute(p + 'href'), w: frame.getAttribute(p + 'w'), h: frame.getAttribute(p + 'h'), alt: frame.getAttribute(p + 'alt') };
+    };
+    var land = attrs('data-'), port = attrs('data-p-'); land.href = frame.getAttribute('href');
+    function syncView() {
+      var v = portraitMQ.matches && port.href ? port : land;
+      frame.setAttribute('href', v.href); frame.setAttribute('data-w', v.w); frame.setAttribute('data-h', v.h);
+      frame.setAttribute('data-alt', v.alt); frame.setAttribute('aria-label', 'View larger: ' + v.alt);
+    }
+
+    var on = false, start = 0, travel = 1, s1 = 1, dx1 = 0, dy1 = 0, radius = 28, capFrom = 0.8, last = -1, ticking = false, pending = false;
+    function clear() {
+      [frame, intro, scrim, cap].forEach(function (el) { el.style.transform = ''; el.style.opacity = ''; el.style.visibility = ''; });
+      frame.style.borderRadius = ''; cap.style.top = '';
+    }
+    function update() {
+      ticking = false; if (!on) return;
+      var q = clamp((window.scrollY - start) / travel);
+      if (q === last) return; last = q;
+      var s = 1 + (s1 - 1) * q, t = clamp(q / 0.4);
+      frame.style.transform = 'translate3d(' + (dx1 * q).toFixed(2) + 'px,' + (dy1 * q).toFixed(2) + 'px,0) scale(' + s.toFixed(4) + ')';
+      frame.style.borderRadius = (radius * q / s).toFixed(2) + 'px';   /* reads as the card radius once scaled */
+      intro.style.opacity = (1 - t).toFixed(3);
+      intro.style.transform = t ? 'scale(' + (1 + 0.06 * t).toFixed(4) + ')' : '';
+      intro.style.visibility = t >= 1 ? 'hidden' : '';
+      scrim.style.opacity = (1 - clamp(q / 0.6)).toFixed(3);
+      cap.style.opacity = clamp((q - capFrom) / (1 - capFrom)).toFixed(3);
+    }
+    function measure() {
+      pending = false;
+      hero.classList.remove('is-static'); pin.style.top = '';
+      on = !staticMode && getComputedStyle(pin).position === 'sticky';
+      /* pin just below the header, even when large text makes the header taller */
+      var head = $('.site-header'), top = head ? head.offsetHeight : 0;
+      if (on && top) pin.style.top = top + 'px';
+      /* very large text can make the introduction taller than the screen: then it stays a still hero */
+      if (on && pin.offsetHeight > window.innerHeight - top + 2) { hero.classList.add('is-static'); pin.style.top = ''; on = false; }
+      hero.classList.toggle('is-scroll-linked', on);
+      last = -1;
+      if (!on) { clear(); return; }
+      /* the card the photo settles into: as large as fits with its caption, never wider than the site */
+      var W = fig.clientWidth, H = fig.clientHeight, fw0 = frame.offsetWidth, fh0 = frame.offsetHeight, ar = fw0 / fh0;
+      var gut = parseFloat(getComputedStyle(cap).paddingLeft) || 20, capH = cap.offsetHeight, gap = 14, pad = Math.max(gut, 24);
+      var fw1 = Math.min(W - 2 * gut, 1680, (H - 2 * pad - gap - capH) * ar), fh1 = fw1 / ar;
+      var x1 = (W - fw1) / 2, y1 = Math.max(pad, (H - fh1 - gap - capH) / 2);
+      s1 = fw1 / fw0; dx1 = x1 - frame.offsetLeft; dy1 = y1 - frame.offsetTop;
+      cap.style.top = Math.round(y1 + fh1 + gap) + 'px';
+      /* the caption only fades in once the photo's bottom edge has moved clear of it (the edge moves linearly) */
+      var b0 = frame.offsetTop + fh0, b1 = y1 + fh1;
+      capFrom = b0 - b1 > 1 ? Math.min(0.94, clamp((b0 - b1 - gap + 4) / (b0 - b1))) : 0.8;
+      radius = parseFloat(getComputedStyle(html).getPropertyValue('--r-lg')) || 28;
+      start = hero.getBoundingClientRect().top + window.scrollY - top;
+      travel = Math.max(1, hero.offsetHeight - pin.offsetHeight);
+      update();
+    }
+    var remeasure = function () { if (!pending) { pending = true; requestAnimationFrame(measure); } };
+
+    syncView(); measure();
+    window.addEventListener('scroll', function () { if (on && !ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    window.addEventListener('resize', remeasure);
+    window.addEventListener('load', remeasure);
+    listen(portraitMQ, function () { syncView(); remeasure(); });
+    listen(reduceMQ, remeasure);
+    /* keyboard: a control that is faded out is brought back into view before it takes focus */
+    intro.addEventListener('focusin', function () { if (on && last > 0.2) window.scrollTo(0, start); });
+    cap.addEventListener('focusin', function () { if (on && last < 1) window.scrollTo(0, start + travel); });
+  });
+
   /* ---------- gentle entrance for section introductions ---------- */
   run('reveal', function () {
     var els = $$('.reveal');
