@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Page not found | LN Photos</title>
 <meta name="description" content="This page does not exist.">
 <link rel="canonical" href="https://notluvii.github.io/ln-photos/404.html">
-<meta name="theme-color" content="#0b0b0c">
+<meta name="theme-color" content="#000000">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LN Photos">
 <meta property="og:title" content="Page not found | LN Photos">
@@ -16,47 +16,52 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="32x32" href="/ln-photos/assets/favicon-32.png">
 <link rel="apple-touch-icon" href="/ln-photos/assets/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..800;1,62..125,300..800&display=swap">
 <link rel="stylesheet" href="/ln-photos/assets/site.css">
+<script>
+/* Interactive layouts switch on immediately; if site.js has not started within 3s, fall back to the static layout. */
+(function(d){d.className='js';setTimeout(function(){if(!window.LN_READY){d.className='no-js js-failed';}},3000);})(document.documentElement);
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="site-header always-solid">
-  <div class="container">
-    <a class="wordmark" href="/ln-photos/" aria-label="LN Photos, home">LN<span>Photos</span></a>
-    <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
-    <nav class="nav" id="site-nav" aria-label="Main">
-      <a href="/ln-photos/work/">Work</a>
-      <a href="/ln-photos/#services">Services</a>
-      <a href="/ln-photos/#about">About</a>
-      <a class="nav-cta" href="/ln-photos/#contact">Book a shoot</a>
+<header class="site-header">
+  <div class="nav-bar">
+    <a class="wordmark" href="/ln-photos/"><img src="/ln-photos/assets/wordmark.svg" alt="LN Photos" width="155" height="12"></a>
+    <nav class="nav" aria-label="Main">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/ln-photos/work/">Work</a></li>
+        <li><a href="/ln-photos/#services">Services</a></li>
+        <li><a href="/ln-photos/#about">About</a></li>
+      </ul>
     </nav>
+    <a class="btn btn-primary btn-sm nav-cta" href="/ln-photos/#contact">Book a shoot</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links"><span class="sr-only">Menu</span><span class="menu-icon" aria-hidden="true"></span></button>
   </div>
 </header>
 
-<main id="main" class="page-head"><div class="container">
-  <p class="label">Error 404</p>
-  <h1 class="display">Wrong turn.</h1>
-  <p>This page doesn't exist. Head back to the portfolio to see the work.</p>
-  <div class="hero-ctas"><a class="btn btn-primary" href="/ln-photos/">Back to the portfolio <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn-ghost" href="/ln-photos/work/">All projects</a></div>
-</div></main>
+<main id="main" class="page-head wrap notfound">
+  <p class="eyebrow">Error 404</p>
+  <h1 class="h-hero">Wrong turn.</h1>
+  <p class="lede">This page doesn’t exist. Head back to the portfolio to see the work.</p>
+  <div class="actions"><a class="btn btn-primary" href="/ln-photos/">Back to the portfolio</a><a class="btn btn-secondary" href="/ln-photos/work/">All projects</a></div>
+</main>
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-top">
-      <a class="wordmark" href="/ln-photos/">LN<span>Photos</span></a>
-      <nav class="footer-nav" aria-label="Footer">
-        <a href="/ln-photos/work/">All projects</a>
-        <a href="/ln-photos/#services">Services</a>
-        <a href="/ln-photos/#about">About</a>
-        <a href="/ln-photos/#contact">Contact</a>
-        <a href="https://www.instagram.com/ln._photos/" target="_blank" rel="noopener">Instagram</a>
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="wordmark" href="/ln-photos/"><img src="/ln-photos/assets/wordmark.svg" alt="LN Photos" width="155" height="12"></a>
+      <nav aria-label="Footer">
+        <ul class="foot-links">
+          <li><a href="/ln-photos/work/">All projects</a></li>
+          <li><a href="/ln-photos/#services">Services</a></li>
+          <li><a href="/ln-photos/#about">About</a></li>
+          <li><a href="/ln-photos/#contact">Book a shoot</a></li>
+          <li><a href="https://www.instagram.com/ln._photos/" target="_blank" rel="noopener">Instagram<svg class="i-out" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5l5-5M4.5 3.5h4v4"/></svg></a></li>
+        </ul>
       </nav>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 LN Photos. All photographs © LN Photos.</span>
-      <span>Automotive photography · New Brunswick, Canada</span>
+    <div class="foot-bottom">
+      <p>Automotive photography · New Brunswick, Canada</p>
+      <p>© 2026 LN Photos. All photographs © LN Photos.</p>
     </div>
   </div>
 </footer>

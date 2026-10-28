@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>All projects | LN Photos</title>
 <meta name="description" content="Every LN Photos project: car features, events and shows, and editorial cover layouts.">
 <link rel="canonical" href="https://notluvii.github.io/ln-photos/work/">
-<meta name="theme-color" content="#0b0b0c">
+<meta name="theme-color" content="#000000">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LN Photos">
 <meta property="og:title" content="All projects | LN Photos">
@@ -16,102 +16,105 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..800;1,62..125,300..800&display=swap">
 <link rel="stylesheet" href="../assets/site.css">
+<script>
+/* Interactive layouts switch on immediately; if site.js has not started within 3s, fall back to the static layout. */
+(function(d){d.className='js';setTimeout(function(){if(!window.LN_READY){d.className='no-js js-failed';}},3000);})(document.documentElement);
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="site-header always-solid">
-  <div class="container">
-    <a class="wordmark" href="../" aria-label="LN Photos, home">LN<span>Photos</span></a>
-    <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
-    <nav class="nav" id="site-nav" aria-label="Main">
-      <a href="../work/" aria-current="page">Work</a>
-      <a href="../#services">Services</a>
-      <a href="../#about">About</a>
-      <a class="nav-cta" href="../#contact">Book a shoot</a>
+<header class="site-header">
+  <div class="nav-bar">
+    <a class="wordmark" href="../"><img src="../assets/wordmark.svg" alt="LN Photos" width="155" height="12"></a>
+    <nav class="nav" aria-label="Main">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../work/" aria-current="page">Work</a></li>
+        <li><a href="../#services">Services</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
     </nav>
+    <a class="btn btn-primary btn-sm nav-cta" href="../#contact">Book a shoot</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links"><span class="sr-only">Menu</span><span class="menu-icon" aria-hidden="true"></span></button>
   </div>
 </header>
 
 <main id="main">
-  <section class="page-head">
-    <div class="container">
-      <nav class="crumbs label" aria-label="Breadcrumb"><a href="../">Home</a><span>/</span><span>Work</span></nav>
-      <h1 class="display">All projects</h1>
-      <p>Every set, newest first. Filter by the kind of shoot.</p>
-    </div>
+  <section class="page-head wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../">Home</a><span aria-hidden="true">/</span><span aria-current="page">Work</span></nav>
+    <h1 class="h-sec">All projects.</h1>
+    <p class="lede">Every set, newest first. Filter by the kind of shoot.</p>
   </section>
-  <div class="container">
+  <div class="wrap">
     <div class="filterbar">
-      <div class="filters" role="group" aria-label="Filter projects"><button type="button" data-filter="all" aria-pressed="true">All<sup>15</sup></button><button type="button" data-filter="features" aria-pressed="false">Car features<sup>4</sup></button><button type="button" data-filter="events" aria-pressed="false">Events & shows<sup>8</sup></button><button type="button" data-filter="editorial" aria-pressed="false">Editorial<sup>3</sup></button></div>
-      <p class="label" id="filter-status" aria-live="polite">Showing 15 projects</p>
+      <div class="seg filters" role="group" aria-label="Filter projects"><button type="button" class="seg-btn" data-filter="all" aria-pressed="true">All <span class="count">15</span></button><button type="button" class="seg-btn" data-filter="features" aria-pressed="false">Car features <span class="count">4</span></button><button type="button" class="seg-btn" data-filter="events" aria-pressed="false">Events & shows <span class="count">8</span></button><button type="button" class="seg-btn" data-filter="editorial" aria-pressed="false">Editorial <span class="count">3</span></button></div>
+      <p class="meta" id="filter-status" aria-live="polite">Showing 15 projects</p>
     </div>
-    <div class="work-grid"><a class="card" href="complex-union-2026/" data-cat="events">
-      <span class="card-media"><img src="../img/CX6001-sm.webp" srcset="../img/CX6001-sm.webp 900w, ../img/CX6001-lg.webp 1800w, ../img/CX6001-xl.webp 2700w" sizes="(max-width:540px) 100vw, (max-width:1000px) 50vw, 33vw" width="2700" height="1519" alt="Complex Union 2026" loading="lazy" decoding="async" style="background:#222322;object-position:48.8% 66.5%"></span>
-      <span class="card-body"><span class="card-title">Complex Union 2026</span><span class="card-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span><span class="card-sub">Events & shows · Sep 2026</span></span>
-    </a><a class="card" href="porsche-yellow-and-black/" data-cat="events">
-      <span class="card-media"><img src="../img/Db_DgIDFcCf-03-sm.webp" srcset="../img/Db_DgIDFcCf-03-sm.webp 570w, ../img/Db_DgIDFcCf-03-lg.webp 1500w" sizes="(max-width:540px) 100vw, (max-width:1000px) 50vw, 33vw" width="1520" height="2026" alt="Porsche, Yellow &amp; Black" loading="lazy" decoding="async" style="background:#594e1e;object-position:100.0% 100.0%"></span>
-      <span class="card-body"><span class="card-title">Porsche, Yellow &amp; Black</span><span class="card-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span><span class="card-sub">Events & shows · Aug 2026</span></span>
-    </a><a class="card" href="subaru-impreza-gc8/" data-cat="features">
-      <span class="card-media"><img src="../img/CX6019-sm.webp" srcset="../img/CX6019-sm.webp 506w, ../img/CX6019-lg.webp 1013w, ../img/CX6019-xl.webp 1519w" sizes="(max-width:540px) 100vw, (max-width:1000px) 50vw, 33vw" width="1519" height="2700" alt="Subaru Impreza GC8" loading="lazy" decoding="async" style="background:#232629;object-position:69.7% 42.9%"></span>
-      <span class="card-body"><span class="card-title">Subaru Impreza GC8</span><span class="card-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span><span class="card-sub">Car features · Jul 2026</span></span>
-    </a><a class="card" href="yfc-autofest-2026/" data-cat="events">
-      <span class="card-media"><img src="../img/DZoFVWdlW7f-07-sm.webp" srcset="../img/DZoFVWdlW7f-07-sm.webp 544w, ../img/DZoFVWdlW7f-07-lg.webp 1231w" sizes="(max-width:540px) 100vw, (max-width:1000px) 50vw, 33vw" width="1231" height="1720" alt="YFC Autofest 2026" loading="lazy" decoding="async" style="background:#3b3836;object-position:46.7% 59.2%"></span>
-      <span class="card-body"><span class="card-title">YFC Autofest 2026</span><span class="card-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span><span class="card-sub">Events & shows · Jun 2026</span></span>
-    </a><a class="card" href="corvette-c8-convertible/" data-cat="features">
-      <span class="card-media"><img src="../img/DZQ0RI6lcNo-01-sm.webp" srcset="../img/DZQ0RI6lcNo-01-sm.webp 570w, ../img/DZQ0RI6lcNo-01-lg.webp 1500w" sizes="(max-width:540px) 100vw, (max-width:1000px) 50vw, 33vw" width="1536" height="2048" alt="Corvette C8 Convertible" loading="lazy" decoding="async" style="background:#353739;object-position:54.9% 76.3%"></span>
-      <span class="card-body"><span class="card-title">Corvette C8 Convertible</span><span class="card-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span><span class="card-sub">Car features · Jun 2026</span></span>
-    </a><a class="card" href="chevrolet-silverado-2500hd/" data-cat="features">
-      <span class="card-media"><img src="../img/AT6012-sm.webp" srcset="../img/AT6012-sm.webp 506w, ../img/AT6012-lg.webp 1013w, ../img/AT6012-xl.webp 1519w" sizes="(max-width:540px) 100vw, (max-width:1000px) 50vw, 33vw" width="1519" height="2700" alt="Chevrolet Silverado 2500HD" loading="lazy" decoding="async" style="background:#545b63;object-position:66.0% 62.0%"></span>
-      <span class="card-body"><span class="card-title">Chevrolet Silverado 2500HD</span><span class="card-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span><span class="card-sub">Car features · May 2026</span></span>
-    </a><a class="card" href="mx-5-poster-series/" data-cat="editorial">
-      <span class="card-media contain"><img src="../img/TK6009-sm.webp" srcset="../img/TK6009-sm.webp 675w, ../img/TK6009-lg.webp 1350w, ../img/TK6009-xl.webp 2025w" sizes="(max-width:540px) 100vw, (max-width:1000px) 50vw, 33vw" width="3481" height="4641" alt="MX-5 Poster Series" loading="lazy" decoding="async" style="background:#868f79;object-position:50.6% 84.3%"></span>
-      <span class="card-body"><span class="card-title"><span class="nowrap">MX-5</span> Poster Series</span><span class="card-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span><span class="card-sub">Editorial · 2026</span></span>
-    </a><a class="card" href="2025-season-recap/" data-cat="editorial">
-      <span class="card-media contain"><img src="../img/DUiwiDAlfu7-05-sm.webp" srcset="../img/DUiwiDAlfu7-05-sm.webp 570w, ../img/DUiwiDAlfu7-05-lg.webp 1440w" sizes="(max-width:540px) 100vw, (max-width:1000px) 50vw, 33vw" width="1440" height="1920" alt="2025 Season Recap" loading="lazy" decoding="async" style="background:#8d8e7a;object-position:61.0% 59.5%"></span>
-      <span class="card-body"><span class="card-title">2025 Season Recap</span><span class="card-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span><span class="card-sub">Editorial · Feb 2026</span></span>
-    </a><a class="card" href="yfc-oktoberfest-2025/" data-cat="events">
-      <span class="card-media"><img src="../img/DP39bzrjBtq-01-sm.webp" srcset="../img/DP39bzrjBtq-01-sm.webp 585w, ../img/DP39bzrjBtq-01-lg.webp 1440w" sizes="(max-width:540px) 100vw, (max-width:1000px) 50vw, 33vw" width="1440" height="1871" alt="YFC Oktoberfest 2025" loading="lazy" decoding="async" style="background:#64635c;object-position:61.7% 59.4%"></span>
-      <span class="card-body"><span class="card-title">YFC Oktoberfest 2025</span><span class="card-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span><span class="card-sub">Events & shows · Oct 2025</span></span>
-    </a><a class="card" href="corvette-c5/" data-cat="events">
-      <span class="card-media"><img src="../img/DPz0lGFjDt9-01-sm.webp" srcset="../img/DPz0lGFjDt9-01-sm.webp 570w, ../img/DPz0lGFjDt9-01-lg.webp 1440w" sizes="(max-width:540px) 100vw, (max-width:1000px) 50vw, 33vw" width="1440" height="1920" alt="Corvette C5" loading="lazy" decoding="async" style="background:#81807a;object-position:48.9% 55.8%"></span>
-      <span class="card-body"><span class="card-title">Corvette C5</span><span class="card-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span><span class="card-sub">Events & shows · Oct 2025</span></span>
-    </a><a class="card" href="mazda-mx-5-miata-na/" data-cat="features">
-      <span class="card-media"><img src="../img/SS017-sm.webp" srcset="../img/SS017-sm.webp 506w, ../img/SS017-lg.webp 1013w, ../img/SS017-xl.webp 1519w" sizes="(max-width:540px) 100vw, (max-width:1000px) 50vw, 33vw" width="1519" height="2700" alt="Mazda MX-5 Miata (NA)" loading="lazy" decoding="async" style="background:#424e4d;object-position:100.0% 82.8%"></span>
-      <span class="card-body"><span class="card-title">Mazda <span class="nowrap">MX-5</span> Miata (NA)</span><span class="card-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span><span class="card-sub">Car features · Aug 2025</span></span>
-    </a><a class="card" href="complex-union-2025/" data-cat="events">
-      <span class="card-media"><img src="../img/CU5009-sm.webp" srcset="../img/CU5009-sm.webp 600w, ../img/CU5009-lg.webp 1200w, ../img/CU5009-xl.webp 1800w" sizes="(max-width:540px) 100vw, (max-width:1000px) 50vw, 33vw" width="1800" height="2700" alt="Complex Union 2025" loading="lazy" decoding="async" style="background:#373a3d;object-position:47.5% 61.4%"></span>
-      <span class="card-body"><span class="card-title">Complex Union 2025</span><span class="card-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span><span class="card-sub">Events & shows · Jul 2025</span></span>
-    </a><a class="card" href="yfc-autofest-2025/" data-cat="events">
-      <span class="card-media"><img src="../img/YA5011-sm.webp" srcset="../img/YA5011-sm.webp 720w, ../img/YA5011-lg.webp 1440w, ../img/YA5011-xl.webp 2160w" sizes="(max-width:540px) 100vw, (max-width:1000px) 50vw, 33vw" width="4000" height="5000" alt="YFC Autofest 2025" loading="lazy" decoding="async" style="background:#645751;object-position:43.5% 93.8%"></span>
-      <span class="card-body"><span class="card-title">YFC Autofest 2025</span><span class="card-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span><span class="card-sub">Events & shows · Jun 2025</span></span>
-    </a><a class="card" href="honda-accord-cover/" data-cat="editorial">
-      <span class="card-media contain"><img src="../img/C5elEijLN43-01-sm.webp" srcset="../img/C5elEijLN43-01-sm.webp 760w, ../img/C5elEijLN43-01-lg.webp 1280w" sizes="(max-width:540px) 100vw, (max-width:1000px) 50vw, 33vw" width="1280" height="1280" alt="Honda Accord Cover" loading="lazy" decoding="async" style="background:#6f7072;object-position:5.1% 83.2%"></span>
-      <span class="card-body"><span class="card-title">Honda Accord Cover</span><span class="card-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span><span class="card-sub">Editorial · Apr 2024</span></span>
-    </a><a class="card" href="yfc-autofest-2023/" data-cat="events">
-      <span class="card-media"><img src="../img/Y23027-sm.webp" srcset="../img/Y23027-sm.webp 506w, ../img/Y23027-lg.webp 1012w, ../img/Y23027-xl.webp 1517w" sizes="(max-width:540px) 100vw, (max-width:1000px) 50vw, 33vw" width="1903" height="3386" alt="YFC Autofest 2023" loading="lazy" decoding="async" style="background:#4c4052;object-position:50% 67.3%"></span>
-      <span class="card-body"><span class="card-title">YFC Autofest 2023</span><span class="card-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span><span class="card-sub">Events & shows · 2023</span></span>
+    <div class="agrid"><a class="acard" href="complex-union-2026/" data-cat="events">
+      <div class="acard-media"><img src="../img/CX6001-sm.webp" srcset="../img/CX6001-sm.webp 900w, ../img/CX6001-lg.webp 1800w, ../img/CX6001-xl.webp 2700w" sizes="(max-width:539px) 100vw, (max-width:999px) 50vw, (max-width:1328px) 31vw, 384px" width="2700" height="1519" alt="" loading="lazy" decoding="async" style="background-color:#222322;object-position:48.8% 66.5%;"></div>
+      <div class="acard-body"><h2 class="acard-title">Complex Union 2026<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></h2><p class="acard-meta">Events & shows · September 2026</p></div>
+    </a><a class="acard" href="porsche-yellow-and-black/" data-cat="events">
+      <div class="acard-media"><img src="../img/Db_DgIDFcCf-03-sm.webp" srcset="../img/Db_DgIDFcCf-03-sm.webp 570w, ../img/Db_DgIDFcCf-03-lg.webp 1500w" sizes="(max-width:539px) 100vw, (max-width:999px) 50vw, (max-width:1328px) 31vw, 384px" width="1520" height="2026" alt="" loading="lazy" decoding="async" style="background-color:#594e1e;object-position:100.0% 100.0%;"></div>
+      <div class="acard-body"><h2 class="acard-title">Porsche, Yellow &amp; Black<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></h2><p class="acard-meta">Events & shows · August 2026</p></div>
+    </a><a class="acard" href="subaru-impreza-gc8/" data-cat="features">
+      <div class="acard-media"><img src="../img/CX6019-sm.webp" srcset="../img/CX6019-sm.webp 506w, ../img/CX6019-lg.webp 1013w, ../img/CX6019-xl.webp 1519w" sizes="(max-width:539px) 100vw, (max-width:999px) 50vw, (max-width:1328px) 31vw, 384px" width="1519" height="2700" alt="" loading="lazy" decoding="async" style="background-color:#232629;object-position:69.7% 42.9%;"></div>
+      <div class="acard-body"><h2 class="acard-title">Subaru Impreza GC8<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></h2><p class="acard-meta">Car features · July 2026</p></div>
+    </a><a class="acard" href="yfc-autofest-2026/" data-cat="events">
+      <div class="acard-media"><img src="../img/DZoFVWdlW7f-07-sm.webp" srcset="../img/DZoFVWdlW7f-07-sm.webp 544w, ../img/DZoFVWdlW7f-07-lg.webp 1231w" sizes="(max-width:539px) 100vw, (max-width:999px) 50vw, (max-width:1328px) 31vw, 384px" width="1231" height="1720" alt="" loading="lazy" decoding="async" style="background-color:#3b3836;object-position:46.7% 59.2%;"></div>
+      <div class="acard-body"><h2 class="acard-title">YFC Autofest 2026<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></h2><p class="acard-meta">Events & shows · June 2026</p></div>
+    </a><a class="acard" href="corvette-c8-convertible/" data-cat="features">
+      <div class="acard-media"><img src="../img/DZQ0RI6lcNo-01-sm.webp" srcset="../img/DZQ0RI6lcNo-01-sm.webp 570w, ../img/DZQ0RI6lcNo-01-lg.webp 1500w" sizes="(max-width:539px) 100vw, (max-width:999px) 50vw, (max-width:1328px) 31vw, 384px" width="1536" height="2048" alt="" loading="lazy" decoding="async" style="background-color:#353739;object-position:54.9% 76.3%;"></div>
+      <div class="acard-body"><h2 class="acard-title">Corvette C8 Convertible<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></h2><p class="acard-meta">Car features · June 2026</p></div>
+    </a><a class="acard" href="chevrolet-silverado-2500hd/" data-cat="features">
+      <div class="acard-media"><img src="../img/AT6012-sm.webp" srcset="../img/AT6012-sm.webp 506w, ../img/AT6012-lg.webp 1013w, ../img/AT6012-xl.webp 1519w" sizes="(max-width:539px) 100vw, (max-width:999px) 50vw, (max-width:1328px) 31vw, 384px" width="1519" height="2700" alt="" loading="lazy" decoding="async" style="background-color:#545b63;object-position:66.0% 62.0%;"></div>
+      <div class="acard-body"><h2 class="acard-title">Chevrolet Silverado 2500HD<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></h2><p class="acard-meta">Car features · May 2026</p></div>
+    </a><a class="acard" href="mx-5-poster-series/" data-cat="editorial">
+      <div class="acard-media is-poster"><img src="../img/TK6009-sm.webp" srcset="../img/TK6009-sm.webp 675w, ../img/TK6009-lg.webp 1350w, ../img/TK6009-xl.webp 2025w" sizes="(max-width:539px) 100vw, (max-width:999px) 50vw, (max-width:1328px) 31vw, 384px" width="3481" height="4641" alt="" loading="lazy" decoding="async" style="background-color:#868f79;"></div>
+      <div class="acard-body"><h2 class="acard-title"><span class="nowrap">MX-5</span> Poster Series<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></h2><p class="acard-meta">Editorial · 2026</p></div>
+    </a><a class="acard" href="2025-season-recap/" data-cat="editorial">
+      <div class="acard-media is-poster"><img src="../img/DUiwiDAlfu7-05-sm.webp" srcset="../img/DUiwiDAlfu7-05-sm.webp 570w, ../img/DUiwiDAlfu7-05-lg.webp 1440w" sizes="(max-width:539px) 100vw, (max-width:999px) 50vw, (max-width:1328px) 31vw, 384px" width="1440" height="1920" alt="" loading="lazy" decoding="async" style="background-color:#8d8e7a;"></div>
+      <div class="acard-body"><h2 class="acard-title">2025 Season Recap<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></h2><p class="acard-meta">Editorial · February 2026</p></div>
+    </a><a class="acard" href="yfc-oktoberfest-2025/" data-cat="events">
+      <div class="acard-media"><img src="../img/DP39bzrjBtq-01-sm.webp" srcset="../img/DP39bzrjBtq-01-sm.webp 585w, ../img/DP39bzrjBtq-01-lg.webp 1440w" sizes="(max-width:539px) 100vw, (max-width:999px) 50vw, (max-width:1328px) 31vw, 384px" width="1440" height="1871" alt="" loading="lazy" decoding="async" style="background-color:#64635c;object-position:61.7% 59.4%;"></div>
+      <div class="acard-body"><h2 class="acard-title">YFC Oktoberfest 2025<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></h2><p class="acard-meta">Events & shows · October 2025</p></div>
+    </a><a class="acard" href="corvette-c5/" data-cat="events">
+      <div class="acard-media"><img src="../img/DPz0lGFjDt9-01-sm.webp" srcset="../img/DPz0lGFjDt9-01-sm.webp 570w, ../img/DPz0lGFjDt9-01-lg.webp 1440w" sizes="(max-width:539px) 100vw, (max-width:999px) 50vw, (max-width:1328px) 31vw, 384px" width="1440" height="1920" alt="" loading="lazy" decoding="async" style="background-color:#81807a;object-position:48.9% 55.8%;"></div>
+      <div class="acard-body"><h2 class="acard-title">Corvette C5<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></h2><p class="acard-meta">Events & shows · October 2025</p></div>
+    </a><a class="acard" href="mazda-mx-5-miata-na/" data-cat="features">
+      <div class="acard-media"><img src="../img/SS017-sm.webp" srcset="../img/SS017-sm.webp 506w, ../img/SS017-lg.webp 1013w, ../img/SS017-xl.webp 1519w" sizes="(max-width:539px) 100vw, (max-width:999px) 50vw, (max-width:1328px) 31vw, 384px" width="1519" height="2700" alt="" loading="lazy" decoding="async" style="background-color:#424e4d;object-position:100.0% 82.8%;"></div>
+      <div class="acard-body"><h2 class="acard-title">Mazda <span class="nowrap">MX-5</span> Miata (NA)<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></h2><p class="acard-meta">Car features · August 2025</p></div>
+    </a><a class="acard" href="complex-union-2025/" data-cat="events">
+      <div class="acard-media"><img src="../img/CU5009-sm.webp" srcset="../img/CU5009-sm.webp 600w, ../img/CU5009-lg.webp 1200w, ../img/CU5009-xl.webp 1800w" sizes="(max-width:539px) 100vw, (max-width:999px) 50vw, (max-width:1328px) 31vw, 384px" width="1800" height="2700" alt="" loading="lazy" decoding="async" style="background-color:#373a3d;object-position:47.5% 61.4%;"></div>
+      <div class="acard-body"><h2 class="acard-title">Complex Union 2025<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></h2><p class="acard-meta">Events & shows · July 2025</p></div>
+    </a><a class="acard" href="yfc-autofest-2025/" data-cat="events">
+      <div class="acard-media"><img src="../img/YA5011-sm.webp" srcset="../img/YA5011-sm.webp 720w, ../img/YA5011-lg.webp 1440w, ../img/YA5011-xl.webp 2160w" sizes="(max-width:539px) 100vw, (max-width:999px) 50vw, (max-width:1328px) 31vw, 384px" width="4000" height="5000" alt="" loading="lazy" decoding="async" style="background-color:#645751;object-position:43.5% 93.8%;"></div>
+      <div class="acard-body"><h2 class="acard-title">YFC Autofest 2025<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></h2><p class="acard-meta">Events & shows · June 2025</p></div>
+    </a><a class="acard" href="honda-accord-cover/" data-cat="editorial">
+      <div class="acard-media is-poster"><img src="../img/C5elEijLN43-01-sm.webp" srcset="../img/C5elEijLN43-01-sm.webp 760w, ../img/C5elEijLN43-01-lg.webp 1280w" sizes="(max-width:539px) 100vw, (max-width:999px) 50vw, (max-width:1328px) 31vw, 384px" width="1280" height="1280" alt="" loading="lazy" decoding="async" style="background-color:#6f7072;"></div>
+      <div class="acard-body"><h2 class="acard-title">Honda Accord Cover<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></h2><p class="acard-meta">Editorial · April 2024</p></div>
+    </a><a class="acard" href="yfc-autofest-2023/" data-cat="events">
+      <div class="acard-media"><img src="../img/Y23027-sm.webp" srcset="../img/Y23027-sm.webp 506w, ../img/Y23027-lg.webp 1012w, ../img/Y23027-xl.webp 1517w" sizes="(max-width:539px) 100vw, (max-width:999px) 50vw, (max-width:1328px) 31vw, 384px" width="1903" height="3386" alt="" loading="lazy" decoding="async" style="background-color:#4c4052;object-position:50% 67.3%;"></div>
+      <div class="acard-body"><h2 class="acard-title">YFC Autofest 2023<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></h2><p class="acard-meta">Events & shows · 2023</p></div>
     </a></div>
   </div>
 </main>
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-top">
-      <a class="wordmark" href="../">LN<span>Photos</span></a>
-      <nav class="footer-nav" aria-label="Footer">
-        <a href="../work/">All projects</a>
-        <a href="../#services">Services</a>
-        <a href="../#about">About</a>
-        <a href="../#contact">Contact</a>
-        <a href="https://www.instagram.com/ln._photos/" target="_blank" rel="noopener">Instagram</a>
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="wordmark" href="../"><img src="../assets/wordmark.svg" alt="LN Photos" width="155" height="12"></a>
+      <nav aria-label="Footer">
+        <ul class="foot-links">
+          <li><a href="../work/">All projects</a></li>
+          <li><a href="../#services">Services</a></li>
+          <li><a href="../#about">About</a></li>
+          <li><a href="../#contact">Book a shoot</a></li>
+          <li><a href="https://www.instagram.com/ln._photos/" target="_blank" rel="noopener">Instagram<svg class="i-out" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5l5-5M4.5 3.5h4v4"/></svg></a></li>
+        </ul>
       </nav>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 LN Photos. All photographs © LN Photos.</span>
-      <span>Automotive photography · New Brunswick, Canada</span>
+    <div class="foot-bottom">
+      <p>Automotive photography · New Brunswick, Canada</p>
+      <p>© 2026 LN Photos. All photographs © LN Photos.</p>
     </div>
   </div>
 </footer>

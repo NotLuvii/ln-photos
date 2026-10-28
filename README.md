@@ -4,12 +4,17 @@ Portfolio website for [@ln._photos](https://www.instagram.com/ln._photos/), auto
 
 Live site: https://notluvii.github.io/ln-photos/
 
-- `index.html`: home page (hero, featured projects, frames, services, about, contact)
-- `work/index.html`: all projects, with category filters
-- `work/<project>/index.html`: one page per project
-- `assets/`: styles, script, icons and social preview image
-- `img/`: photographs in web sizes (`-sm`, `-lg`, and `-xl` for wide images). Files named `<post>-NN-MM` join two carousel frames that form one panorama.
+## What's in this repository
 
-Static HTML, CSS and JavaScript. No build step, served by GitHub Pages from the `main` branch.
+- `index.html`: home page. It has the hero, the MX-5 lighting chapter, selected work, a short gallery, services and booking, about, and the inquiry section.
+- `work/index.html`: all projects, with category filters.
+- `work/<project>/index.html`: one page per project.
+- `assets/site.css`: the whole visual system. Colour, type and spacing tokens are at the top.
+- `assets/site.js`: interactions, with no dependencies. It covers the header and mobile menu, lighting tabs, archive filters, copy button, section reveals and the photo viewer.
+- `assets/wordmark.svg`: the LN Photos wordmark (Archivo Extended, converted to outlines).
+- `img/`: photographs in web sizes (`-sm`, `-lg`, and `-xl` when the original is large enough). Files named `<post>-NN-MM` join two carousel frames that form one panorama.
+- `ASSET_MAP.md`: which photograph is used where on the home page, with its source and pixel sizes.
+
+The site is static HTML, CSS and JavaScript, served by GitHub Pages from the `main` branch under `/ln-photos/`. Every path is relative, so it does not touch the site at the domain root. Interface text uses each device's system font. When JavaScript is unavailable, the lighting chapter shows all three photographs and the viewer links open the full-size files.
 
 All photographs © LN Photos.
