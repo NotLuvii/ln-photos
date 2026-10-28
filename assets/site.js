@@ -234,7 +234,14 @@
       var maxW = Math.min(w, 2000), s = Math.min(bw / w, bh / h, maxW / w);
       img.style.width = Math.round(w * s) + 'px'; img.style.height = Math.round(h * s) + 'px';
     }
-    function thumbOf(a) { var t = a.querySelector('img'); return t && (t.currentSrc || t.src) || ''; }
+    function thumbOf(a) {
+      /* use the already-loaded thumbnail as a placeholder only if it has the same proportions as the large file
+         (a phone may be showing a different frame inside <picture>) */
+      var t = a.querySelector('img'); if (!t || !t.naturalWidth) return '';
+      var w = +a.getAttribute('data-w') || 0, h = +a.getAttribute('data-h') || 0;
+      if (w && h && Math.abs((t.naturalWidth / t.naturalHeight) / (w / h) - 1) > 0.03) return '';
+      return t.currentSrc || t.src || '';
+    }
 
     function setInert(on) {
       if (on) {

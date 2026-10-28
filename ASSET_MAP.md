@@ -5,7 +5,8 @@ Widths are the real pixel widths of the published variants. Crops use the car bo
 
 | Slot | Image | Project | Source px | Published widths | Source | Notes |
 |---|---|---|---|---|---|---|
-| Hero | `SS037` | Mazda MX-5 Miata (NA) | 2700×1149 | 900, 1800, 2700 | Library original `2025\Savanna Sharp\Edited\car-42.jpg` (2700×1149) | 2.35:1 on desktop, 16:9 tablet, 1:1 phone. Largest export available is 2700 px wide. |
+| Hero | `YA5020` | YFC Autofest 2025 | 3000×1276 | 900, 1800, 2700, 3600 | Library original `2025\YFC\Autofest\Edited\DSC00483-Enhanced-NR-2.jpg` (6000×2553) | tablets and desktops, shown whole at 2.35:1 |
+| Hero (phones) | `YA5011` | YFC Autofest 2025 | 4000×5000 | 720, 1440, 2160 | Library original `2025\YFC\Autofest\Edited\DSC00468.jpg` (4000×5000) | same Audi, portrait frame, shown whole |
 | Lighting · Daylight | `SS002` | Mazda MX-5 Miata (NA) | 2700×1149 | 900, 1800, 2700 | Library original `2025\Savanna Sharp\Edited\car-10.jpg` (2700×1149) | 2.35:1 stage, 3:2 on phones |
 | Lighting · Golden hour | `SS013` | Mazda MX-5 Miata (NA) | 2700×1149 | 900, 1800, 2700 | Library original `2025\Savanna Sharp\Edited\car-20.jpg` (2700×1149) | 2.35:1 stage, 3:2 on phones |
 | Lighting · Dusk | `SS028` | Mazda MX-5 Miata (NA) | 2700×1149 | 900, 1800, 2700 | Library original `2025\Savanna Sharp\Edited\car-34.jpg` (2700×1149) | 2.35:1 stage, 3:2 on phones |
@@ -23,7 +24,7 @@ Widths are the real pixel widths of the published variants. Crops use the car bo
 | Service · Event coverage | `CU5012` | Complex Union 2025 | 2700×1800 | 900, 1800, 2700 | Library original `2025\COMPLEX UNION\Edited\rae-14.jpg` (2700×1800) | 3:2 crop around the car |
 | Service · Rolling shots | `AT6001` | Chevrolet Silverado 2500HD | 2700×1519 | 900, 1800, 2700 | Library original `2026\Alex Truck\Edited\AlexTruck.jpg` (2700×1519) | 3:2 crop around the car |
 | Service · Cover layouts | `C5elEijLN43-01` | Honda Accord Cover | 1280×1280 | 760, 1280 | Instagram post C5elEijLN43, slide 1 (1280×1280) | poster contained, uncropped |
-| About | `YA5009` | YFC Autofest 2025 | 3000×2000 | 900, 1800, 2700 | Library original `2025\YFC\Autofest\Edited\DSC00464.jpg` (6000×4000) | contextual photograph; no photographer portrait exists in the supplied files |
+| About | `CX6007` | Complex Union 2026 | 2700×1519 | 900, 1800, 2700 | Library original `2026\COMPLEX\Edited\complex-7.jpg` (2700×1519) | contextual photograph; no photographer portrait exists in the supplied files |
 
 ## Poster artwork
 
