@@ -31,9 +31,9 @@ Widths are the real pixel widths of the published variants. Crops use the car bo
 | Service · Event coverage | `CX6005` | Complex Union 2026 | 2700×1519 | 900, 1800, 2700 | Library original `2026\COMPLEX\Edited\complex-5.jpg` (2700×1519) | 4:3 crop around the car |
 | Service · Rolling shots | `AT6001` | Chevrolet Silverado 2500HD | 2700×1519 | 900, 1800, 2700 | Library original `2026\Alex Truck\Edited\AlexTruck.jpg` (2700×1519) | 4:3 crop around the car |
 | Service · Cover layouts | `C5elEijLN43-01` | Honda Accord Cover | 1280×1280 | 760, 1280 | Instagram post C5elEijLN43, slide 1 (1280×1280) | poster contained, uncropped |
-| Booking · Send the details | `CX6018` | Subaru Impreza GC8 | 1800×2700 | 600, 1200, 1800 | Library original `2026\COMPLEX\Edited\Rachel-7.jpg` (1800×2700) | 4:5 crop around the car |
-| Booking · Plan the shoot | `CX6019` | Subaru Impreza GC8 | 1519×2700 | 506, 1013, 1519 | Library original `2026\COMPLEX\Edited\Rachel-8.jpg` (1519×2700) | 4:5 crop around the car |
-| Booking · Make it happen | `CX6020` | Subaru Impreza GC8 | 1800×2700 | 600, 1200, 1800 | Library original `2026\COMPLEX\Edited\Rachel-9.jpg` (1800×2700) | 4:5 crop around the car |
+| Booking · Send the details | `SS023` | Mazda MX-5 Miata (NA) | 1519×2700 | 506, 1013, 1519 | Library original `2025\Savanna Sharp\Edited\car-3.jpg` (1519×2700) | 4:5 crop, whole car, no people |
+| Booking · Plan the shoot | `SS016` | Mazda MX-5 Miata (NA) | 1519×2700 | 506, 1013, 1519 | Library original `2025\Savanna Sharp\Edited\car-23.jpg` (1519×2700) | 4:5 crop, whole car, no people |
+| Booking · Make it happen | `AT6010` | Chevrolet Silverado 2500HD | 1519×2700 | 506, 1013, 1519 | Library original `2026\Alex Truck\Edited\AlexTruck-18.jpg` (1519×2700) | 4:5 crop, whole car, no people |
 | About | `CX6007` | Complex Union 2026 | 2700×1519 | 900, 1800, 2700 | Library original `2026\COMPLEX\Edited\complex-7.jpg` (2700×1519) | contextual photograph; no photographer portrait exists in the supplied files |
 
 ## Poster artwork
