@@ -17,8 +17,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/site.css">
-<link rel="preload" as="image" media="(orientation:landscape)" imagesrcset="img/YA5020-sm.webp 900w, img/YA5020-lg.webp 1800w, img/YA5020-xl.webp 2700w, img/YA5020-xxl.webp 3600w" imagesizes="max(100vw, (100vh - 56px) * 2.351)" fetchpriority="high">
-<link rel="preload" as="image" media="(orientation:portrait)" imagesrcset="img/YA5012-sm.webp 506w, img/YA5012-lg.webp 1013w, img/YA5012-xl.webp 1519w, img/YA5012-xxl.webp 2400w" imagesizes="max(100vw, (100vh - 56px) * 0.563)" fetchpriority="high">
+<link rel="preload" as="image" media="(orientation:landscape)" imagesrcset="img/YA5020-sm.webp 900w, img/YA5020-lg.webp 1800w, img/YA5020-xl.webp 2700w, img/YA5020-xxl.webp 3600w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" media="(orientation:portrait)" imagesrcset="img/YA5012-sm.webp 506w, img/YA5012-lg.webp 1013w, img/YA5012-xl.webp 1519w, img/YA5012-xxl.webp 2400w" imagesizes="max(100vw, (100vh - 280px) * 0.563)" fetchpriority="high">
 <script>
 /* Interactive layouts switch on immediately; if site.js has not started within 3s, fall back to the static layout. */
 (function(d){d.className='js';setTimeout(function(){if(!window.LN_READY){d.className='no-js js-failed';}},3000);})(document.documentElement);
@@ -26,7 +26,7 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
+<header class="site-header is-overlay">
   <div class="nav-bar">
     <a class="wordmark" href="./"><img src="assets/wordmark.svg" alt="LN Photos" width="155" height="12"></a>
     <nav class="nav" aria-label="Main">
@@ -36,181 +36,219 @@
         <li><a href="./#about">About</a></li>
       </ul>
     </nav>
-    <a class="btn btn-primary btn-sm nav-cta" href="./#contact">Book a shoot</a>
+    <a class="nav-cta" href="./#contact">Book a shoot</a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links"><span class="sr-only">Menu</span><span class="menu-icon" aria-hidden="true"></span></button>
   </div>
 </header>
-<main id="main">
+<main id="main" class="home">
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-pin">
-      <div class="hero-intro">
-        <p class="eyebrow"><span class="eb">Automotive photography</span><span class="eb-sep"> · </span><span class="eb">New Brunswick, Canada</span></p>
-        <h1 class="h-hero" id="hero-title">Every build.<br> A closer look.</h1>
-        <p class="lede">Car features, rolling shots, and show coverage across New&nbsp;Brunswick.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="#work">View the work</a>
-          <a class="btn btn-secondary" href="#contact">Book a shoot</a>
-        </div>
-      </div>
-      <figure class="hero-fig">
-        <a class="hero-frame" style="--ar-l:2.3511;--ar-p:0.5627;--fx-l:0.024;--fy-l:0.822;--fx-p:0.432;--fy-p:0.875" href="img/YA5020-lg.webp" data-lightbox="hero" data-title="YFC Autofest 2025" data-date="June 2025" data-w="3000" data-h="1276" data-alt="A slammed yellow Audi Q5 with a roof box, parked with a red Honda Civic and a silver coupe at YFC Autofest 2025" data-project="work/yfc-autofest-2025/" aria-label="View larger: A slammed yellow Audi Q5 with a roof box, parked with a red Honda Civic and a silver coupe at YFC Autofest 2025" data-p-href="img/YA5012-lg.webp" data-p-w="3104" data-p-h="5516" data-p-alt="A slammed yellow Audi Q5 with a roof box in front of a brick wall under storm clouds, YFC Autofest 2025" data-lb-label="photograph"><picture><source media="(orientation:portrait)" srcset="img/YA5012-sm.webp 506w, img/YA5012-lg.webp 1013w, img/YA5012-xl.webp 1519w, img/YA5012-xxl.webp 2400w" sizes="max(100vw, (100vh - 56px) * 0.563)" width="3104" height="5516"><img src="img/YA5020-sm.webp" srcset="img/YA5020-sm.webp 900w, img/YA5020-lg.webp 1800w, img/YA5020-xl.webp 2700w, img/YA5020-xxl.webp 3600w" sizes="max(100vw, (100vh - 56px) * 2.351)" width="3000" height="1276" alt="A slammed yellow Audi Q5 with a roof box at YFC Autofest 2025" fetchpriority="high" loading="eager" decoding="async" style="background-color:#6e614d;"></picture></a>
+      <figure class="hero-fig" style="--ar-l:2.3511;--ar-p:0.5627;--cb-l:0.925;--cb-p:0.907">
+        <a class="hero-frame" href="img/YA5020-lg.webp" data-lightbox="hero" data-title="YFC Autofest 2025" data-date="June 2025" data-w="3000" data-h="1276" data-alt="A slammed yellow Audi Q5 with a roof box, parked with a red Honda Civic and a silver coupe at YFC Autofest 2025" data-project="work/yfc-autofest-2025/" aria-label="View larger: A slammed yellow Audi Q5 with a roof box, parked with a red Honda Civic and a silver coupe at YFC Autofest 2025" data-swap-mq="(orientation: portrait)" data-swap-href="img/YA5012-lg.webp" data-swap-w="3104" data-swap-h="5516" data-swap-alt="A slammed yellow Audi Q5 with a roof box in front of a brick wall under storm clouds, YFC Autofest 2025" data-lb-label="photograph"><picture><source media="(orientation:portrait)" srcset="img/YA5012-sm.webp 506w, img/YA5012-lg.webp 1013w, img/YA5012-xl.webp 1519w, img/YA5012-xxl.webp 2400w" sizes="max(100vw, (100vh - 280px) * 0.563)" width="3104" height="5516"><img src="img/YA5020-sm.webp" srcset="img/YA5020-sm.webp 900w, img/YA5020-lg.webp 1800w, img/YA5020-xl.webp 2700w, img/YA5020-xxl.webp 3600w" sizes="100vw" width="3000" height="1276" alt="A slammed yellow Audi Q5 with a roof box at YFC Autofest 2025" fetchpriority="high" loading="eager" decoding="async" style="background-color:#6e614d;"></picture></a>
         <div class="hero-scrim" aria-hidden="true"></div>
+        <div class="hero-shade" aria-hidden="true"></div>
         <figcaption class="hero-cap"><a href="work/yfc-autofest-2025/">YFC Autofest 2025</a><span>June 2025</span></figcaption>
       </figure>
+      <div class="hero-copy">
+        <div class="hero-inner">
+          <div class="hero-head">
+            <p class="hero-eyebrow">LN Photos</p>
+            <h1 class="hero-title" id="hero-title">Every build.<br class="br-narrow"> A closer look.</h1>
+            <p class="hero-detail">Car features, rolling shots, and show coverage across New&nbsp;Brunswick.</p>
+          </div>
+          <div class="hero-cta">
+            <a class="link" href="#work">View the work<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></a>
+            <a class="btn btn-primary btn-pill" href="#contact">Book a shoot</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-  <section class="section sig" id="mx5" aria-labelledby="sig-title">
-    <div class="wrap sig-head reveal">
-      <p class="eyebrow"><span class="eb">Mazda <span class="nowrap">MX-5</span> Miata (NA)</span><span class="eb-sep"> · </span><span class="eb">UNB Fredericton</span></p>
-      <h2 class="h-sec" id="sig-title">From daylight<br> to after dark.</h2>
+  <section class="section section-highlights" id="work" aria-labelledby="work-title">
+    <div class="wrap sec-head" data-stagger>
+      <h2 class="t-section" id="work-title" data-stagger-item>Selected work.</h2>
+      <a class="link sec-link" href="work/" data-stagger-item>View all projects<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></a>
     </div>
+    <div class="hl" data-gallery aria-roledescription="carousel" aria-labelledby="work-title">
+      <ul class="hl-track" tabindex="-1"><li class="hl-item" id="hl-0" aria-roledescription="slide" aria-label="1 of 4">
+          <a class="hl-card" href="work/chevrolet-silverado-2500hd/">
+            <span class="hl-media"><picture class="ad" style="--fp-s:48.2% 86.3%;--fp-l:23.4% 70.7%"><source media="(max-width:734px)" srcset="img/AT6017-sm.webp 506w, img/AT6017-lg.webp 1013w, img/AT6017-xl.webp 1519w" sizes="82vw" width="1519" height="2700"><img src="img/AT6011-sm.webp" srcset="img/AT6011-sm.webp 900w, img/AT6011-lg.webp 1800w, img/AT6011-xl.webp 2700w" sizes="(max-width:1068px) 88vw, min(88vw, 1260px)" width="2700" height="1519" alt="The black Silverado 2500HD rolling under a highway overpass" loading="lazy" decoding="async" style="background-color:#4f5058;"></picture></span>
+            <span class="hl-cap"><strong>Chevrolet Silverado 2500HD.</strong> Rolling shots on the highway, statics against white buildings and the details up close.</span>
+          </a>
+        </li><li class="hl-item" id="hl-1" aria-roledescription="slide" aria-label="2 of 4">
+          <a class="hl-card" href="work/corvette-c8-convertible/">
+            <span class="hl-media"><picture class="ad" style="--fp-s:54.9% 76.3%;--fp-l:50.0% 56.8%"><source media="(max-width:734px)" srcset="img/DZQ0RI6lcNo-01-sm.webp 570w, img/DZQ0RI6lcNo-01-lg.webp 1500w" sizes="82vw" width="1536" height="2048"><img src="img/DZQ0RI6lcNo-02-03-sm.webp" srcset="img/DZQ0RI6lcNo-02-03-sm.webp 1000w, img/DZQ0RI6lcNo-02-03-lg.webp 2000w, img/DZQ0RI6lcNo-02-03-xl.webp 3072w" sizes="(max-width:1068px) 88vw, min(88vw, 1260px)" width="3072" height="2048" alt="A white C8 Corvette convertible with red stripes inside a glass-walled showroom" loading="lazy" decoding="async" style="background-color:#303233;"></picture></span>
+            <span class="hl-cap"><strong>Corvette C8 Convertible.</strong> A white C8 with red stripes, behind the glass of a dealer showroom.</span>
+          </a>
+        </li><li class="hl-item" id="hl-2" aria-roledescription="slide" aria-label="3 of 4">
+          <a class="hl-card" href="work/complex-union-2025/">
+            <span class="hl-media"><picture class="ad" style="--fp-s:0.0% 27.7%;--fp-l:76.4% 70.0%"><source media="(max-width:734px)" srcset="img/CU5002-sm.webp 675w, img/CU5002-lg.webp 1350w, img/CU5002-xl.webp 2025w" sizes="82vw" width="2025" height="2700"><img src="img/CU5012-sm.webp" srcset="img/CU5012-sm.webp 900w, img/CU5012-lg.webp 1800w, img/CU5012-xl.webp 2700w" sizes="(max-width:1068px) 88vw, min(88vw, 1260px)" width="2700" height="1800" alt="A blue Subaru Impreza GC8 in front of the Illicit booth banner at Complex Union 2025" loading="lazy" decoding="async" style="background-color:#50666f;"></picture></span>
+            <span class="hl-cap"><strong>Complex Union 2025.</strong> A blue GC8 Impreza at the Illicit booth.</span>
+          </a>
+        </li><li class="hl-item" id="hl-3" aria-roledescription="slide" aria-label="4 of 4">
+          <a class="hl-card" href="work/yfc-autofest-2023/">
+            <span class="hl-media"><picture class="ad" style="--fp-s:50% 67.3%;--fp-l:31.8% 100.0%"><source media="(max-width:734px)" srcset="img/Y23027-sm.webp 506w, img/Y23027-lg.webp 1012w, img/Y23027-xl.webp 1517w" sizes="82vw" width="1903" height="3386"><img src="img/Y23030-sm.webp" srcset="img/Y23030-sm.webp 900w, img/Y23030-lg.webp 1800w, img/Y23030-xl.webp 2700w" sizes="(max-width:1068px) 88vw, min(88vw, 1260px)" width="3872" height="2026" alt="A lilac NA Miata on chrome wheels under a pool-noodle bar held across the lane, with a crowd watching at YFC Autofest 2023" loading="lazy" decoding="async" style="background-color:#635357;"></picture></span>
+            <span class="hl-cap"><strong>YFC Autofest 2023.</strong> A lilac NA Miata on chrome wheels.</span>
+          </a>
+        </li></ul>
+      <div class="hl-pill" data-pill>
+        <span class="hl-pill-bg" aria-hidden="true"></span>
+        <button type="button" class="hl-play" data-state="pause" aria-label="Pause the gallery"><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg class="i-replay" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5a7 7 0 1 1-6.6 4.7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M4.2 4.6l1.3 5.3 5-2z"/></svg></button>
+        <ul class="hl-dots"><li><button type="button" class="hl-dot" data-index="0" aria-controls="hl-0" aria-label="Show Chevrolet Silverado 2500HD" aria-current="true"><span class="hl-dot-fill"></span></button></li><li><button type="button" class="hl-dot" data-index="1" aria-controls="hl-1" aria-label="Show Corvette C8 Convertible"><span class="hl-dot-fill"></span></button></li><li><button type="button" class="hl-dot" data-index="2" aria-controls="hl-2" aria-label="Show Complex Union 2025"><span class="hl-dot-fill"></span></button></li><li><button type="button" class="hl-dot" data-index="3" aria-controls="hl-3" aria-label="Show YFC Autofest 2023"><span class="hl-dot-fill"></span></button></li></ul>
+      </div>
+    </div>
+  </section>
+  <section class="section section-alt sig" id="mx5" aria-labelledby="sig-title">
+    <div class="wrap story-head" data-stagger><p class="t-eyebrow" data-stagger-item>Mazda <span class="nowrap">MX-5</span> Miata (NA)</p><h2 class="t-standalone" id="sig-title" data-stagger-item>From daylight<br> to after dark.</h2></div>
     <div class="lighting" data-tabs>
-      <div class="seg lighting-tabs" role="tablist" aria-label="Choose the light"><button type="button" role="tab" class="seg-btn" id="lt-0" aria-controls="lp-0" aria-selected="true" tabindex="0">Daylight</button><button type="button" role="tab" class="seg-btn" id="lt-1" aria-controls="lp-1" aria-selected="false" tabindex="-1">Golden hour</button><button type="button" role="tab" class="seg-btn" id="lt-2" aria-controls="lp-2" aria-selected="false" tabindex="-1">Dusk</button><span class="seg-thumb" aria-hidden="true"></span></div>
-      <div class="lighting-stage stage-w"><figure class="lp is-active" role="tabpanel" id="lp-0" aria-labelledby="lt-0" data-caption="The rooftop lot, the flagpoles and the old stone buildings." data-label="Daylight">
-          <a class="lp-frame" href="img/SS002-lg.webp" data-lightbox="lighting" data-title="Mazda MX-5 Miata (NA)" data-date="August 2025" data-w="2700" data-h="1149" data-alt="The MX-5 in profile on a rooftop lot beside a black iron fence, under an overcast daylight sky" data-project="work/mazda-mx-5-miata-na/" aria-label="View larger: The MX-5 in profile on a rooftop lot beside a black iron fence, under an overcast daylight sky" data-lb-label="selected photographs"><img src="img/SS002-sm.webp" srcset="img/SS002-sm.webp 900w, img/SS002-lg.webp 1800w, img/SS002-xl.webp 2700w" sizes="(max-width:599px) 150vw, min(100vw, 1440px)" width="2700" height="1149" alt="The MX-5 in profile on a rooftop lot beside a black iron fence, under an overcast daylight sky" loading="lazy" decoding="async" style="background-color:#6e7470;object-position:75.1% 86.6%;"></a>
+      <div class="wrap lighting-nav"><div class="seg lighting-tabs" role="tablist" aria-label="Choose the light"><button type="button" role="tab" class="seg-btn" id="lt-0" aria-controls="lp-0" aria-selected="true" tabindex="0">Daylight</button><button type="button" role="tab" class="seg-btn" id="lt-1" aria-controls="lp-1" aria-selected="false" tabindex="-1">Golden hour</button><button type="button" role="tab" class="seg-btn" id="lt-2" aria-controls="lp-2" aria-selected="false" tabindex="-1">Dusk</button><span class="seg-thumb" aria-hidden="true"></span></div></div>
+      <div class="lighting-stage" data-expand><figure class="lp is-active" role="tabpanel" id="lp-0" aria-labelledby="lt-0" data-caption="The rooftop lot, the flagpoles and the old stone buildings." data-label="Daylight">
+          <a class="lp-frame" href="img/SS002-lg.webp" data-lightbox="lighting" data-title="Mazda MX-5 Miata (NA)" data-date="August 2025" data-w="2700" data-h="1149" data-alt="The MX-5 on a rooftop lot beside a black iron fence in daylight" data-project="work/mazda-mx-5-miata-na/" aria-label="View larger: The MX-5 on a rooftop lot beside a black iron fence in daylight" data-swap-mq="(max-width:734px)" data-swap-href="img/SS004-lg.webp" data-swap-w="1519" data-swap-h="2700" data-swap-alt="The MX-5 on a rooftop lot beside a black iron fence in daylight" data-lb-label="selected photographs"><picture class="ad" style="--fp-s:55.6% 80.0%;--fp-l:75.1% 86.6%"><source media="(max-width:734px)" srcset="img/SS004-sm.webp 506w, img/SS004-lg.webp 1013w, img/SS004-xl.webp 1519w" sizes="100vw" width="1519" height="2700"><img src="img/SS002-sm.webp" srcset="img/SS002-sm.webp 900w, img/SS002-lg.webp 1800w, img/SS002-xl.webp 2700w" sizes="min(100vw, 1680px)" width="2700" height="1149" alt="The MX-5 on a rooftop lot beside a black iron fence in daylight" loading="lazy" decoding="async" style="background-color:#6e7470;"></picture></a>
           <figcaption class="lp-cap"><span class="lp-label">Daylight</span> The rooftop lot, the flagpoles and the old stone buildings.</figcaption>
         </figure><figure class="lp" role="tabpanel" id="lp-1" aria-labelledby="lt-1" data-caption="Low sun through the trees." data-label="Golden hour">
-          <a class="lp-frame" href="img/SS013-lg.webp" data-lightbox="lighting" data-title="Mazda MX-5 Miata (NA)" data-date="August 2025" data-w="2700" data-h="1149" data-alt="The MX-5 from behind on a quiet road as low golden sun comes through the trees" data-project="work/mazda-mx-5-miata-na/" aria-label="View larger: The MX-5 from behind on a quiet road as low golden sun comes through the trees" data-lb-label="selected photographs"><img src="img/SS013-sm.webp" srcset="img/SS013-sm.webp 900w, img/SS013-lg.webp 1800w, img/SS013-xl.webp 2700w" sizes="(max-width:599px) 150vw, min(100vw, 1440px)" width="2700" height="1149" alt="The MX-5 from behind on a quiet road as low golden sun comes through the trees" loading="lazy" decoding="async" style="background-color:#4d4031;object-position:69.9% 93.2%;"></a>
+          <a class="lp-frame" href="img/SS013-lg.webp" data-lightbox="lighting" data-title="Mazda MX-5 Miata (NA)" data-date="August 2025" data-w="2700" data-h="1149" data-alt="The MX-5 from behind as low golden sun comes through the trees" data-project="work/mazda-mx-5-miata-na/" aria-label="View larger: The MX-5 from behind as low golden sun comes through the trees" data-swap-mq="(max-width:734px)" data-swap-href="img/SS005-lg.webp" data-swap-w="1519" data-swap-h="2700" data-swap-alt="The MX-5 from behind as low golden sun comes through the trees" data-lb-label="selected photographs"><picture class="ad" style="--fp-s:53.9% 85.1%;--fp-l:69.9% 93.2%"><source media="(max-width:734px)" srcset="img/SS005-sm.webp 506w, img/SS005-lg.webp 1013w, img/SS005-xl.webp 1519w" sizes="100vw" width="1519" height="2700"><img src="img/SS013-sm.webp" srcset="img/SS013-sm.webp 900w, img/SS013-lg.webp 1800w, img/SS013-xl.webp 2700w" sizes="min(100vw, 1680px)" width="2700" height="1149" alt="The MX-5 from behind as low golden sun comes through the trees" loading="lazy" decoding="async" style="background-color:#4d4031;"></picture></a>
           <figcaption class="lp-cap"><span class="lp-label">Golden hour</span> Low sun through the trees.</figcaption>
         </figure><figure class="lp" role="tabpanel" id="lp-2" aria-labelledby="lt-2" data-caption="The field and the last of the sky." data-label="Dusk">
-          <a class="lp-frame" href="img/SS028-lg.webp" data-lightbox="lighting" data-title="Mazda MX-5 Miata (NA)" data-date="August 2025" data-w="2700" data-h="1149" data-alt="The MX-5 small on a dark road under a wide orange and grey dusk sky" data-project="work/mazda-mx-5-miata-na/" aria-label="View larger: The MX-5 small on a dark road under a wide orange and grey dusk sky" data-lb-label="selected photographs"><img src="img/SS028-sm.webp" srcset="img/SS028-sm.webp 900w, img/SS028-lg.webp 1800w, img/SS028-xl.webp 2700w" sizes="(max-width:599px) 150vw, min(100vw, 1440px)" width="2700" height="1149" alt="The MX-5 small on a dark road under a wide orange and grey dusk sky" loading="lazy" decoding="async" style="background-color:#6b5b47;object-position:49.9% 86.4%;"></a>
+          <a class="lp-frame" href="img/SS028-lg.webp" data-lightbox="lighting" data-title="Mazda MX-5 Miata (NA)" data-date="August 2025" data-w="2700" data-h="1149" data-alt="The MX-5 on a dark road under an orange and grey dusk sky" data-project="work/mazda-mx-5-miata-na/" aria-label="View larger: The MX-5 on a dark road under an orange and grey dusk sky" data-swap-mq="(max-width:734px)" data-swap-href="img/SS031-lg.webp" data-swap-w="1519" data-swap-h="2700" data-swap-alt="The MX-5 on a dark road under an orange and grey dusk sky" data-lb-label="selected photographs"><picture class="ad" style="--fp-s:54.6% 68.3%;--fp-l:49.9% 86.4%"><source media="(max-width:734px)" srcset="img/SS031-sm.webp 506w, img/SS031-lg.webp 1013w, img/SS031-xl.webp 1519w" sizes="100vw" width="1519" height="2700"><img src="img/SS028-sm.webp" srcset="img/SS028-sm.webp 900w, img/SS028-lg.webp 1800w, img/SS028-xl.webp 2700w" sizes="min(100vw, 1680px)" width="2700" height="1149" alt="The MX-5 on a dark road under an orange and grey dusk sky" loading="lazy" decoding="async" style="background-color:#6b5b47;"></picture></a>
           <figcaption class="lp-cap"><span class="lp-label">Dusk</span> The field and the last of the sky.</figcaption>
         </figure></div>
-      <div class="lighting-foot stage-w">
+      <div class="wrap lighting-foot">
         <p class="lighting-caption" aria-hidden="true"><span class="lp-label">Daylight</span> <span class="lc-text">The rooftop lot, the flagpoles and the old stone buildings.</span></p>
         <a class="link" href="work/mazda-mx-5-miata-na/">View the full project<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></a>
       </div>
     </div>
   </section>
-  <section class="section" id="work" aria-labelledby="work-title">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <div>
-          <h2 class="h-sec" id="work-title">Selected work.</h2>
-          <p class="lede">A show floor, a Silverado on the highway, a Corvette behind glass and a poster series. A bit of everything I&nbsp;shoot.</p>
-        </div>
-        <a class="link sec-link" href="work/">View all projects<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></a>
-      </div>
-      <div class="wgrid"><div class="wrow"><a class="wcard" href="work/complex-union-2026/" style="--ar:177.75">
-          <div class="wcard-media" style="aspect-ratio:2700/1519"><img src="img/CX6005-sm.webp" srcset="img/CX6005-sm.webp 900w, img/CX6005-lg.webp 1800w, img/CX6005-xl.webp 2700w" sizes="(max-width:719px) 100vw, (max-width:1328px) 46vw, 600px" width="2700" height="1519" alt="" loading="lazy" decoding="async" style="background-color:#27272d;"></div>
-          <div class="wcard-body"><h3 class="wcard-title">Complex Union 2026<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></h3><p class="wcard-meta">Show coverage · September 2026</p></div>
-        </a><a class="wcard" href="work/chevrolet-silverado-2500hd/" style="--ar:177.75">
-          <div class="wcard-media" style="aspect-ratio:2700/1519"><img src="img/AT6011-sm.webp" srcset="img/AT6011-sm.webp 900w, img/AT6011-lg.webp 1800w, img/AT6011-xl.webp 2700w" sizes="(max-width:719px) 100vw, (max-width:1328px) 46vw, 600px" width="2700" height="1519" alt="" loading="lazy" decoding="async" style="background-color:#4f5058;"></div>
-          <div class="wcard-body"><h3 class="wcard-title">Chevrolet Silverado 2500HD<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></h3><p class="wcard-meta">Rolling shots · May 2026</p></div>
-        </a></div><div class="wrow has-poster"><a class="wcard" href="work/corvette-c8-convertible/" style="--ar:150.00">
-          <div class="wcard-media" style="aspect-ratio:3072/2048"><img src="img/DZQ0RI6lcNo-02-03-sm.webp" srcset="img/DZQ0RI6lcNo-02-03-sm.webp 1000w, img/DZQ0RI6lcNo-02-03-lg.webp 2000w, img/DZQ0RI6lcNo-02-03-xl.webp 3072w" sizes="(max-width:899px) 100vw, (max-width:1328px) 67vw, 873px" width="3072" height="2048" alt="" loading="lazy" decoding="async" style="background-color:#303233;"></div>
-          <div class="wcard-body"><h3 class="wcard-title">Corvette C8 Convertible<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></h3><p class="wcard-meta">Car feature · June 2026</p></div>
-        </a><a class="wcard is-poster" href="work/mx-5-poster-series/" style="--ar:56.27">
-          <div class="wcard-media" style="aspect-ratio:1688/3000"><img src="img/TK6031-sm.webp" srcset="img/TK6031-sm.webp 506w, img/TK6031-lg.webp 1013w, img/TK6031-xl.webp 1519w" sizes="(max-width:899px) 320px, (max-width:1328px) 25vw, 327px" width="1688" height="3000" alt="" loading="lazy" decoding="async" style="background-color:#464837;"></div>
-          <div class="wcard-body"><h3 class="wcard-title"><span class="nowrap">MX-5</span> Poster Series<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></h3><p class="wcard-meta">Editorial layouts · 2026</p></div>
-        </a></div></div>
-      <p class="more-link"><a class="btn btn-secondary" href="work/">View all 15 projects</a></p>
-    </div>
-  </section>
   <section class="section" aria-labelledby="pers-title">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <div>
-          <h2 class="h-sec" id="pers-title">A few more perspectives.</h2>
-          <p class="lede">A few more frames from other shoots. Open any of them to see it full&nbsp;size.</p>
-        </div>
-      </div>
-      <div class="pt-gallery"><div class="pt-row"><figure class="pt pt-port" style="--ar:75.02;--w:1520;--h:2026">
-          <a class="pt-frame" href="img/Db_DgIDFcCf-03-lg.webp" data-lightbox="perspectives" data-title="Porsche, Yellow &amp; Black" data-date="August 2026" data-w="1520" data-h="2026" data-alt="Close-up of a yellow Porsche 911 headlight and fender" data-project="work/porsche-yellow-and-black/" aria-label="View larger: Close-up of a yellow Porsche 911 headlight and fender" data-lb-label="selected photographs"><img src="img/Db_DgIDFcCf-03-sm.webp" srcset="img/Db_DgIDFcCf-03-sm.webp 570w, img/Db_DgIDFcCf-03-lg.webp 1500w" sizes="(max-width:899px) 50vw, (max-width:1328px) 18vw, 239px" width="1520" height="2026" alt="Close-up of a yellow Porsche 911 headlight and fender" loading="lazy" decoding="async" style="background-color:#594e1e;object-position:100.0% 100.0%;"></a>
+    <div class="wrap sec-head" data-stagger>
+      <h2 class="t-section" id="pers-title" data-stagger-item>A few more perspectives.</h2>
+    </div>
+    <div class="wrap pt-gallery"><div class="pt-row" data-stagger data-parallax><figure class="pt pt-port" style="--ar:75.02;--w:1520;--h:2026" data-stagger-item>
+          <a class="pt-frame" href="img/Db_DgIDFcCf-03-lg.webp" data-lightbox="perspectives" data-title="Porsche, Yellow &amp; Black" data-date="August 2026" data-w="1520" data-h="2026" data-alt="Close-up of a yellow Porsche 911 headlight and fender" data-project="work/porsche-yellow-and-black/" aria-label="View larger: Close-up of a yellow Porsche 911 headlight and fender" data-lb-label="selected photographs"><img src="img/Db_DgIDFcCf-03-sm.webp" srcset="img/Db_DgIDFcCf-03-sm.webp 570w, img/Db_DgIDFcCf-03-lg.webp 1500w" sizes="(max-width:1068px) 44vw, (max-width:1440px) 18vw, 251px" width="1520" height="2026" alt="Close-up of a yellow Porsche 911 headlight and fender" loading="lazy" decoding="async" style="background-color:#594e1e;object-position:100.0% 100.0%;"></a>
           <figcaption><a href="work/porsche-yellow-and-black/">Porsche, Yellow &amp; Black</a></figcaption>
-        </figure><figure class="pt pt-land" style="--ar:234.99;--w:3499;--h:1489">
-          <a class="pt-frame" href="img/Y23007-lg.webp" data-lightbox="perspectives" data-title="YFC Autofest 2023" data-date="2023" data-w="3499" data-h="1489" data-alt="A yellow Audi R8 with a big rear wing in the YFC Autofest 2023 lot" data-project="work/yfc-autofest-2023/" aria-label="View larger: A yellow Audi R8 with a big rear wing in the YFC Autofest 2023 lot" data-lb-label="selected photographs"><img src="img/Y23007-sm.webp" srcset="img/Y23007-sm.webp 900w, img/Y23007-lg.webp 1800w, img/Y23007-xl.webp 2700w" sizes="(max-width:899px) 100vw, (max-width:1328px) 57vw, 749px" width="3499" height="1489" alt="A yellow Audi R8 with a big rear wing in the YFC Autofest 2023 lot" loading="lazy" decoding="async" style="background-color:#3a3836;object-position:88.9% 68.8%;"></a>
+        </figure><figure class="pt pt-land" style="--ar:234.99;--w:3499;--h:1489" data-stagger-item>
+          <a class="pt-frame" href="img/Y23007-lg.webp" data-lightbox="perspectives" data-title="YFC Autofest 2023" data-date="2023" data-w="3499" data-h="1489" data-alt="A yellow Audi R8 with a big rear wing in the YFC Autofest 2023 lot" data-project="work/yfc-autofest-2023/" aria-label="View larger: A yellow Audi R8 with a big rear wing in the YFC Autofest 2023 lot" data-lb-label="selected photographs"><img src="img/Y23007-sm.webp" srcset="img/Y23007-sm.webp 900w, img/Y23007-lg.webp 1800w, img/Y23007-xl.webp 2700w" sizes="(max-width:1068px) 88vw, (max-width:1440px) 55vw, 786px" width="3499" height="1489" alt="A yellow Audi R8 with a big rear wing in the YFC Autofest 2023 lot" loading="lazy" decoding="async" style="background-color:#3a3836;object-position:88.9% 68.8%;"></a>
           <figcaption><a href="work/yfc-autofest-2023/">YFC Autofest 2023</a></figcaption>
-        </figure><figure class="pt pt-port" style="--ar:66.67;--w:2000;--h:3000">
-          <a class="pt-frame" href="img/CU5025-lg.webp" data-lightbox="perspectives" data-title="Complex Union 2025" data-date="July 2025" data-w="2000" data-h="3000" data-alt="A black VIP-style Toyota sedan from behind under pink tent lights" data-project="work/complex-union-2025/" aria-label="View larger: A black VIP-style Toyota sedan from behind under pink tent lights" data-lb-label="selected photographs"><img src="img/CU5025-sm.webp" srcset="img/CU5025-sm.webp 600w, img/CU5025-lg.webp 1200w, img/CU5025-xl.webp 1800w" sizes="(max-width:899px) 50vw, (max-width:1328px) 16vw, 212px" width="2000" height="3000" alt="A black VIP-style Toyota sedan from behind under pink tent lights" loading="lazy" decoding="async" style="background-color:#67645e;object-position:0.0% 80.1%;"></a>
+        </figure><figure class="pt pt-port" style="--ar:66.67;--w:2000;--h:3000" data-stagger-item>
+          <a class="pt-frame" href="img/CU5025-lg.webp" data-lightbox="perspectives" data-title="Complex Union 2025" data-date="July 2025" data-w="2000" data-h="3000" data-alt="A black VIP-style Toyota sedan from behind under pink tent lights" data-project="work/complex-union-2025/" aria-label="View larger: A black VIP-style Toyota sedan from behind under pink tent lights" data-lb-label="selected photographs"><img src="img/CU5025-sm.webp" srcset="img/CU5025-sm.webp 600w, img/CU5025-lg.webp 1200w, img/CU5025-xl.webp 1800w" sizes="(max-width:1068px) 44vw, (max-width:1440px) 16vw, 223px" width="2000" height="3000" alt="A black VIP-style Toyota sedan from behind under pink tent lights" loading="lazy" decoding="async" style="background-color:#67645e;object-position:0.0% 80.1%;"></a>
           <figcaption><a href="work/complex-union-2025/">Complex Union 2025</a></figcaption>
-        </figure></div><div class="pt-row"><figure class="pt pt-port" style="--ar:71.57;--w:1231;--h:1720">
-          <a class="pt-frame" href="img/DZoFVWdlW7f-07-lg.webp" data-lightbox="perspectives" data-title="YFC Autofest 2026" data-date="June 2026" data-w="1231" data-h="1720" data-alt="An orange C7 Corvette in an indoor hall, shot on a fisheye lens" data-project="work/yfc-autofest-2026/" aria-label="View larger: An orange C7 Corvette in an indoor hall, shot on a fisheye lens" data-lb-label="selected photographs"><img src="img/DZoFVWdlW7f-07-sm.webp" srcset="img/DZoFVWdlW7f-07-sm.webp 544w, img/DZoFVWdlW7f-07-lg.webp 1231w" sizes="(max-width:899px) 50vw, (max-width:1328px) 17vw, 225px" width="1231" height="1720" alt="An orange C7 Corvette in an indoor hall, shot on a fisheye lens" loading="lazy" decoding="async" style="background-color:#3b3836;object-position:46.7% 59.2%;"></a>
+        </figure></div><div class="pt-row" data-stagger data-parallax><figure class="pt pt-port" style="--ar:71.57;--w:1231;--h:1720" data-stagger-item>
+          <a class="pt-frame" href="img/DZoFVWdlW7f-07-lg.webp" data-lightbox="perspectives" data-title="YFC Autofest 2026" data-date="June 2026" data-w="1231" data-h="1720" data-alt="An orange C7 Corvette in an indoor hall, shot on a fisheye lens" data-project="work/yfc-autofest-2026/" aria-label="View larger: An orange C7 Corvette in an indoor hall, shot on a fisheye lens" data-lb-label="selected photographs"><img src="img/DZoFVWdlW7f-07-sm.webp" srcset="img/DZoFVWdlW7f-07-sm.webp 544w, img/DZoFVWdlW7f-07-lg.webp 1231w" sizes="(max-width:1068px) 44vw, (max-width:1440px) 16vw, 236px" width="1231" height="1720" alt="An orange C7 Corvette in an indoor hall, shot on a fisheye lens" loading="lazy" decoding="async" style="background-color:#3b3836;object-position:46.7% 59.2%;"></a>
           <figcaption><a href="work/yfc-autofest-2026/">YFC Autofest 2026</a></figcaption>
-        </figure><figure class="pt pt-land" style="--ar:235.21;--w:2879;--h:1224">
-          <a class="pt-frame" href="img/DP39bzrjBtq-09-10-lg.webp" data-lightbox="perspectives" data-title="YFC Oktoberfest 2025" data-date="October 2025" data-w="2879" data-h="1224" data-alt="A black Nissan Skyline with its hood up, a blue 350Z and a shopping-cart go-kart outside Fredericton Nissan" data-project="work/yfc-oktoberfest-2025/" aria-label="View larger: A black Nissan Skyline with its hood up, a blue 350Z and a shopping-cart go-kart outside Fredericton Nissan" data-lb-label="selected photographs"><img src="img/DP39bzrjBtq-09-10-sm.webp" srcset="img/DP39bzrjBtq-09-10-sm.webp 1000w, img/DP39bzrjBtq-09-10-lg.webp 2000w, img/DP39bzrjBtq-09-10-xl.webp 2879w" sizes="(max-width:899px) 100vw, (max-width:1328px) 57vw, 739px" width="2879" height="1224" alt="A black Nissan Skyline with its hood up, a blue 350Z and a shopping-cart go-kart outside Fredericton Nissan" loading="lazy" decoding="async" style="background-color:#4e5255;object-position:22.3% 64.4%;"></a>
+        </figure><figure class="pt pt-land" style="--ar:235.21;--w:2879;--h:1224" data-stagger-item>
+          <a class="pt-frame" href="img/DP39bzrjBtq-09-10-lg.webp" data-lightbox="perspectives" data-title="YFC Oktoberfest 2025" data-date="October 2025" data-w="2879" data-h="1224" data-alt="A black Nissan Skyline with its hood up, a blue 350Z and a shopping-cart go-kart outside Fredericton Nissan" data-project="work/yfc-oktoberfest-2025/" aria-label="View larger: A black Nissan Skyline with its hood up, a blue 350Z and a shopping-cart go-kart outside Fredericton Nissan" data-lb-label="selected photographs"><img src="img/DP39bzrjBtq-09-10-sm.webp" srcset="img/DP39bzrjBtq-09-10-sm.webp 1000w, img/DP39bzrjBtq-09-10-lg.webp 2000w, img/DP39bzrjBtq-09-10-xl.webp 2879w" sizes="(max-width:1068px) 88vw, (max-width:1440px) 54vw, 776px" width="2879" height="1224" alt="A black Nissan Skyline with its hood up, a blue 350Z and a shopping-cart go-kart outside Fredericton Nissan" loading="lazy" decoding="async" style="background-color:#4e5255;object-position:22.3% 64.4%;"></a>
           <figcaption><a href="work/yfc-oktoberfest-2025/">YFC Oktoberfest 2025</a></figcaption>
-        </figure><figure class="pt pt-port" style="--ar:75.00;--w:1440;--h:1920">
-          <a class="pt-frame" href="img/DPz0lGFjDt9-01-lg.webp" data-lightbox="perspectives" data-title="Corvette C5" data-date="October 2025" data-w="1440" data-h="1920" data-alt="A black C5 Corvette in hard autumn sun under a big sky" data-project="work/corvette-c5/" aria-label="View larger: A black C5 Corvette in hard autumn sun under a big sky" data-lb-label="selected photographs"><img src="img/DPz0lGFjDt9-01-sm.webp" srcset="img/DPz0lGFjDt9-01-sm.webp 570w, img/DPz0lGFjDt9-01-lg.webp 1440w" sizes="(max-width:899px) 50vw, (max-width:1328px) 18vw, 236px" width="1440" height="1920" alt="A black C5 Corvette in hard autumn sun under a big sky" loading="lazy" decoding="async" style="background-color:#81807a;object-position:48.9% 55.8%;"></a>
+        </figure><figure class="pt pt-port" style="--ar:75.00;--w:1440;--h:1920" data-stagger-item>
+          <a class="pt-frame" href="img/DPz0lGFjDt9-01-lg.webp" data-lightbox="perspectives" data-title="Corvette C5" data-date="October 2025" data-w="1440" data-h="1920" data-alt="A black C5 Corvette in hard autumn sun under a big sky" data-project="work/corvette-c5/" aria-label="View larger: A black C5 Corvette in hard autumn sun under a big sky" data-lb-label="selected photographs"><img src="img/DPz0lGFjDt9-01-sm.webp" srcset="img/DPz0lGFjDt9-01-sm.webp 570w, img/DPz0lGFjDt9-01-lg.webp 1440w" sizes="(max-width:1068px) 44vw, (max-width:1440px) 17vw, 248px" width="1440" height="1920" alt="A black C5 Corvette in hard autumn sun under a big sky" loading="lazy" decoding="async" style="background-color:#81807a;object-position:48.9% 55.8%;"></a>
           <figcaption><a href="work/corvette-c5/">Corvette C5</a></figcaption>
         </figure></div></div>
+  </section>
+  <section class="section section-alt" id="services" aria-labelledby="services-title">
+    <div class="wrap story-head is-section" data-stagger><p class="t-eyebrow" data-stagger-item>Services</p><h2 class="t-section" id="services-title" data-stagger-item>A shoot built around your&nbsp;car.</h2><div class="t-story story-copy" data-stagger-item><p>Here’s what I shoot, with a past example for&nbsp;each.</p></div></div>
+    <div class="fc-scroller"><div class="fc-row" data-stagger><article class="fc" data-stagger-item>
+          <div class="fc-body">
+            <h3 class="fc-label">Car features</h3>
+            <p class="fc-copy">A shoot that’s all about your car, from the full statics to the details you put the work into.</p>
+            <a class="link" href="work/subaru-impreza-gc8/">See the Impreza feature<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></a>
+          </div>
+          <a class="fc-media" href="work/subaru-impreza-gc8/" tabindex="-1" aria-hidden="true"><img src="img/CX6014-sm.webp" srcset="img/CX6014-sm.webp 600w, img/CX6014-lg.webp 1200w, img/CX6014-xl.webp 1800w" sizes="(max-width:734px) 82vw, (max-width:1068px) 44vw, 300px" width="1800" height="2700" alt="The green Subaru Impreza GC8 at the Stance East booth" loading="lazy" decoding="async" style="background-color:#2a3039;object-position:44.1% 57.9%;"></a>
+        </article><article class="fc" data-stagger-item>
+          <div class="fc-body">
+            <h3 class="fc-label">Event coverage</h3>
+            <p class="fc-copy">Shows and meets, with the cars, the crowd and everything happening around them.</p>
+            <a class="link" href="work/complex-union-2026/">See Complex Union 2026<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></a>
+          </div>
+          <a class="fc-media" href="work/complex-union-2026/" tabindex="-1" aria-hidden="true"><img src="img/CX6005-sm.webp" srcset="img/CX6005-sm.webp 900w, img/CX6005-lg.webp 1800w, img/CX6005-xl.webp 2700w" sizes="(max-width:734px) 82vw, (max-width:1068px) 44vw, 300px" width="2700" height="1519" alt="A teal BMW E36 on silver mesh wheels at the Stance East booth, Complex Union 2026" loading="lazy" decoding="async" style="background-color:#27272d;object-position:41.9% 58.8%;"></a>
+        </article><article class="fc" data-stagger-item>
+          <div class="fc-body">
+            <h3 class="fc-label">Rolling shots</h3>
+            <p class="fc-copy">Shot from another car while yours is moving, so the build looks as good on the road as it does parked.</p>
+            <a class="link" href="work/chevrolet-silverado-2500hd/">See the Silverado<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></a>
+          </div>
+          <a class="fc-media" href="work/chevrolet-silverado-2500hd/" tabindex="-1" aria-hidden="true"><img src="img/AT6001-sm.webp" srcset="img/AT6001-sm.webp 900w, img/AT6001-lg.webp 1800w, img/AT6001-xl.webp 2700w" sizes="(max-width:734px) 82vw, (max-width:1068px) 44vw, 300px" width="2700" height="1519" alt="The black Silverado 2500HD driving toward the camera on an open highway" loading="lazy" decoding="async" style="background-color:#4f5153;object-position:70.2% 58.1%;"></a>
+        </article><article class="fc" data-stagger-item>
+          <div class="fc-body">
+            <h3 class="fc-label">Cover layouts</h3>
+            <p class="fc-copy">A poster to open the set, with a big headline and spec-sheet fine print, like a magazine cover.</p>
+            <a class="link" href="work/honda-accord-cover/">See the Accord cover<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></a>
+          </div>
+          <a class="fc-media is-poster" href="work/honda-accord-cover/" tabindex="-1" aria-hidden="true"><img src="img/C5elEijLN43-01-sm.webp" srcset="img/C5elEijLN43-01-sm.webp 760w, img/C5elEijLN43-01-lg.webp 1280w" sizes="(max-width:734px) 82vw, (max-width:1068px) 44vw, 300px" width="1280" height="1280" alt="Poster: &quot;No time or on time&quot;, a lowered Honda Accord with spec-sheet text" loading="lazy" decoding="async" style="background-color:#6f7072;"></a>
+        </article></div></div>
+  </section>
+  <section class="section book" aria-labelledby="book-title">
+    <div class="wrap story-head" data-stagger><p class="t-eyebrow" data-stagger-item>Booking</p><h2 class="t-standalone" id="book-title" data-stagger-item>How booking works.</h2><div class="t-story story-copy" data-stagger-item><p><strong>Message me to discuss rates, availability, and location.</strong> Here’s how a shoot comes together, shown with frames from the <a href="work/subaru-impreza-gc8/">GC8 Impreza</a> feature.</p></div></div>
+    <div class="wrap book-grid" data-steps>
+      <div class="book-media"><div class="book-sticky"><div class="book-shot is-active" data-step-media="0"><img src="img/CX6018-sm.webp" srcset="img/CX6018-sm.webp 600w, img/CX6018-lg.webp 1200w, img/CX6018-xl.webp 1800w" sizes="(max-width:734px) 88vw, (max-width:1068px) 40vw, 520px" width="1800" height="2700" alt="Someone sitting on the front of the green GC8 Impreza at the Stance East booth" loading="lazy" decoding="async" style="background-color:#3e4046;object-position:0.0% 66.7%;"></div><div class="book-shot" data-step-media="1"><img src="img/CX6019-sm.webp" srcset="img/CX6019-sm.webp 506w, img/CX6019-lg.webp 1013w, img/CX6019-xl.webp 1519w" sizes="(max-width:734px) 88vw, (max-width:1068px) 40vw, 520px" width="1519" height="2700" alt="The green GC8 Impreza head-on, with a roof rack and Hella fog lights" loading="lazy" decoding="async" style="background-color:#232629;object-position:69.7% 42.9%;"></div><div class="book-shot" data-step-media="2"><img src="img/CX6020-sm.webp" srcset="img/CX6020-sm.webp 600w, img/CX6020-lg.webp 1200w, img/CX6020-xl.webp 1800w" sizes="(max-width:734px) 88vw, (max-width:1068px) 40vw, 520px" width="1800" height="2700" alt="Close-up of the GC8 Impreza’s white wheel and green fender" loading="lazy" decoding="async" style="background-color:#36353a;object-position:62.0% 55.8%;"></div></div></div>
+      <ol class="book-steps"><li class="book-step is-active" data-step="0">
+          <div class="book-inline"><img src="img/CX6018-sm.webp" srcset="img/CX6018-sm.webp 600w, img/CX6018-lg.webp 1200w, img/CX6018-xl.webp 1800w" sizes="(max-width:734px) 88vw, 1px" width="1800" height="2700" alt="" loading="lazy" decoding="async" style="background-color:#3e4046;object-position:0.0% 66.7%;"></div>
+          <span class="book-num">01</span>
+          <h3 class="book-title">Send the details</h3>
+          <p class="t-callout">DM @ln._photos on Instagram with your car, a date that works and where you’d like to shoot.</p>
+        </li><li class="book-step" data-step="1">
+          <div class="book-inline"><img src="img/CX6019-sm.webp" srcset="img/CX6019-sm.webp 506w, img/CX6019-lg.webp 1013w, img/CX6019-xl.webp 1519w" sizes="(max-width:734px) 88vw, 1px" width="1519" height="2700" alt="" loading="lazy" decoding="async" style="background-color:#232629;object-position:69.7% 42.9%;"></div>
+          <span class="book-num">02</span>
+          <h3 class="book-title">Plan the shoot</h3>
+          <p class="t-callout">We’ll sort out the time, the spot and anything else the shoot needs, right there in the chat.</p>
+        </li><li class="book-step" data-step="2">
+          <div class="book-inline"><img src="img/CX6020-sm.webp" srcset="img/CX6020-sm.webp 600w, img/CX6020-lg.webp 1200w, img/CX6020-xl.webp 1800w" sizes="(max-width:734px) 88vw, 1px" width="1800" height="2700" alt="" loading="lazy" decoding="async" style="background-color:#36353a;object-position:62.0% 55.8%;"></div>
+          <span class="book-num">03</span>
+          <h3 class="book-title">Make it happen</h3>
+          <p class="t-callout">Once we’ve agreed on the details, it’s booked. Then we go shoot.</p>
+        </li></ol>
     </div>
   </section>
-  <section class="section" id="services" aria-labelledby="services-title">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <div>
-          <p class="eyebrow">Services</p>
-          <h2 class="h-sec" id="services-title">A shoot built around your&nbsp;car.</h2>
-          <p class="lede">Here’s what I shoot, with a past example for&nbsp;each.</p>
-        </div>
-      </div>
-      <div class="svc-grid"><article class="svc">
-          <a class="svc-media" href="work/subaru-impreza-gc8/" tabindex="-1" aria-hidden="true"><img src="img/CX6014-sm.webp" srcset="img/CX6014-sm.webp 600w, img/CX6014-lg.webp 1200w, img/CX6014-xl.webp 1800w" sizes="(max-width:719px) 100vw, (max-width:1328px) 46vw, 588px" width="1800" height="2700" alt="The green Subaru Impreza GC8 at the Stance East booth" loading="lazy" decoding="async" style="background-color:#2a3039;object-position:44.1% 57.9%;"></a>
-          <h3 class="svc-title">Car features</h3>
-          <p>A shoot that’s all about your car, from the full statics to the details you put the work into.</p>
-          <a class="link" href="work/subaru-impreza-gc8/">See the Impreza feature<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></a>
-        </article><article class="svc">
-          <a class="svc-media" href="work/complex-union-2025/" tabindex="-1" aria-hidden="true"><img src="img/CU5012-sm.webp" srcset="img/CU5012-sm.webp 900w, img/CU5012-lg.webp 1800w, img/CU5012-xl.webp 2700w" sizes="(max-width:719px) 100vw, (max-width:1328px) 46vw, 588px" width="2700" height="1800" alt="A blue Subaru Impreza GC8 in front of the Illicit booth banner at Complex Union 2025" loading="lazy" decoding="async" style="background-color:#50666f;object-position:76.4% 70.0%;"></a>
-          <h3 class="svc-title">Event coverage</h3>
-          <p>Shows and meets, with the cars, the crowd and everything happening around them.</p>
-          <a class="link" href="work/complex-union-2025/">See Complex Union 2025<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></a>
-        </article><article class="svc">
-          <a class="svc-media" href="work/chevrolet-silverado-2500hd/" tabindex="-1" aria-hidden="true"><img src="img/AT6001-sm.webp" srcset="img/AT6001-sm.webp 900w, img/AT6001-lg.webp 1800w, img/AT6001-xl.webp 2700w" sizes="(max-width:719px) 100vw, (max-width:1328px) 46vw, 588px" width="2700" height="1519" alt="The black Silverado 2500HD driving toward the camera on an open highway" loading="lazy" decoding="async" style="background-color:#4f5153;object-position:70.2% 58.1%;"></a>
-          <h3 class="svc-title">Rolling shots</h3>
-          <p>Shot from another car while yours is moving, so the build looks as good on the road as it does parked.</p>
-          <a class="link" href="work/chevrolet-silverado-2500hd/">See the Silverado<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></a>
-        </article><article class="svc">
-          <a class="svc-media is-poster" href="work/honda-accord-cover/" tabindex="-1" aria-hidden="true"><img src="img/C5elEijLN43-01-sm.webp" srcset="img/C5elEijLN43-01-sm.webp 760w, img/C5elEijLN43-01-lg.webp 1280w" sizes="(max-width:719px) 70vw, (max-width:1328px) 30vw, 400px" width="1280" height="1280" alt="Poster: &quot;No time or on time&quot;, a lowered Honda Accord with spec-sheet text" loading="lazy" decoding="async" style="background-color:#6f7072;"></a>
-          <h3 class="svc-title">Cover layouts</h3>
-          <p>A poster to open the set, with a big headline and spec-sheet fine print, like a magazine cover.</p>
-          <a class="link" href="work/honda-accord-cover/">See the Accord cover<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></a>
-        </article></div>
-      <div class="booking reveal" aria-labelledby="booking-title">
-        <div class="booking-head">
-          <h3 class="h-sub" id="booking-title">How booking works</h3>
-          <p>Message me to discuss rates, availability, and location.</p>
-        </div>
-        <ol class="steps"><li><span class="step-num">01</span><h4>Send the details</h4><p>DM @ln._photos on Instagram with your car, a date that works and where you’d like to shoot.</p></li><li><span class="step-num">02</span><h4>Plan the shoot</h4><p>We’ll sort out the time, the spot and anything else the shoot needs, right there in the chat.</p></li><li><span class="step-num">03</span><h4>Make it happen</h4><p>Once we’ve agreed on the details, it’s booked. Then we go shoot.</p></li></ol>
-      </div>
-    </div>
-  </section>
-  <section class="section about" id="about" aria-labelledby="about-title">
-    <div class="wrap about-grid">
-      <div class="about-copy reveal">
-        <p class="eyebrow">About</p>
-        <h2 class="h-sec" id="about-title">Behind the camera.</h2>
-        <p class="lede">I shoot cars around New Brunswick, Canada, as LN&nbsp;Photos.</p>
-        <p class="body">Car features are planned with the owner, like the <a href="work/mazda-mx-5-miata-na/"><span class="nowrap">MX-5</span></a>, the <a href="work/chevrolet-silverado-2500hd/">Silverado</a> and the <a href="work/subaru-impreza-gc8/">Impreza</a>. We pick the spots and the timing together.</p>
-        <p class="body">I start with the build, then go looking for light and a setting that suit it, whether that’s a rooftop lot in daylight, low sun through the trees or a gas pump after dark. The details that make a car yours get their own frames too.</p>
-        <dl class="facts">
-          <div><dt>Based in</dt><dd>New Brunswick, Canada</dd></div>
-          <div><dt>Shows covered</dt><dd>YFC Autofest, YFC Oktoberfest, Complex Union</dd></div>
-          <div><dt>Bookings</dt><dd>Instagram direct message</dd></div>
-        </dl>
-        <p class="bio-note">“Close your eyes and make a wish.” <span>From the @ln._photos bio</span></p>
-      </div>
-      <figure class="about-photo">
-        <a class="about-frame" href="img/CX6007-lg.webp" data-lightbox="about" data-title="Complex Union 2026" data-date="September 2026" data-w="2700" data-h="1519" data-alt="Two slammed sedans, one white and one black, under the stands at Complex Union 2026 as a visitor walks past" data-project="work/complex-union-2026/" aria-label="View larger: Two slammed sedans, one white and one black, under the stands at Complex Union 2026 as a visitor walks past" data-lb-label="photograph"><img src="img/CX6007-sm.webp" srcset="img/CX6007-sm.webp 900w, img/CX6007-lg.webp 1800w, img/CX6007-xl.webp 2700w" sizes="(max-width:899px) 100vw, (max-width:1328px) 50vw, 640px" width="2700" height="1519" alt="Two slammed sedans, one white and one black, under the stands at Complex Union 2026 as a visitor walks past" loading="lazy" decoding="async" style="background-color:#21252b;object-position:76.7% 70.3%;"></a>
-        <figcaption><a href="work/complex-union-2026/">Complex Union 2026</a></figcaption>
-      </figure>
+  <section class="section section-alt about" id="about" aria-labelledby="about-title">
+    <div class="wrap story-head" data-stagger><p class="t-eyebrow" data-stagger-item>About</p><h2 class="t-standalone" id="about-title" data-stagger-item>Behind the camera.</h2><div class="t-story story-copy" data-stagger-item><p><strong>I shoot cars around New Brunswick, Canada, as LN&nbsp;Photos.</strong> Car features are planned with the owner, like the <a href="work/mazda-mx-5-miata-na/"><span class="nowrap">MX-5</span></a>, the <a href="work/chevrolet-silverado-2500hd/">Silverado</a> and the <a href="work/subaru-impreza-gc8/">Impreza</a>. We pick the spots and the timing together.</p></div></div>
+    <figure class="about-photo" data-expand>
+      <a class="about-frame" href="img/CX6007-lg.webp" data-lightbox="about" data-title="Complex Union 2026" data-date="September 2026" data-w="2700" data-h="1519" data-alt="Two slammed sedans, one white and one black, under the stands at Complex Union 2026 as a visitor walks past" data-project="work/complex-union-2026/" aria-label="View larger: Two slammed sedans, one white and one black, under the stands at Complex Union 2026 as a visitor walks past" data-lb-label="photograph"><img src="img/CX6007-sm.webp" srcset="img/CX6007-sm.webp 900w, img/CX6007-lg.webp 1800w, img/CX6007-xl.webp 2700w" sizes="min(100vw, 1680px)" width="2700" height="1519" alt="Two slammed sedans, one white and one black, under the stands at Complex Union 2026 as a visitor walks past" loading="lazy" decoding="async" style="background-color:#21252b;object-position:76.7% 70.3%;"></a>
+      <figcaption class="wrap"><a href="work/complex-union-2026/">Complex Union 2026</a></figcaption>
+    </figure>
+    <div class="wrap about-more" data-stagger>
+      <p class="t-story about-body" data-stagger-item><strong>I start with the build,</strong> then go looking for light and a setting that suit it, whether that’s a rooftop lot in daylight, low sun through the trees or a gas pump after dark. The details that make a car yours get their own frames&nbsp;too.</p>
+      <ul class="touts"><li class="tout" data-stagger-item><span class="tout-value">New Brunswick</span><span class="tout-label">Based in New Brunswick, Canada.</span></li><li class="tout" data-stagger-item><span class="tout-value">3 shows</span><span class="tout-label">YFC Autofest, YFC Oktoberfest and Complex Union.</span></li><li class="tout" data-stagger-item><span class="tout-value">15 projects</span><span class="tout-label">Car features, show coverage and cover layouts.</span></li><li class="tout" data-stagger-item><span class="tout-value">Instagram DM</span><span class="tout-label">Every booking starts with a message.</span></li></ul>
+      <p class="bio-note" data-stagger-item>“Close your eyes and make a wish.” <span>From the @ln._photos bio</span></p>
     </div>
   </section>
   <section class="inquiry" id="contact" aria-labelledby="contact-title">
-    <div class="wrap inquiry-inner reveal">
-      <p class="eyebrow">Book a shoot</p>
-      <h2 class="h-hero" id="contact-title">Your car.<br> The next feature.</h2>
-      <p class="lede">Send the car, your preferred date, and the location. Let’s plan a&nbsp;shoot.</p>
-      <div class="actions">
+    <div class="wrap inquiry-inner" data-stagger>
+      <p class="t-eyebrow" data-stagger-item>Book a shoot</p>
+      <h2 class="t-standalone" id="contact-title" data-stagger-item>Your car.<br> The next feature.</h2>
+      <p class="t-story story-copy" data-stagger-item>Send the car, your preferred date, and the location. Let’s plan a&nbsp;shoot.</p>
+      <div class="actions" data-stagger-item>
         <a class="btn btn-primary btn-lg" href="https://ig.me/m/ln._photos" target="_blank" rel="noopener" aria-describedby="dm-note">Message on Instagram<svg class="i-out" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5l5-5M4.5 3.5h4v4"/></svg></a>
         <div class="handle">
           <span class="handle-text" id="ig-handle">@ln._photos</span>
           <button type="button" class="copy-btn" data-copy="@ln._photos" data-status="copy-status">Copy</button>
         </div>
       </div>
-<p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+      <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
       <p class="fineprint" id="dm-note">This opens a DM with @ln._photos on Instagram. Nothing’s booked until we’ve agreed on the details. You can also check out the <a href="https://www.instagram.com/ln._photos/" target="_blank" rel="noopener">Instagram profile<svg class="i-out" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5l5-5M4.5 3.5h4v4"/></svg></a></p>
-
+    </div>
+  </section>
+  <section class="section-index" aria-labelledby="index-title">
+    <div class="wrap" data-stagger>
+      <h2 class="t-section index-title" id="index-title" data-stagger-item>LN Photos</h2>
+      <div class="index-cols" data-stagger-item>
+        <div class="index-col">
+          <h3 class="index-head">Explore</h3>
+          <ul class="index-list is-elevated">
+            <li><a href="work/">All projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+        <div class="index-col">
+          <h3 class="index-head">Projects</h3>
+          <ul class="index-list"><li><a href="work/#features">Car features</a></li><li><a href="work/#events">Events & shows</a></li><li><a href="work/#editorial">Editorial</a></li></ul>
+        </div>
+        <div class="index-col">
+          <h3 class="index-head">Get in touch</h3>
+          <ul class="index-list">
+            <li><a href="#contact">Book a shoot</a></li>
+            <li><a href="https://ig.me/m/ln._photos" target="_blank" rel="noopener">Message on Instagram<svg class="i-out" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5l5-5M4.5 3.5h4v4"/></svg></a></li>
+            <li><a href="https://www.instagram.com/ln._photos/" target="_blank" rel="noopener">@ln._photos on Instagram<svg class="i-out" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5l5-5M4.5 3.5h4v4"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 </main>
