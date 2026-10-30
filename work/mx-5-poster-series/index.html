@@ -22,15 +22,17 @@
 (function(d){d.className='js';setTimeout(function(){if(!window.LN_READY){d.className='no-js js-failed';}},3000);})(document.documentElement);
 </script>
 </head>
-<body>
+<body class="t-dark t-ipad has-lnav p-project p-editorial">
 <a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="nav-bar">
+<header class="gnav">
+  <div class="gnav-bar">
     <a class="wordmark" href="../../"><img src="../../assets/wordmark.svg" alt="LN Photos" width="155" height="12"></a>
     <nav class="nav" aria-label="Main">
-      <ul class="nav-links" id="nav-links">
-        <li><a href="../../work/" aria-current="page">Work</a></li>
-        <li><a href="../../#services">Services</a></li>
+      <ul class="gnav-links" id="nav-links">
+        <li><a href="../../work/features/">Car features</a></li>
+        <li><a href="../../work/events/">Events</a></li>
+        <li><a href="../../work/editorial/" aria-current="true">Editorial</a></li>
+        <li><a href="../../work/">All projects</a></li>
         <li><a href="../../#about">About</a></li>
       </ul>
     </nav>
@@ -38,39 +40,53 @@
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links"><span class="sr-only">Menu</span><span class="menu-icon" aria-hidden="true"></span></button>
   </div>
 </header>
-
-<main id="main">
-  <section class="p-open is-editorial">
-    <div class="wrap p-open-grid">
-      <div class="p-intro" data-stagger>
-        <nav class="crumbs" aria-label="Breadcrumb" data-stagger-item><a href="../../work/">Work</a><span aria-hidden="true">/</span><a href="../../work/#editorial">Editorial</a></nav>
-        <h1 class="h-sec" data-stagger-item><span class="nowrap">MX-5</span> Poster Series</h1>
-        
-        <p class="lede" data-stagger-item>Posters I made from the MX-5 shoot, with big headline type and spec-sheet fine print over the photos. Each one is shown uncropped.</p>
-        <a class="link p-jump" href="#gallery" data-stagger-item>See the set<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></a>
-      </div>
-      <figure class="p-lead"><a href="../../img/TK6009-lg.webp" data-lightbox="project" data-title="MX-5 Poster Series" data-date="2026" data-w="3481" data-h="4641" data-alt="MX-5 Poster Series, photo 1 of 7" aria-label="View larger: MX-5 Poster Series, photo 1 of 7" data-lb-label="photographs"><img src="../../img/TK6009-sm.webp" srcset="../../img/TK6009-sm.webp 675w, ../../img/TK6009-lg.webp 1350w, ../../img/TK6009-xl.webp 2025w" sizes="(max-width:860px) 100vw, 46vw" width="3481" height="4641" alt="MX-5 Poster Series, photo 1 of 7" fetchpriority="high" loading="eager" decoding="async" style="background-color:#868f79;"></a></figure>
+<nav class="lnav" aria-label="MX-5 Poster Series">
+  <div class="lnav-bar">
+    <a class="lnav-title" href="../../work/mx-5-poster-series/"><span class="nowrap">MX-5</span> Poster Series</a>
+    <ul class="lnav-links"><li><a href="../../work/editorial/">Overview</a></li><li><a href="../../work/#editorial">All projects</a></li></ul>
+    <a class="nav-cta" href="../../#contact">Book a shoot</a>
+  </div>
+</nav>
+<main id="main" class="project project-editorial">
+  <section class="pd-hero" aria-labelledby="p-title">
+    <div class="wrap" data-stagger>
+      <p class="t-eyebrow" data-stagger-item>Editorial</p>
+      <h1 class="t-hero" id="p-title" data-stagger-item><span class="grad" style="--grad:linear-gradient(90deg,#7fb0ff,#c8a2ff 50%,#ff9fb5)"><span class="nowrap">MX-5</span> Poster Series</span></h1>
+      <p class="t-story story-copy" data-stagger-item>Posters I made from the MX-5 shoot, with big headline type and spec-sheet fine print over the photos. Each one is shown uncropped.</p>
     </div>
+    <figure class="wrap pd-lead"><a href="../../img/TK6009-lg.webp" data-lightbox="project" data-title="MX-5 Poster Series" data-date="2026" data-w="3481" data-h="4641" data-alt="MX-5 Poster Series, photo 1 of 7" aria-label="View larger: MX-5 Poster Series, photo 1 of 7" data-lb-label="photographs"><img src="../../img/TK6009-sm.webp" srcset="../../img/TK6009-sm.webp 675w, ../../img/TK6009-lg.webp 1350w, ../../img/TK6009-xl.webp 2025w" sizes="(max-width:1068px) 100vw, 46vw" width="3481" height="4641" alt="MX-5 Poster Series, photo 1 of 7" fetchpriority="high" loading="eager" decoding="async" style="background-color:#868f79;"></a></figure>
+    <div class="wrap p-specs" data-stagger><div data-stagger-item><dl class="specs"><div class="spec"><dt>Category</dt><dd><a href="../../work/editorial/">Editorial</a></dd></div><div class="spec"><dt>Year</dt><dd>2026</dd></div><div class="spec"><dt>Owner</dt><dd><a class="owner" href="https://www.instagram.com/savannasharp_7/" target="_blank" rel="noopener">@savannasharp_7</a></dd></div><div class="spec"><dt>Photographs</dt><dd>7</dd></div></dl></div></div>
   </section>
-  <section class="wrap credits" aria-label="Credits"><dl><div><dt>Category</dt><dd>Editorial</dd></div><div><dt>Year</dt><dd>2026</dd></div><div><dt>Owner</dt><dd><a class="owner" href="https://www.instagram.com/savannasharp_7/" target="_blank" rel="noopener">@savannasharp_7</a></dd></div><div><dt>Photographs</dt><dd>7</dd></div></dl></section>
-  <section class="wrap gallery is-editorial" id="gallery" aria-label="Photographs"><div class="prow"><a class="ph" style="--ar:75.00;--w:4000;--h:5333" href="../../img/TK6035-lg.webp" data-lightbox="project" data-lb-label="photographs" data-title="MX-5 Poster Series" data-date="2026" data-w="4000" data-h="5333" data-alt="MX-5 Poster Series, photo 2 of 7" aria-label="View larger: MX-5 Poster Series, photo 2 of 7"><img src="../../img/TK6035-sm.webp" srcset="../../img/TK6035-sm.webp 675w, ../../img/TK6035-lg.webp 1350w, ../../img/TK6035-xl.webp 2025w" sizes="(max-width:640px) 100vw, (max-width:1328px) 40vw, 480px" width="4000" height="5333" alt="" loading="lazy" decoding="async" style="background-color:#2a1f17;"></a><a class="ph" style="--ar:56.27;--w:1688;--h:3000" href="../../img/TK6031-lg.webp" data-lightbox="project" data-lb-label="photographs" data-title="MX-5 Poster Series" data-date="2026" data-w="1688" data-h="3000" data-alt="MX-5 Poster Series, photo 3 of 7" aria-label="View larger: MX-5 Poster Series, photo 3 of 7"><img src="../../img/TK6031-sm.webp" srcset="../../img/TK6031-sm.webp 506w, ../../img/TK6031-lg.webp 1013w, ../../img/TK6031-xl.webp 1519w" sizes="(max-width:640px) 50vw, (max-width:1328px) 30vw, 360px" width="1688" height="3000" alt="" loading="lazy" decoding="async" style="background-color:#464837;"></a><a class="ph" style="--ar:56.27;--w:3217;--h:5717" href="../../img/TK6033-lg.webp" data-lightbox="project" data-lb-label="photographs" data-title="MX-5 Poster Series" data-date="2026" data-w="3217" data-h="5717" data-alt="MX-5 Poster Series, photo 4 of 7" aria-label="View larger: MX-5 Poster Series, photo 4 of 7"><img src="../../img/TK6033-sm.webp" srcset="../../img/TK6033-sm.webp 506w, ../../img/TK6033-lg.webp 1013w, ../../img/TK6033-xl.webp 1519w" sizes="(max-width:640px) 50vw, (max-width:1328px) 30vw, 360px" width="3217" height="5717" alt="" loading="lazy" decoding="async" style="background-color:#4a4c37;"></a></div><figure class="feature"><a href="../../img/TK6007-lg.webp" data-lightbox="project" data-title="MX-5 Poster Series" data-date="2026" data-w="3000" data-h="2000" data-alt="MX-5 Poster Series, photo 5 of 7" aria-label="View larger: MX-5 Poster Series, photo 5 of 7" data-lb-label="photographs"><img src="../../img/TK6007-sm.webp" srcset="../../img/TK6007-sm.webp 900w, ../../img/TK6007-lg.webp 1800w, ../../img/TK6007-xl.webp 2700w" sizes="(max-width:860px) 100vw, min(100vw, 1440px)" width="3000" height="2000" alt="MX-5 Poster Series, photo 5 of 7" loading="lazy" decoding="async" style="background-color:#707070;"></a></figure><div class="prow"><a class="ph" style="--ar:75.00;--w:4000;--h:5333" href="../../img/TK6015-lg.webp" data-lightbox="project" data-lb-label="photographs" data-title="MX-5 Poster Series" data-date="2026" data-w="4000" data-h="5333" data-alt="MX-5 Poster Series, photo 6 of 7" aria-label="View larger: MX-5 Poster Series, photo 6 of 7"><img src="../../img/TK6015-sm.webp" srcset="../../img/TK6015-sm.webp 675w, ../../img/TK6015-lg.webp 1350w, ../../img/TK6015-xl.webp 2025w" sizes="(max-width:640px) 100vw, (max-width:1328px) 40vw, 480px" width="4000" height="5333" alt="" loading="lazy" decoding="async" style="background-color:#727068;"></a><a class="ph" style="--ar:112.50;--w:4500;--h:4000" href="../../img/TK6011-lg.webp" data-lightbox="project" data-lb-label="photographs" data-title="MX-5 Poster Series" data-date="2026" data-w="4500" data-h="4000" data-alt="MX-5 Poster Series, photo 7 of 7" aria-label="View larger: MX-5 Poster Series, photo 7 of 7"><img src="../../img/TK6011-sm.webp" srcset="../../img/TK6011-sm.webp 900w, ../../img/TK6011-lg.webp 1800w, ../../img/TK6011-xl.webp 2700w" sizes="(max-width:640px) 50vw, (max-width:1328px) 60vw, 720px" width="4500" height="4000" alt="" loading="lazy" decoding="async" style="background-color:#5d585b;"></a></div></section>
-  <nav class="wrap pager" aria-label="More projects"><a class="pg prev" href="../../work/chevrolet-silverado-2500hd/"><span class="thumb"><img src="../../img/AT6012-sm.webp" srcset="../../img/AT6012-sm.webp 506w, ../../img/AT6012-lg.webp 1013w, ../../img/AT6012-xl.webp 1519w" sizes="120px" width="1519" height="2700" alt="" loading="lazy" decoding="async" style="background-color:#545b63;object-position:66.0% 62.0%"></span><span class="pg-text"><span class="pg-label">Previous project</span><span class="pg-title">Chevrolet Silverado 2500HD</span></span></a><a class="pg next" href="../../work/2025-season-recap/"><span class="pg-text"><span class="pg-label">Next project</span><span class="pg-title">2025 Season Recap</span></span><span class="thumb contain"><img src="../../img/DUiwiDAlfu7-05-sm.webp" srcset="../../img/DUiwiDAlfu7-05-sm.webp 570w, ../../img/DUiwiDAlfu7-05-lg.webp 1440w" sizes="120px" width="1440" height="1920" alt="" loading="lazy" decoding="async" style="background-color:#8d8e7a;object-position:61.0% 59.5%"></span></a></nav>
-  <section class="cta-strip" aria-labelledby="cta-title">
-    <div class="wrap cta-inner">
-      <div><h2 class="h-sub" id="cta-title">Your car. The next feature.</h2><p>DM @ln._photos with your car, a date and where you’d like to shoot.</p></div>
-      <a class="btn btn-primary" href="https://ig.me/m/ln._photos" target="_blank" rel="noopener">Message on Instagram<svg class="i-out" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5l5-5M4.5 3.5h4v4"/></svg></a>
+  <section class="wrap gallery is-editorial" id="gallery" aria-label="Photographs"><div class="prow"><a class="ph" style="--ar:75.00;--w:4000;--h:5333" href="../../img/TK6035-lg.webp" data-lightbox="project" data-lb-label="photographs" data-title="MX-5 Poster Series" data-date="2026" data-w="4000" data-h="5333" data-alt="MX-5 Poster Series, photo 2 of 7" aria-label="View larger: MX-5 Poster Series, photo 2 of 7"><img src="../../img/TK6035-sm.webp" srcset="../../img/TK6035-sm.webp 675w, ../../img/TK6035-lg.webp 1350w, ../../img/TK6035-xl.webp 2025w" sizes="(max-width:640px) 100vw, (max-width:1328px) 40vw, 480px" width="4000" height="5333" alt="" loading="lazy" decoding="async" style="background-color:#2a1f17;"></a><a class="ph" style="--ar:56.27;--w:1688;--h:3000" href="../../img/TK6031-lg.webp" data-lightbox="project" data-lb-label="photographs" data-title="MX-5 Poster Series" data-date="2026" data-w="1688" data-h="3000" data-alt="MX-5 Poster Series, photo 3 of 7" aria-label="View larger: MX-5 Poster Series, photo 3 of 7"><img src="../../img/TK6031-sm.webp" srcset="../../img/TK6031-sm.webp 506w, ../../img/TK6031-lg.webp 1013w, ../../img/TK6031-xl.webp 1519w" sizes="(max-width:640px) 50vw, (max-width:1328px) 30vw, 360px" width="1688" height="3000" alt="" loading="lazy" decoding="async" style="background-color:#464837;"></a><a class="ph" style="--ar:56.27;--w:3217;--h:5717" href="../../img/TK6033-lg.webp" data-lightbox="project" data-lb-label="photographs" data-title="MX-5 Poster Series" data-date="2026" data-w="3217" data-h="5717" data-alt="MX-5 Poster Series, photo 4 of 7" aria-label="View larger: MX-5 Poster Series, photo 4 of 7"><img src="../../img/TK6033-sm.webp" srcset="../../img/TK6033-sm.webp 506w, ../../img/TK6033-lg.webp 1013w, ../../img/TK6033-xl.webp 1519w" sizes="(max-width:640px) 50vw, (max-width:1328px) 30vw, 360px" width="3217" height="5717" alt="" loading="lazy" decoding="async" style="background-color:#4a4c37;"></a></div><figure class="feature"><a href="../../img/TK6007-lg.webp" data-lightbox="project" data-title="MX-5 Poster Series" data-date="2026" data-w="3000" data-h="2000" data-alt="MX-5 Poster Series, photo 5 of 7" aria-label="View larger: MX-5 Poster Series, photo 5 of 7" data-lb-label="photographs"><img src="../../img/TK6007-sm.webp" srcset="../../img/TK6007-sm.webp 900w, ../../img/TK6007-lg.webp 1800w, ../../img/TK6007-xl.webp 2700w" sizes="(max-width:1068px) 100vw, min(100vw, 1260px)" width="3000" height="2000" alt="MX-5 Poster Series, photo 5 of 7" loading="lazy" decoding="async" style="background-color:#707070;"></a></figure><div class="prow"><a class="ph" style="--ar:75.00;--w:4000;--h:5333" href="../../img/TK6015-lg.webp" data-lightbox="project" data-lb-label="photographs" data-title="MX-5 Poster Series" data-date="2026" data-w="4000" data-h="5333" data-alt="MX-5 Poster Series, photo 6 of 7" aria-label="View larger: MX-5 Poster Series, photo 6 of 7"><img src="../../img/TK6015-sm.webp" srcset="../../img/TK6015-sm.webp 675w, ../../img/TK6015-lg.webp 1350w, ../../img/TK6015-xl.webp 2025w" sizes="(max-width:640px) 100vw, (max-width:1328px) 40vw, 480px" width="4000" height="5333" alt="" loading="lazy" decoding="async" style="background-color:#727068;"></a><a class="ph" style="--ar:112.50;--w:4500;--h:4000" href="../../img/TK6011-lg.webp" data-lightbox="project" data-lb-label="photographs" data-title="MX-5 Poster Series" data-date="2026" data-w="4500" data-h="4000" data-alt="MX-5 Poster Series, photo 7 of 7" aria-label="View larger: MX-5 Poster Series, photo 7 of 7"><img src="../../img/TK6011-sm.webp" srcset="../../img/TK6011-sm.webp 900w, ../../img/TK6011-lg.webp 1800w, ../../img/TK6011-xl.webp 2700w" sizes="(max-width:640px) 50vw, (max-width:1328px) 60vw, 720px" width="4500" height="4000" alt="" loading="lazy" decoding="async" style="background-color:#5d585b;"></a></div></section>
+  <section class="section section-alt" aria-labelledby="more-title">
+    <div class="wrap pager-head" data-stagger><h2 class="t-section" id="more-title" data-stagger-item>More editorial.</h2>
+      <a class="link sec-link" href="../../work/editorial/" data-stagger-item>Editorial<svg class="i-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5L8 6l-3.5 3.5"/></svg></a></div>
+    <div class="wrap pager-cards" data-stagger><a class="pcard" href="../../work/2025-season-recap/" data-stagger-item>
+          <span class="pcard-media is-poster"><img src="../../img/DUiwiDAlfu7-05-sm.webp" srcset="../../img/DUiwiDAlfu7-05-sm.webp 570w, ../../img/DUiwiDAlfu7-05-lg.webp 1440w" sizes="(max-width:734px) 88vw, (max-width:1068px) 44vw, 400px" width="1440" height="1920" alt="" loading="lazy" decoding="async" style="background-color:#8d8e7a;"></span>
+          <span class="pcard-body"><span class="pcard-meta">February 2026 · 7 photographs</span><span class="pcard-title">2025 Season Recap</span></span>
+        </a><a class="pcard" href="../../work/honda-accord-cover/" data-stagger-item>
+          <span class="pcard-media is-poster"><img src="../../img/C5elEijLN43-01-sm.webp" srcset="../../img/C5elEijLN43-01-sm.webp 760w, ../../img/C5elEijLN43-01-lg.webp 1280w" sizes="(max-width:734px) 88vw, (max-width:1068px) 44vw, 400px" width="1280" height="1280" alt="" loading="lazy" decoding="async" style="background-color:#6f7072;"></span>
+          <span class="pcard-body"><span class="pcard-meta">April 2024 · 1 photographs</span><span class="pcard-title">Honda Accord Cover</span></span>
+        </a></div>
+  </section>
+  <section class="cta-strip section-alt" aria-labelledby="cta-title">
+    <div class="wrap cta-inner" data-stagger>
+      <h2 class="t-section" id="cta-title" data-stagger-item>Your car. The next feature.</h2>
+      <p data-stagger-item>DM @ln._photos with your car, a date and where you’d like to shoot.</p>
+      <div class="actions" data-stagger-item><a class="btn btn-primary" href="https://ig.me/m/ln._photos" target="_blank" rel="noopener">Message on Instagram<svg class="i-out" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5l5-5M4.5 3.5h4v4"/></svg></a>
+        <a class="btn btn-outline" href="../../#contact">How booking works</a></div>
     </div>
   </section>
 </main>
 <footer class="site-footer">
   <div class="wrap">
     <div class="foot-top">
-      <a class="wordmark" href="../../"><img src="../../assets/wordmark.svg" alt="LN Photos" width="155" height="12"></a>
       <nav aria-label="Footer">
         <ul class="foot-links">
+          <li><a href="../../work/features/">Car features</a></li>
+          <li><a href="../../work/events/">Events &amp; shows</a></li>
+          <li><a href="../../work/editorial/">Editorial</a></li>
           <li><a href="../../work/">All projects</a></li>
-          <li><a href="../../#services">Services</a></li>
-          <li><a href="../../#about">About</a></li>
           <li><a href="../../#contact">Book a shoot</a></li>
           <li><a href="https://www.instagram.com/ln._photos/" target="_blank" rel="noopener">Instagram<svg class="i-out" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5l5-5M4.5 3.5h4v4"/></svg></a></li>
         </ul>

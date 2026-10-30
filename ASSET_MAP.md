@@ -5,36 +5,64 @@ Widths are the real pixel widths of the published variants. Crops use the car bo
 
 | Slot | Image | Project | Source px | Published widths | Source | Notes |
 |---|---|---|---|---|---|---|
-| Hero | `YA5020` | YFC Autofest 2025 | 3000×1276 | 900, 1800, 2700, 3600 | Library original `2025\YFC\Autofest\Edited\DSC00483-Enhanced-NR-2.jpg` (6000×2553) | landscape screens: edge to edge above the headline, then framed as you scroll |
-| Hero (portrait screens) | `YA5012` | YFC Autofest 2025 | 3104×5516 | 506, 1013, 1519, 2400 | Library original `2025\YFC\Autofest\Edited\DSC00469.jpg` (3104×5516) | same Audi, portrait frame, same behaviour |
-| Selected work · chevrolet-silverado-2500hd | `AT6011` | Chevrolet Silverado 2500HD | 2700×1519 | 900, 1800, 2700 | Library original `2026\Alex Truck\Edited\AlexTruck-19.jpg` (2700×1519) | gallery card, tablets and desktops |
-| Selected work · chevrolet-silverado-2500hd (phones) | `AT6017` | Chevrolet Silverado 2500HD | 1519×2700 | 506, 1013, 1519 | Library original `2026\Alex Truck\Edited\AlexTruck-24.jpg` (1519×2700) | same car, 4:5 card on phones |
-| Selected work · corvette-c8-convertible | `DZQ0RI6lcNo-02-03` | Corvette C8 Convertible | 3072×2048 | 1000, 2000, 3072 | Instagram carousel DZQ0RI6lcNo, two slides joined (3072×2048) | gallery card, tablets and desktops |
-| Selected work · corvette-c8-convertible (phones) | `DZQ0RI6lcNo-01` | Corvette C8 Convertible | 1536×2048 | 570, 1500 | Instagram post DZQ0RI6lcNo, slide 1 (1536×2048) | same car, 4:5 card on phones |
-| Selected work · complex-union-2025 | `CU5012` | Complex Union 2025 | 2700×1800 | 900, 1800, 2700 | Library original `2025\COMPLEX UNION\Edited\rae-14.jpg` (2700×1800) | gallery card, tablets and desktops |
-| Selected work · complex-union-2025 (phones) | `CU5002` | Complex Union 2025 | 2025×2700 | 675, 1350, 2025 | Library original `2025\COMPLEX UNION\Edited\car-2.jpg` (2025×2700) | same car, 4:5 card on phones |
-| Selected work · yfc-autofest-2023 | `Y23030` | YFC Autofest 2023 | 3872×2026 | 900, 1800, 2700 | Library original `2023\yfcautofest\edited\miat-5.jpg` (3872×2026) | gallery card, tablets and desktops |
-| Selected work · yfc-autofest-2023 (phones) | `Y23027` | YFC Autofest 2023 | 1903×3386 | 506, 1012, 1517 | Library original `2023\yfcautofest\edited\miat-2.jpg` (1903×3386) | same car, 4:5 card on phones |
-| Lighting · Daylight | `SS002` | Mazda MX-5 Miata (NA) | 2700×1149 | 900, 1800, 2700 | Library original `2025\Savanna Sharp\Edited\car-10.jpg` (2700×1149) | 2.35:1 stage on tablets and desktops |
-| Lighting · Daylight (phones) | `SS004` | Mazda MX-5 Miata (NA) | 1519×2700 | 506, 1013, 1519 | Library original `2025\Savanna Sharp\Edited\car-12.jpg` (1519×2700) | same evening, 4:5 on phones |
-| Lighting · Golden hour | `SS013` | Mazda MX-5 Miata (NA) | 2700×1149 | 900, 1800, 2700 | Library original `2025\Savanna Sharp\Edited\car-20.jpg` (2700×1149) | 2.35:1 stage on tablets and desktops |
-| Lighting · Golden hour (phones) | `SS005` | Mazda MX-5 Miata (NA) | 1519×2700 | 506, 1013, 1519 | Library original `2025\Savanna Sharp\Edited\car-13.jpg` (1519×2700) | same evening, 4:5 on phones |
-| Lighting · Dusk | `SS028` | Mazda MX-5 Miata (NA) | 2700×1149 | 900, 1800, 2700 | Library original `2025\Savanna Sharp\Edited\car-34.jpg` (2700×1149) | 2.35:1 stage on tablets and desktops |
-| Lighting · Dusk (phones) | `SS031` | Mazda MX-5 Miata (NA) | 1519×2700 | 506, 1013, 1519 | Library original `2025\Savanna Sharp\Edited\car-37.jpg` (1519×2700) | same evening, 4:5 on phones |
-| Perspectives | `Db_DgIDFcCf-03` | Porsche, Yellow & Black | 1520×2026 | 570, 1500 | Instagram post Db_DgIDFcCf, slide 3 (1520×2026) |  |
-| Perspectives | `Y23007` | YFC Autofest 2023 | 3499×1489 | 900, 1800, 2700 | Library original `2023\Edited\Edited\2023musictypeshit-2.png` (3499×1489) |  |
-| Perspectives | `CU5025` | Complex Union 2025 | 2000×3000 | 600, 1200, 1800 | Library original `2025\COMPLEX UNION\Edited\wilf4.jpg` (4000×6000) |  |
-| Perspectives | `DZoFVWdlW7f-07` | YFC Autofest 2026 | 1231×1720 | 544, 1231 | Instagram post DZoFVWdlW7f, slide 7 (1231×1720) |  |
-| Perspectives | `DP39bzrjBtq-09-10` | YFC Oktoberfest 2025 | 2879×1224 | 1000, 2000, 2879 | Instagram carousel DP39bzrjBtq, two slides joined (2879×1224) |  |
-| Perspectives | `DPz0lGFjDt9-01` | Corvette C5 | 1440×1920 | 570, 1440 | Instagram post DPz0lGFjDt9, slide 1 (1440×1920) |  |
-| Service · Car features | `CX6014` | Subaru Impreza GC8 | 1800×2700 | 600, 1200, 1800 | Library original `2026\COMPLEX\Edited\Rachel-3.jpg` (1800×2700) | 4:3 crop around the car |
-| Service · Event coverage | `CX6005` | Complex Union 2026 | 2700×1519 | 900, 1800, 2700 | Library original `2026\COMPLEX\Edited\complex-5.jpg` (2700×1519) | 4:3 crop around the car |
-| Service · Rolling shots | `AT6001` | Chevrolet Silverado 2500HD | 2700×1519 | 900, 1800, 2700 | Library original `2026\Alex Truck\Edited\AlexTruck.jpg` (2700×1519) | 4:3 crop around the car |
-| Service · Cover layouts | `C5elEijLN43-01` | Honda Accord Cover | 1280×1280 | 760, 1280 | Instagram post C5elEijLN43, slide 1 (1280×1280) | poster contained, uncropped |
+| Home tile · brand | `YA5020` | YFC Autofest 2025 | 3000×1276 | 900, 1800, 2700, 3600 | Library original `2025\YFC\Autofest\Edited\DSC00483-Enhanced-NR-2.jpg` (6000×2553) | bleed |
+| Home tile · brand (phones) | `YA5012` | YFC Autofest 2025 | 3104×5516 | 506, 1013, 1519, 2400 | Library original `2025\YFC\Autofest\Edited\DSC00469.jpg` (3104×5516) | bleed |
+| Home tile · features | `SSB11` | Mazda MX-5 Miata (NA) | 2700×1149 | 900, 1800, 2700 | Library original `2025\Savanna Sharp\Edited\car-11.jpg` (2700×1149) | bleed |
+| Home tile · features (phones) | `SS004` | Mazda MX-5 Miata (NA) | 1519×2700 | 506, 1013, 1519 | Library original `2025\Savanna Sharp\Edited\car-12.jpg` (1519×2700) | bleed |
+| Home tile · events | `CX6009` | Complex Union 2026 | 2700×1519 | 900, 1800, 2700 | Library original `2026\COMPLEX\Edited\complex-9.jpg` (2700×1519) | bleed |
+| Home tile · events (phones) | `Y23006` | YFC Autofest 2023 | 2176×3872 | 506, 1012, 1517 | Library original `2023\Edited\Edited\2023musictypeshit.png` (2176×3872) | bleed |
+| Home tile · editorial | `TK6031` | MX-5 Poster Series | 1688×3000 | 506, 1013, 1519 | Library original `2026\TECHNICALLY 2025\DSC01533.jpg` (3376×6000) | poster, uncropped |
+| Home tile · editorial | `C5elEijLN43-01` | Honda Accord Cover | 1280×1280 | 760, 1280 | Instagram post C5elEijLN43, slide 1 (1280×1280) | poster, uncropped |
+| Home tile · editorial | `DUiwiDAlfu7-05` | 2025 Season Recap | 1440×1920 | 570, 1440 | Instagram post DUiwiDAlfu7, slide 5 (1440×1920) | poster, uncropped |
+| Home tile · silverado | `AT6017` | Chevrolet Silverado 2500HD | 1519×2700 | 506, 1013, 1519 | Library original `2026\Alex Truck\Edited\AlexTruck-24.jpg` (1519×2700) | bleed |
+| Home tile · c8 | `DZQ0RI6lcNo-02-03` | Corvette C8 Convertible | 3072×2048 | 1000, 2000, 3072 | Instagram carousel DZQ0RI6lcNo, two slides joined (3072×2048) | framed |
+| Home tile · c8 (phones) | `DZQ0RI6lcNo-01` | Corvette C8 Convertible | 1536×2048 | 570, 1500 | Instagram post DZQ0RI6lcNo, slide 1 (1536×2048) | framed |
+| Home tile · cu26 | `CX6005` | Complex Union 2026 | 2700×1519 | 900, 1800, 2700 | Library original `2026\COMPLEX\Edited\complex-5.jpg` (2700×1519) | framed |
+| Home tile · yfc26 | `DZoFVWdlW7f-07` | YFC Autofest 2026 | 1231×1720 | 544, 1231 | Instagram post DZoFVWdlW7f, slide 7 (1231×1720) | bleed |
+| Home tile · cu25 | `CU5012` | Complex Union 2025 | 2700×1800 | 900, 1800, 2700 | Library original `2025\COMPLEX UNION\Edited\rae-14.jpg` (2700×1800) | framed |
+| Home carousel · Audi R8 | `Y23007` | YFC Autofest 2023 | 3499×1489 | 900, 1800, 2700 | Library original `2023\Edited\Edited\2023musictypeshit-2.png` (3499×1489) |  |
+| Home carousel · Nissan Skyline | `DP39bzrjBtq-09-10` | YFC Oktoberfest 2025 | 2879×1224 | 1000, 2000, 2879 | Instagram carousel DP39bzrjBtq, two slides joined (2879×1224) |  |
+| Home carousel · Corvette C5 | `DPz0lGFjDt9-02-03` | Corvette C5 | 2880×1920 | 1000, 2000, 2880 | Instagram carousel DPz0lGFjDt9, two slides joined (2880×1920) |  |
+| Home carousel · Nissan 350Z | `CX6001` | Complex Union 2026 | 2700×1519 | 900, 1800, 2700 | Library original `2026\COMPLEX\Edited\complex.jpg` (2700×1519) |  |
+| Service · Car features | `CX6014` | Subaru Impreza GC8 | 1800×2700 | 600, 1200, 1800 | Library original `2026\COMPLEX\Edited\Rachel-3.jpg` (1800×2700) |  |
+| Service · Event coverage | `CX6005` | Complex Union 2026 | 2700×1519 | 900, 1800, 2700 | Library original `2026\COMPLEX\Edited\complex-5.jpg` (2700×1519) |  |
+| Service · Rolling shots | `AT6001` | Chevrolet Silverado 2500HD | 2700×1519 | 900, 1800, 2700 | Library original `2026\Alex Truck\Edited\AlexTruck.jpg` (2700×1519) |  |
+| Service · Cover layouts | `C5elEijLN43-01` | Honda Accord Cover | 1280×1280 | 760, 1280 | Instagram post C5elEijLN43, slide 1 (1280×1280) |  |
 | Booking · Send the details | `SS023` | Mazda MX-5 Miata (NA) | 1519×2700 | 506, 1013, 1519 | Library original `2025\Savanna Sharp\Edited\car-3.jpg` (1519×2700) | 4:5 crop, whole car, no people |
 | Booking · Plan the shoot | `SS016` | Mazda MX-5 Miata (NA) | 1519×2700 | 506, 1013, 1519 | Library original `2025\Savanna Sharp\Edited\car-23.jpg` (1519×2700) | 4:5 crop, whole car, no people |
 | Booking · Make it happen | `AT6010` | Chevrolet Silverado 2500HD | 1519×2700 | 506, 1013, 1519 | Library original `2026\Alex Truck\Edited\AlexTruck-18.jpg` (1519×2700) | 4:5 crop, whole car, no people |
-| About | `CX6007` | Complex Union 2026 | 2700×1519 | 900, 1800, 2700 | Library original `2026\COMPLEX\Edited\complex-7.jpg` (2700×1519) | contextual photograph; no photographer portrait exists in the supplied files |
+| About | `SS014` | Mazda MX-5 Miata (NA) | 2700×1519 | 900, 1800, 2700 | Library original `2025\Savanna Sharp\Edited\car-21.jpg` (2700×1519) |  |
+| Car features · hero | `SSB30` | Mazda MX-5 Miata (NA) | 2700×1519 | 900, 1800, 2700 | Library original `2025\Savanna Sharp\Edited\car-30.jpg` (2700×1519) |  |
+| Car features · hero (phones) | `SSB39` | Mazda MX-5 Miata (NA) | 1519×2700 | 506, 1013, 1519 | Library original `2025\Savanna Sharp\Edited\car-39.jpg` (1519×2700) |  |
+| Car features · highlights | `SSB11` | Mazda MX-5 Miata (NA) | 2700×1149 | 900, 1800, 2700 | Library original `2025\Savanna Sharp\Edited\car-11.jpg` (2700×1149) |  |
+| Car features · highlights | `ATB06` | Chevrolet Silverado 2500HD | 2700×1519 | 900, 1800, 2700 | Library original `2026\Alex Truck\Edited\AlexTruck-6.jpg` (2700×1519) |  |
+| Car features · highlights | `DZQ0RI6lcNo-02-03` | Corvette C8 Convertible | 3072×2048 | 1000, 2000, 3072 | Instagram carousel DZQ0RI6lcNo, two slides joined (3072×2048) |  |
+| Car features · highlights | `CX6014` | Subaru Impreza GC8 | 1800×2700 | 600, 1200, 1800 | Library original `2026\COMPLEX\Edited\Rachel-3.jpg` (1800×2700) |  |
+| Car features · closer look | `AT6025` | Chevrolet Silverado 2500HD | 2700×1519 | 900, 1800, 2700 | Library original `2026\Alex Truck\Edited\AlexTruck-8.jpg` (2700×1519) | uncropped |
+| Car features · closer look | `DZQ0RI6lcNo-04` | Corvette C8 Convertible | 1536×2048 | 570, 1500 | Instagram post DZQ0RI6lcNo, slide 4 (1536×2048) | uncropped |
+| Car features · closer look | `CX6020` | Subaru Impreza GC8 | 1800×2700 | 600, 1200, 1800 | Library original `2026\COMPLEX\Edited\Rachel-9.jpg` (1800×2700) | uncropped |
+| Car features · closer look | `SS026` | Mazda MX-5 Miata (NA) | 1519×2700 | 506, 1013, 1519 | Library original `2025\Savanna Sharp\Edited\car-32.jpg` (1519×2700) | uncropped |
+| Car features · closer look | `AT6005` | Chevrolet Silverado 2500HD | 1519×2700 | 506, 1013, 1519 | Library original `2026\Alex Truck\Edited\AlexTruck-13.jpg` (1519×2700) | uncropped |
+| Lighting · Daylight | `SS002` | Mazda MX-5 Miata (NA) | 2700×1149 | 900, 1800, 2700 | Library original `2025\Savanna Sharp\Edited\car-10.jpg` (2700×1149) |  |
+| Lighting · Golden hour | `SS013` | Mazda MX-5 Miata (NA) | 2700×1149 | 900, 1800, 2700 | Library original `2025\Savanna Sharp\Edited\car-20.jpg` (2700×1149) |  |
+| Lighting · Dusk | `SS028` | Mazda MX-5 Miata (NA) | 2700×1149 | 900, 1800, 2700 | Library original `2025\Savanna Sharp\Edited\car-34.jpg` (2700×1149) |  |
+| Events · highlights | `CX6005` | Complex Union 2026 | 2700×1519 | 900, 1800, 2700 | Library original `2026\COMPLEX\Edited\complex-5.jpg` (2700×1519) |  |
+| Events · highlights | `DZoFVWdlW7f-04` | YFC Autofest 2026 | 1301×811 | 760, 1301 | Instagram post DZoFVWdlW7f, slide 4 (1301×811) |  |
+| Events · highlights | `DP39bzrjBtq-09-10` | YFC Oktoberfest 2025 | 2879×1224 | 1000, 2000, 2879 | Instagram carousel DP39bzrjBtq, two slides joined (2879×1224) |  |
+| Events · highlights | `CU5012` | Complex Union 2025 | 2700×1800 | 900, 1800, 2700 | Library original `2025\COMPLEX UNION\Edited\rae-14.jpg` (2700×1800) |  |
+| Events · highlights | `YA5020` | YFC Autofest 2025 | 3000×1276 | 900, 1800, 2700, 3600 | Library original `2025\YFC\Autofest\Edited\DSC00483-Enhanced-NR-2.jpg` (6000×2553) |  |
+| Events · highlights | `Y23030` | YFC Autofest 2023 | 3872×2026 | 900, 1800, 2700 | Library original `2023\yfcautofest\edited\miat-5.jpg` (3872×2026) |  |
+| Events · arena | `CX6009` | Complex Union 2026 | 2700×1519 | 900, 1800, 2700 | Library original `2026\COMPLEX\Edited\complex-9.jpg` (2700×1519) |  |
+| Editorial · closer look | `TK6031` | MX-5 Poster Series | 1688×3000 | 506, 1013, 1519 | Library original `2026\TECHNICALLY 2025\DSC01533.jpg` (3376×6000) | uncropped |
+| Editorial · closer look | `TK6009` | MX-5 Poster Series | 3481×4641 | 675, 1350, 2025 | Library original `2026\TECHNICALLY 2025\DSC01274.jpg` (3481×4641) | uncropped |
+| Editorial · closer look | `DUiwiDAlfu7-02` | 2025 Season Recap | 1440×1920 | 570, 1440 | Instagram post DUiwiDAlfu7, slide 2 (1440×1920) | uncropped |
+| Editorial · closer look | `C5elEijLN43-01` | Honda Accord Cover | 1280×1280 | 760, 1280 | Instagram post C5elEijLN43, slide 1 (1280×1280) | uncropped |
+| Editorial · closer look | `TK6033` | MX-5 Poster Series | 3217×5717 | 506, 1013, 1519 | Library original `2026\TECHNICALLY 2025\DSC01536.jpg` (3217×5717) | uncropped |
+| Editorial · closer look | `DUiwiDAlfu7-07` | 2025 Season Recap | 1440×1920 | 570, 1440 | Instagram post DUiwiDAlfu7, slide 7 (1440×1920) | uncropped |
+| Editorial · closer look | `TK6015` | MX-5 Poster Series | 4000×5333 | 675, 1350, 2025 | Library original `2026\TECHNICALLY 2025\DSC01332-1.jpg` (4000×5333) | uncropped |
+| Editorial · closer look | `DUiwiDAlfu7-04` | 2025 Season Recap | 1440×1920 | 570, 1440 | Instagram post DUiwiDAlfu7, slide 4 (1440×1920) | uncropped |
+
+Video: `media/yfc26-floor.mp4` (1280×720) and `media/yfc26-floor-1080.mp4`, from `2026\YFC\edited\Timeline 1_00008198.mov`, slowed to half speed, no audio.
 
 ## Poster artwork
 
@@ -43,21 +71,3 @@ Posters and cover layouts are always shown uncropped (`object-fit: contain` or n
 - MX-5 Poster Series: `TK6009`, `TK6035`, `TK6031`, `TK6033`, `TK6007`, `TK6015`, `TK6011`
 - 2025 Season Recap: `DUiwiDAlfu7-05`, `DUiwiDAlfu7-02`, `DUiwiDAlfu7-04`, `DUiwiDAlfu7-01`, `DUiwiDAlfu7-03`, `DUiwiDAlfu7-06`, `DUiwiDAlfu7-07`
 - Honda Accord Cover: `C5elEijLN43-01`
-
-## Archive covers
-
-- Complex Union 2026: `CX6001` (3:4 crop at 48.8% 66.5%)
-- Porsche, Yellow & Black: `Db_DgIDFcCf-03` (3:4 crop at 100.0% 100.0%)
-- Subaru Impreza GC8: `CX6019` (3:4 crop at 69.7% 42.9%)
-- YFC Autofest 2026: `DZoFVWdlW7f-07` (3:4 crop at 46.7% 59.2%)
-- Corvette C8 Convertible: `DZQ0RI6lcNo-01` (3:4 crop at 54.9% 76.3%)
-- Chevrolet Silverado 2500HD: `AT6012` (3:4 crop at 66.0% 62.0%)
-- MX-5 Poster Series: `TK6009` (contained)
-- 2025 Season Recap: `DUiwiDAlfu7-05` (contained)
-- YFC Oktoberfest 2025: `DP39bzrjBtq-01` (3:4 crop at 61.7% 59.4%)
-- Corvette C5: `DPz0lGFjDt9-01` (3:4 crop at 48.9% 55.8%)
-- Mazda MX-5 Miata (NA): `SS017` (3:4 crop at 100.0% 82.8%)
-- Complex Union 2025: `CU5009` (3:4 crop at 47.5% 61.4%)
-- YFC Autofest 2025: `YA5011` (3:4 crop at 43.5% 93.8%)
-- Honda Accord Cover: `C5elEijLN43-01` (contained)
-- YFC Autofest 2023: `Y23027` (3:4 crop at 50% 67.3%)

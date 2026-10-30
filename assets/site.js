@@ -23,23 +23,9 @@
   /* iOS only shows :active press states when a touch listener exists */
   d.addEventListener('touchstart', function () {}, { passive: true });
 
-  /* ---------- local navigation: material once the hero has passed; mobile menu ---------- */
+  /* ---------- global navigation: mobile menu ---------- */
   run('header', function () {
-    var header = $('.site-header'); if (!header) return;
-    var overlay = header.classList.contains('is-overlay'), hero = $('.hero'), ticking = false;
-    var onScroll = function () {
-      if (ticking) return; ticking = true;
-      requestAnimationFrame(function () {
-        ticking = false;
-        var y = window.scrollY;
-        header.classList.toggle('is-scrolled', y > 4);
-        if (overlay) header.classList.toggle('is-stuck', !hero || y > hero.offsetHeight + hero.offsetTop - header.offsetHeight - 1);
-      });
-    };
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll);
-
+    var header = $('.gnav'); if (!header) return;
     var btn = $('.menu-btn', header), links = $('#nav-links'); if (!btn || !links) return;
     var setMenu = function (open, returnFocus) {
       header.classList.toggle('nav-open', open);
@@ -53,6 +39,9 @@
     var wide = window.matchMedia('(min-width: 834px)');
     listen(wide, function () { if (wide.matches) setMenu(false); });
   });
+
+  /* height of whichever bar is pinned to the top of the page */
+  var pinnedBar = function () { var l = $('.lnav'); if (l) return l.offsetHeight; var g = $('.gnav'); return g ? g.offsetHeight : 0; };
 
   /* ---------- art direction: the viewer opens whichever photograph is on screen ---------- */
   run('swap', function () {
@@ -126,10 +115,10 @@
      (clip-path, so the photograph itself is never scaled). Settled once it is centred in the window. */
   run('expand', function () {
     var els = $$('[data-expand]'); if (!els.length || staticMode) return;
-    var head = $('.site-header'), ticking = false;
+    var ticking = false;
     var frame = function () {
       ticking = false;
-      var vh = window.innerHeight, vw = html.clientWidth, nav = head ? head.offsetHeight : 0;
+      var vh = window.innerHeight, vw = html.clientWidth, nav = pinnedBar();
       var radius = parseFloat(getComputedStyle(html).getPropertyValue('--r-lg')) || 28;
       els.forEach(function (el) {
         if (reduced()) { el.style.clipPath = ''; return; }
@@ -284,76 +273,51 @@
     });
   });
 
-  /* ---------- hero ----------
-     CSS lays the photograph out edge to edge and lifts it until the car clears the copy; this measures the
-     copy so that lift is exact. Where the pin is sticky (motion allowed, tall enough window, container
-     units), scrolling then eases the same frame down into a rounded card below the navigation bar while the
-     copy and the blur fade, and the caption appears once the photograph has cleared it. Scroll-linked, so
-     the scroll is the timing; only transform and opacity change per frame. */
-  run('hero', function () {
-    var hero = $('.hero'), pin = hero && $('.hero-pin', hero); if (!pin) return;
-    var fig = $('.hero-fig', pin), frame = $('.hero-frame', pin), copy = $('.hero-copy', pin), inner = $('.hero-inner', pin);
-    var scrim = $('.hero-scrim', pin), shade = $('.hero-shade', pin), cap = $('.hero-cap', pin), head = $('.site-header');
-    if (!fig || !frame || !copy || !inner || !cap) return;
-    var fades = [scrim, shade].filter(Boolean);
-    var on = false, start = 0, travel = 1, s1 = 1, dx1 = 0, dy1 = 0, radius = 28, capFrom = 0.8, last = -1, ticking = false, pending = false;
+  /* ---------- video: plays muted while it is on screen, with a pause button; never on its own with reduced motion ---------- */
+  run('video', function () {
+    if (staticMode) return;
+    $$('[data-video]').forEach(function (box) {
+      var v = $('video', box), btn = $('.media-btn', box); if (!v || !btn) return;
+      v.removeAttribute('controls');
+      var userPaused = false, inView = false;
+      var LABEL = { play: 'Play the video', pause: 'Pause the video' };
+      var sync = function () { var s = v.paused ? 'play' : 'pause'; btn.setAttribute('data-state', s); btn.setAttribute('aria-label', LABEL[s]); };
+      var tryPlay = function () { var pr = v.play(); if (pr && pr.catch) pr.catch(function () { sync(); }); };
+      btn.addEventListener('click', function () {
+        if (v.paused) { userPaused = false; tryPlay(); } else { userPaused = true; v.pause(); }
+      });
+      v.addEventListener('play', sync); v.addEventListener('pause', sync);
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (es) {
+          inView = es[0].isIntersecting;
+          if (inView && !userPaused && !reduced()) tryPlay();
+          else if (!inView && !v.paused) v.pause();
+        }, { threshold: .5 }).observe(box);
+      }
+      listen(reduceMQ, function () { if (reduced() && !v.paused) { v.pause(); } });
+      d.addEventListener('visibilitychange', function () { if (d.hidden && !v.paused) v.pause(); else if (!d.hidden && inView && !userPaused && !reduced()) tryPlay(); });
+      sync();
+    });
+  });
 
-    function clear() {
-      [frame, copy, cap].concat(fades).forEach(function (el) { el.style.transform = ''; el.style.opacity = ''; el.style.visibility = ''; });
-      frame.style.borderRadius = ''; cap.style.top = '';
-    }
-    function update() {
-      ticking = false; if (!on) return;
-      var q = clamp((window.scrollY - start) / travel);
-      if (q === last) return; last = q;
-      var s = 1 + (s1 - 1) * q, t = clamp(q / 0.35), f = clamp(q / 0.18);
-      frame.style.transform = 'translate3d(' + (dx1 * q).toFixed(2) + 'px,' + (dy1 * q).toFixed(2) + 'px,0) scale(' + s.toFixed(4) + ')';
-      frame.style.borderRadius = (radius * q / s).toFixed(2) + 'px';   /* reads as the card radius once scaled */
-      copy.style.opacity = (1 - t).toFixed(3);
-      copy.style.transform = t ? 'translate3d(0,' + (-24 * t).toFixed(2) + 'px,0)' : '';
-      copy.style.visibility = t >= 1 ? 'hidden' : '';
-      fades.forEach(function (el) { el.style.opacity = (1 - f).toFixed(3); el.style.visibility = f >= 1 ? 'hidden' : ''; });
-      cap.style.opacity = clamp((q - capFrom) / (1 - capFrom)).toFixed(3);
-    }
-    function measure() {
-      pending = false;
-      /* the photograph is lifted by exactly the room the copy needs, plus a little air */
-      var air = window.innerWidth <= 734 ? 24 : 32;
-      pin.style.setProperty('--copy-h', Math.ceil(copy.offsetHeight + air) + 'px');
-      hero.classList.remove('is-static');
-      on = !staticMode && getComputedStyle(pin).position === 'sticky';
-      var navH = head ? head.offsetHeight : 0;
-      /* a hero taller than the window (very short screens, very large text) stays still */
-      if (on && pin.offsetHeight > window.innerHeight + 2) { hero.classList.add('is-static'); on = false; }
-      hero.classList.toggle('is-scroll-linked', on);
-      last = -1;
-      if (!on) { clear(); return; }
-      /* the card the photograph settles into: as large as fits below the bar with its caption */
-      var W = fig.clientWidth, H = fig.clientHeight, fw0 = frame.offsetWidth, fh0 = frame.offsetHeight, ar = fw0 / fh0;
-      var gut = (W - inner.offsetWidth) / 2, capH = cap.offsetHeight, gap = 14, pad = Math.max(24, Math.min(gut, 48)), room = H - navH;
-      var fw1 = Math.min(W - 2 * gut, 1680, (room - 2 * pad - gap - capH) * ar), fh1 = fw1 / ar;
-      var x1 = (W - fw1) / 2, y1 = navH + Math.max(pad, (room - fh1 - gap - capH) / 2);
-      s1 = fw1 / fw0; dx1 = x1 - frame.offsetLeft; dy1 = y1 - frame.offsetTop;
-      cap.style.top = Math.round(y1 + fh1 + gap) + 'px';
-      var b0 = frame.offsetTop + fh0, b1 = y1 + fh1;
-      capFrom = b0 - b1 > 1 ? Math.min(0.94, clamp((b0 - b1 - gap + 4) / (b0 - b1))) : 0.8;
-      radius = parseFloat(getComputedStyle(html).getPropertyValue('--r-lg')) || 28;
-      start = hero.getBoundingClientRect().top + window.scrollY;
-      travel = Math.max(1, hero.offsetHeight - pin.offsetHeight);
-      update();
-    }
-    var remeasure = function () { if (!pending) { pending = true; requestAnimationFrame(measure); } };
-
-    measure();
-    window.addEventListener('scroll', function () { if (on && !ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
-    window.addEventListener('resize', remeasure);
-    window.addEventListener('load', remeasure);
-    if (d.fonts && d.fonts.ready) d.fonts.ready.then(remeasure);
-    listen(window.matchMedia('(orientation: portrait)'), remeasure);
-    listen(reduceMQ, remeasure);
-    /* keyboard: a control that has faded out comes back into view before it takes focus */
-    copy.addEventListener('focusin', function () { if (on && last > 0.2) window.scrollTo(0, start); });
-    cap.addEventListener('focusin', function () { if (on && last < 1) window.scrollTo(0, start + travel); });
+  /* ---------- side-scrolling rows: previous / next buttons ---------- */
+  run('scrollers', function () {
+    $$('[data-scroller]').forEach(function (sc) {
+      var btns = sc.nextElementSibling && sc.nextElementSibling.classList.contains('scroll-btns') ? $$('.scroll-btn', sc.nextElementSibling) : [];
+      if (!btns.length) return;
+      var update = function () {
+        var max = sc.scrollWidth - sc.clientWidth - 2;
+        btns[0].disabled = sc.scrollLeft <= 2; btns[1].disabled = sc.scrollLeft >= max;
+      };
+      btns.forEach(function (b) {
+        b.addEventListener('click', function () {
+          var item = $('.bento', sc), step = item ? item.offsetWidth + 20 : sc.clientWidth * .8;
+          sc.scrollBy({ left: step * +b.getAttribute('data-dir'), behavior: reduced() ? 'auto' : 'smooth' });
+        });
+      });
+      sc.addEventListener('scroll', function () { requestAnimationFrame(update); }, { passive: true });
+      window.addEventListener('resize', update); update();
+    });
   });
 
   /* ---------- lighting tabs (WAI-ARIA tabs, automatic activation, crossfade) ---------- */
