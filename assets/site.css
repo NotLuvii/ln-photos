@@ -88,6 +88,8 @@
   --pill-bg:rgba(42,42,45,.72);
 }
 .t-ipad{--bg-alt:#161617;--tile:#161617}
+/* home and car features: black page, near-black alternate sections, cards a step lighter (Apple's dark product pages) */
+.t-home,.t-airpods{--bg-alt:#0d0d0e;--bg-index:#0d0d0e;--tile:#1d1d1f;--card:#1d1d1f}
 
 /* ---------- base ---------- */
 *,*::before,*::after{box-sizing:border-box}
@@ -250,16 +252,18 @@ a:hover .i-chev{transform:translateX(2px)}
 /* product tiles: full-width tiles 12px apart, then a two-column grid of smaller tiles, then a media carousel */
 .tiles{display:grid;gap:12px;padding:12px 0;background:var(--bg)}
 .tile-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:0 12px}
-/* two columns until a column gets too narrow for a two-line headline, its sub-head and both buttons over the photo */
-@media (max-width:960px){.tile-grid{grid-template-columns:minmax(0,1fr)}}
+/* two columns from Apple's large breakpoint up; below it each tile gets the full width */
+@media (max-width:1068px){.tile-grid{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:734px){.tile-grid{padding:0}}
-.tile{position:relative;overflow:hidden;isolation:isolate;height:clamp(520px,48.06vw,760px);background:var(--tile-bg,#f5f5f7);color:#1d1d1f;text-align:center;--o:#0066cc}
+.tile{position:relative;overflow:hidden;isolation:isolate;height:clamp(520px,48.06vw,max(760px,78svh));background:var(--tile-bg,#161617);color:#f5f5f7;text-align:center;--o:#2997ff}
 .tile.ink-light{color:#f5f5f7;--o:#2997ff}
 .tile.ink-light:not(.is-framed){--o:#fff}
 .tile.ink-dark:not(.is-framed){--o:#1d1d1f}
-.tile-grid .tile{height:clamp(480px,40.28vw,680px)}
-@media (min-width:735px) and (max-width:960px){.tile-grid .tile{height:clamp(520px,60vw,600px)}}
-@media (max-width:734px){.tile,.tile-grid .tile{height:560px}}
+/* tile heights follow the width so each tile keeps a narrow range of shapes, and every photograph is placed for
+   that whole range (build.py: cover_range): full tiles 1.41-2.6 wide, grid tiles 1.2-1.78, phones 0.6-0.97 */
+.tile-grid .tile{height:clamp(420px,40.28vw,max(680px,70svh))}
+@media (min-width:735px) and (max-width:1068px){.tile-grid .tile{height:clamp(520px,60vw,600px)}}
+@media (max-width:734px){.tile,.tile-grid .tile{height:clamp(500px,140vw,760px)}}
 .tile-link{position:absolute;inset:0;z-index:1}
 .tile-copy{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;padding:56px 24px 0;pointer-events:none}
 .tile-grid .tile-copy{padding-top:53px}
@@ -295,6 +299,11 @@ a:hover .i-chev{transform:translateX(2px)}
 .tile.is-framed .tile-shade{display:none}
 .tile.is-framed:hover .tile-media img{transform:translateY(-4px)}
 .tile.is-posters .tile-media img{flex:0 1 auto;min-width:0;border-radius:4px}
+/* then and now: two photographs at one height with their years under them */
+.tile-pair{align-items:stretch!important}
+.pair-item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;min-width:0;height:100%}
+.pair-item img{flex:0 1 auto;min-height:0;width:auto!important;max-width:100%;max-height:calc(100% - 30px)!important;object-fit:contain;border-radius:var(--r-sm)}
+.pair-item figcaption{font-family:var(--font-display);font-size:1.0625rem;font-weight:600;color:var(--fg-2);font-variant-numeric:tabular-nums}
 
 
 /* media carousel ("Endless entertainment" on apple.com) */
@@ -547,6 +556,8 @@ a.owner:hover{text-decoration-color:currentColor}
 .chapter-num{font-size:.875rem;color:var(--fg-3);font-variant-numeric:tabular-nums}
 .chapter h2{font-family:var(--font-display);font-size:var(--fs-eyebrow);line-height:var(--lh-eyebrow);letter-spacing:var(--ls-eyebrow)}
 .chapter p{flex-basis:100%;color:var(--fg-2)}
+.chapter-link{margin-left:6px;color:var(--link);white-space:nowrap}
+.chapter-link:hover{text-decoration:underline;text-underline-offset:.2em}
 .prow{display:flex;gap:var(--g)}
 .ph{position:relative;display:block;flex:var(--ar) 1 0%;aspect-ratio:var(--w) / var(--h);min-width:0;overflow:hidden;border-radius:var(--r-sm);background:var(--tile);cursor:zoom-in}
 .ph img{width:100%;height:100%;object-fit:cover;transition:transform 700ms var(--ease-out)}
@@ -625,14 +636,14 @@ a.owner:hover{text-decoration-color:currentColor}
 .af-chapter .lp-label{color:#fff}
 /* white interludes: centred copy, then three short features with icons */
 .af-interlude{text-align:center}
-.af-interlude .story-copy{margin:0 auto;max-width:min(66.6667%,680px);color:#6e6e73}
-.af-interlude .story-copy strong{color:#1d1d1f}
+.af-interlude .story-copy{margin:0 auto;max-width:min(66.6667%,680px);color:var(--fg-3)}
+.af-interlude .story-copy strong{color:var(--fg)}
 @media (max-width:734px){.af-interlude .story-copy{max-width:none}}
 .af-icons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px clamp(24px,4vw,64px);max-width:980px;margin:var(--head-gap) auto 0;text-align:left}
 @media (max-width:734px){.af-icons{grid-template-columns:minmax(0,1fr);gap:32px}}
-.af-icon svg{width:40px;height:40px;fill:none;stroke:#1d1d1f;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.af-icon svg{width:40px;height:40px;fill:none;stroke:var(--fg);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .af-icon h3{margin-top:14px;font-size:1.0625rem;line-height:1.2353;letter-spacing:-.022em}
-.af-icon p{margin-top:4px;color:#6e6e73}
+.af-icon p{margin-top:4px;color:var(--fg-3)}
 /* "Take a closer look": a row of grey cards, photograph whole inside each */
 .bento-scroller{container-type:inline-size;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;padding-inline:calc((100% - min(87.5%,var(--content))) / 2);scroll-padding-inline:calc((100% - min(87.5%,var(--content))) / 2)}
 .bento-scroller::-webkit-scrollbar{display:none}
@@ -821,3 +832,41 @@ a.owner:hover{text-decoration-color:currentColor}
   .lb-spinner{animation-duration:2.4s}
 }
 @media print{.js [data-stagger-item]{opacity:1;transform:none}.gnav,.lnav{position:static}}
+
+/* ======================= over the years: iPad-style gradient years, oldest first ======================= */
+.yrs-hero{padding-block:clamp(72px,9vw,140px) clamp(40px,5vw,80px);text-align:center}
+.yrs-sub{max-width:34ch;margin:16px auto 0;font-family:var(--font-display);font-size:var(--fs-eyebrow);line-height:var(--lh-eyebrow);font-weight:600;color:var(--fg-2);text-wrap:balance}
+.yrs-stats{display:flex;flex-wrap:wrap;justify-content:center;gap:24px clamp(32px,6vw,96px);margin-top:clamp(36px,4vw,56px)}
+.yrs-stats div{display:flex;flex-direction:column-reverse;gap:4px}
+.yrs-stats dt{font-size:.875rem;color:var(--fg-3)}
+.yrs-stats dd{margin:0;font-family:var(--font-display);font-size:clamp(2rem,1.4rem + 2vw,3rem);font-weight:600;line-height:1.05;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.yr{padding-block:clamp(64px,8vw,128px);border-top:1px solid var(--line)}
+.yr-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px clamp(32px,5vw,80px);align-items:end}
+@media (max-width:1068px){.yr-head{grid-template-columns:minmax(0,1fr)}}
+.yr-num{font-family:var(--font-display);font-weight:700;font-size:clamp(5.5rem,3rem + 11vw,12rem);line-height:.86;letter-spacing:-.045em;font-variant-numeric:tabular-nums}
+.yr-text .t-story{margin-top:14px;max-width:46ch}
+.yr-meta{margin-top:14px;font-size:.875rem;color:var(--fg-3)}
+/* a strip of photographs at one height that scrolls sideways; it starts in line with the text column */
+.yr-strip{--h:clamp(260px,30vw,460px);display:flex;gap:12px;margin-top:clamp(32px,4vw,56px);padding-inline:max(16px,calc((100% - min(87.5%,var(--content))) / 2));overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-inline:max(16px,calc((100% - min(87.5%,var(--content))) / 2));scrollbar-width:none}
+.yr-strip::-webkit-scrollbar{display:none}
+.yr-shot{flex:none;height:var(--h);aspect-ratio:var(--ar);border-radius:var(--r-md);overflow:hidden;background:var(--tile);scroll-snap-align:start;cursor:zoom-in}
+.yr-shot img{width:100%;height:100%;object-fit:cover;transition:transform 700ms var(--ease-out)}
+.yr-shot:hover img{transform:scale(1.02)}
+.yr-strip:focus-visible{outline-offset:-2px}
+.yr .scroll-btns{display:flex;justify-content:flex-end;gap:12px;margin-top:16px}
+.yr-projs{margin-top:clamp(36px,4vw,56px)}
+.yr-projs-head{font-size:.875rem;font-weight:400;color:var(--fg-3)}
+.yr-proj-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:0 24px;margin-top:8px}
+.yr-proj{display:flex;flex-direction:column;gap:2px;padding:14px 0;border-bottom:1px solid var(--line)}
+.yr-proj-title{font-family:var(--font-display);font-size:1.0625rem;font-weight:600}
+.yr-proj-meta{font-size:.875rem;color:var(--fg-3)}
+.yr-proj:hover .yr-proj-title{color:var(--link)}
+.cmp-copy{max-width:52ch;margin:16px auto 0;text-align:center}
+/* the two edits at one height: each takes width in proportion to its shape */
+.cmp-pair{display:flex;align-items:flex-start;gap:clamp(12px,2vw,24px);max-width:1000px;margin:clamp(36px,4vw,56px) auto 0}
+.cmp-item{flex:var(--ar) 1 0;min-width:0}
+@media (max-width:480px){.cmp-pair{flex-direction:column}.cmp-item{width:100%}}
+.cmp-item a{display:block;border-radius:var(--r-md);overflow:hidden;cursor:zoom-in}
+.cmp-item img{width:100%;height:auto}
+.cmp-item figcaption{margin-top:10px;font-size:.875rem;color:var(--fg-3);text-align:center}
+@media (prefers-reduced-motion:reduce){.yr-shot img{transition:none}.yr-strip{scroll-behavior:auto}}

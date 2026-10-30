@@ -10,16 +10,15 @@ Widths are the real pixel widths of the published variants. Crops use the car bo
 | Home tile · features | `SSB11` | Mazda MX-5 Miata (NA) | 2700×1149 | 900, 1800, 2700 | Library original `2025\Savanna Sharp\Edited\car-11.jpg` (2700×1149) | bleed |
 | Home tile · features (phones) | `SS004` | Mazda MX-5 Miata (NA) | 1519×2700 | 506, 1013, 1519 | Library original `2025\Savanna Sharp\Edited\car-12.jpg` (1519×2700) | bleed |
 | Home tile · events | `CX6009` | Complex Union 2026 | 2700×1519 | 900, 1800, 2700 | Library original `2026\COMPLEX\Edited\complex-9.jpg` (2700×1519) | bleed |
-| Home tile · events (phones) | `Y23006` | YFC Autofest 2023 | 2176×3872 | 506, 1012, 1517 | Library original `2023\Edited\Edited\2023musictypeshit.png` (2176×3872) | bleed |
+| Home tile · events (phones) | `CU5009` | Complex Union 2025 | 1800×2700 | 600, 1200, 1800 | Library original `2025\COMPLEX UNION\Edited\rae-11.jpg` (1800×2700) | bleed |
+| Home tile · years · 2022 | `CeRVJ7MLxBT-01` | The First Posts | 1080×1350 | 540, 1080 | Instagram post CeRVJ7MLxBT, slide 1 (1080×1350) | uncropped |
+| Home tile · years · 2026 | `CX6014` | Subaru Impreza GC8 | 1800×2700 | 600, 1200, 1800 | Library original `2026\COMPLEX\Edited\Rachel-3.jpg` (1800×2700) | uncropped |
+| Home tile · silverado | `ATB12` | Chevrolet Silverado 2500HD | 2700×1125 | 900, 1800, 2700 | Library original `2026\Alex Truck\Edited\AlexTruck-12.jpg` (2700×1125) | bleed |
+| Home tile · silverado (phones) | `AT6017` | Chevrolet Silverado 2500HD | 1519×2700 | 506, 1013, 1519 | Library original `2026\Alex Truck\Edited\AlexTruck-24.jpg` (1519×2700) | bleed |
+| Home tile · c8 | `DZQ0RI6lcNo-02-03` | Corvette C8 Convertible | 3072×2048 | 1000, 2000, 3072 | Instagram carousel DZQ0RI6lcNo, two slides joined (3072×2048) | framed |
 | Home tile · editorial | `TK6031` | MX-5 Poster Series | 1688×3000 | 506, 1013, 1519 | Library original `2026\TECHNICALLY 2025\DSC01533.jpg` (3376×6000) | poster, uncropped |
 | Home tile · editorial | `C5elEijLN43-01` | Honda Accord Cover | 1280×1280 | 760, 1280 | Instagram post C5elEijLN43, slide 1 (1280×1280) | poster, uncropped |
 | Home tile · editorial | `DUiwiDAlfu7-05` | 2025 Season Recap | 1440×1920 | 570, 1440 | Instagram post DUiwiDAlfu7, slide 5 (1440×1920) | poster, uncropped |
-| Home tile · silverado | `AT6017` | Chevrolet Silverado 2500HD | 1519×2700 | 506, 1013, 1519 | Library original `2026\Alex Truck\Edited\AlexTruck-24.jpg` (1519×2700) | bleed |
-| Home tile · c8 | `DZQ0RI6lcNo-02-03` | Corvette C8 Convertible | 3072×2048 | 1000, 2000, 3072 | Instagram carousel DZQ0RI6lcNo, two slides joined (3072×2048) | framed |
-| Home tile · c8 (phones) | `DZQ0RI6lcNo-01` | Corvette C8 Convertible | 1536×2048 | 570, 1500 | Instagram post DZQ0RI6lcNo, slide 1 (1536×2048) | framed |
-| Home tile · cu26 | `CX6005` | Complex Union 2026 | 2700×1519 | 900, 1800, 2700 | Library original `2026\COMPLEX\Edited\complex-5.jpg` (2700×1519) | framed |
-| Home tile · yfc26 | `DZoFVWdlW7f-07` | YFC Autofest 2026 | 1231×1720 | 544, 1231 | Instagram post DZoFVWdlW7f, slide 7 (1231×1720) | bleed |
-| Home tile · cu25 | `CU5012` | Complex Union 2025 | 2700×1800 | 900, 1800, 2700 | Library original `2025\COMPLEX UNION\Edited\rae-14.jpg` (2700×1800) | framed |
 | Home carousel · Audi R8 | `Y23007` | YFC Autofest 2023 | 3499×1489 | 900, 1800, 2700 | Library original `2023\Edited\Edited\2023musictypeshit-2.png` (3499×1489) |  |
 | Home carousel · Nissan Skyline | `DP39bzrjBtq-09-10` | YFC Oktoberfest 2025 | 2879×1224 | 1000, 2000, 2879 | Instagram carousel DP39bzrjBtq, two slides joined (2879×1224) |  |
 | Home carousel · Corvette C5 | `DPz0lGFjDt9-02-03` | Corvette C5 | 2880×1920 | 1000, 2000, 2880 | Instagram carousel DPz0lGFjDt9, two slides joined (2880×1920) |  |
@@ -61,6 +60,47 @@ Widths are the real pixel widths of the published variants. Crops use the car bo
 | Editorial · closer look | `DUiwiDAlfu7-07` | 2025 Season Recap | 1440×1920 | 570, 1440 | Instagram post DUiwiDAlfu7, slide 7 (1440×1920) | uncropped |
 | Editorial · closer look | `TK6015` | MX-5 Poster Series | 4000×5333 | 675, 1350, 2025 | Library original `2026\TECHNICALLY 2025\DSC01332-1.jpg` (4000×5333) | uncropped |
 | Editorial · closer look | `DUiwiDAlfu7-04` | 2025 Season Recap | 1440×1920 | 570, 1440 | Instagram post DUiwiDAlfu7, slide 4 (1440×1920) | uncropped |
+| Over the years · 2022 | `CeRVWVvrQmS-01` | The First Posts | 1080×1080 | 540, 1080 | Instagram post CeRVWVvrQmS, slide 1 (1080×1080) | uncropped |
+| Over the years · 2022 | `CeSda-EsWSi-01` | The First Posts | 1080×1080 | 540, 1080 | Instagram post CeSda-EsWSi, slide 1 (1080×1080) | uncropped |
+| Over the years · 2022 | `CeSdRcOMwwK-01` | The First Posts | 1080×1080 | 540, 1080 | Instagram post CeSdRcOMwwK, slide 1 (1080×1080) | uncropped |
+| Over the years · 2022 | `CeWStNzrhoD-01` | The First Posts | 1080×1350 | 540, 1080 | Instagram post CeWStNzrhoD, slide 1 (1080×1350) | uncropped |
+| Over the years · 2022 | `CeWS0sWrQ2r-01` | The First Posts | 1080×1350 | 540, 1080 | Instagram post CeWS0sWrQ2r, slide 1 (1080×1350) | uncropped |
+| Over the years · 2022 | `CfxN71grzLr-01` | The First Posts | 1080×1080 | 540, 1080 | Instagram post CfxN71grzLr, slide 1 (1080×1080) | uncropped |
+| Over the years · 2023 | `CrrDLVcuRNv-02` | YFC Autofest Pop-up Meet | 1080×606 | 540, 1080 | Instagram post CrrDLVcuRNv, slide 2 (1080×606) | uncropped |
+| Over the years · 2023 | `CtnZTYqtjO3-02` | YFC Autofest 2023 | 1080×864 | 540, 1080 | Instagram post CtnZTYqtjO3, slide 2 (1080×864) | uncropped |
+| Over the years · 2023 | `Ct-h8HcNbUc-04` | YFC Autofest 2023 | 1080×864 | 540, 1080 | Instagram post Ct-h8HcNbUc, slide 4 (1080×864) | uncropped |
+| Over the years · 2023 | `CuVzi2DtEho-01` | YFC Autofest 2023 | 1080×606 | 540, 1080 | Instagram post CuVzi2DtEho, slide 1 (1080×606) | uncropped |
+| Over the years · 2023 | `Cx58djUO3dC-02` | 2023 Season | 1080×1350 | 540, 1080 | Instagram post Cx58djUO3dC, slide 2 (1080×1350) | uncropped |
+| Over the years · 2023 | `CyBZud8uXoW-04` | 2023 Season | 1080×1350 | 540, 1080 | Instagram post CyBZud8uXoW, slide 4 (1080×1350) | uncropped |
+| Over the years · 2023 | `CyEXkVHOobY-02` | 2023 Season | 1080×864 | 540, 1080 | Instagram post CyEXkVHOobY, slide 2 (1080×864) | uncropped |
+| Over the years · 2023 | `Cy_oPrju0Hy-06` | 2023 Season | 1080×1350 | 540, 1080 | Instagram post Cy_oPrju0Hy, slide 6 (1080×1350) | uncropped |
+| Over the years · 2023 | `C0aXxjDtVgD-01` | 2023 Season | 1080×1350 | 540, 1080 | Instagram post C0aXxjDtVgD, slide 1 (1080×1350) | uncropped |
+| Over the years · 2024 | `C18so2SOxdb-01` | Early Posters | 1000×1000 | 540, 1000 | Instagram post C18so2SOxdb, slide 1 (1000×1000) | uncropped |
+| Over the years · 2024 | `C8Ie9hMv2Dj-01` | Early Posters | 1080×1350 | 540, 1080 | Instagram post C8Ie9hMv2Dj, slide 1 (1080×1350) | uncropped |
+| Over the years · 2024 | `C5elEijLN43-01` | Honda Accord Cover | 1280×1280 | 760, 1280 | Instagram post C5elEijLN43, slide 1 (1280×1280) | uncropped |
+| Over the years · 2024 | `C8iifQXNxIZ-02` | Early Posters | 1080×1350 | 540, 1080 | Instagram post C8iifQXNxIZ, slide 2 (1080×1350) | uncropped |
+| Over the years · 2024 | `C8aBVDqOQ_l-04` | 2024 Season | 1080×1350 | 540, 1080 | Instagram post C8aBVDqOQ_l, slide 4 (1080×1350) | uncropped |
+| Over the years · 2024 | `C-p5LD8tThy-03` | YFC Autofest 2024 | 1080×1350 | 540, 1080 | Instagram post C-p5LD8tThy, slide 3 (1080×1350) | uncropped |
+| Over the years · 2024 | `DBXk1jxtaip-07` | 2024 Season | 1080×1350 | 540, 1080 | Instagram post DBXk1jxtaip, slide 7 (1080×1350) | uncropped |
+| Over the years · 2024 | `C9VAruAtJ73-03` | 2024 Season | 1080×1350 | 540, 1080 | Instagram post C9VAruAtJ73, slide 3 (1080×1350) | uncropped |
+| Over the years · 2025 | `DHqrMjduedL-02` | 2025 Season | 1080×1350 | 540, 1080 | Instagram post DHqrMjduedL, slide 2 (1080×1350) | uncropped |
+| Over the years · 2025 | `DItn4DSuvjm-04` | 2025 Season | 1080×1350 | 540, 1080 | Instagram post DItn4DSuvjm, slide 4 (1080×1350) | uncropped |
+| Over the years · 2025 | `YA5020` | YFC Autofest 2025 | 3000×1276 | 900, 1800, 2700, 3600 | Library original `2025\YFC\Autofest\Edited\DSC00483-Enhanced-NR-2.jpg` (6000×2553) | uncropped |
+| Over the years · 2025 | `CU5025` | Complex Union 2025 | 2000×3000 | 600, 1200, 1800 | Library original `2025\COMPLEX UNION\Edited\wilf4.jpg` (4000×6000) | uncropped |
+| Over the years · 2025 | `SS037` | Mazda MX-5 Miata (NA) | 2700×1149 | 900, 1800, 2700 | Library original `2025\Savanna Sharp\Edited\car-42.jpg` (2700×1149) | uncropped |
+| Over the years · 2025 | `SSB22` | Mazda MX-5 Miata (NA) | 2700×1149 | 900, 1800, 2700 | Library original `2025\Savanna Sharp\Edited\car-22.jpg` (2700×1149) | uncropped |
+| Over the years · 2025 | `DP39bzrjBtq-09-10` | YFC Oktoberfest 2025 | 2879×1224 | 1000, 2000, 2879 | Instagram carousel DP39bzrjBtq, two slides joined (2879×1224) | uncropped |
+| Over the years · 2025 | `DPgyOOejbD7-04` | 2025 Season | 1080×1440 | 540, 1080 | Instagram post DPgyOOejbD7, slide 4 (1080×1440) | uncropped |
+| Over the years · 2026 | `DUiwiDAlfu7-05` | 2025 Season Recap | 1440×1920 | 570, 1440 | Instagram post DUiwiDAlfu7, slide 5 (1440×1920) | uncropped |
+| Over the years · 2026 | `AT6011` | Chevrolet Silverado 2500HD | 2700×1519 | 900, 1800, 2700 | Library original `2026\Alex Truck\Edited\AlexTruck-19.jpg` (2700×1519) | uncropped |
+| Over the years · 2026 | `DZQ0RI6lcNo-02-03` | Corvette C8 Convertible | 3072×2048 | 1000, 2000, 3072 | Instagram carousel DZQ0RI6lcNo, two slides joined (3072×2048) | uncropped |
+| Over the years · 2026 | `DZoFVWdlW7f-07` | YFC Autofest 2026 | 1231×1720 | 544, 1231 | Instagram post DZoFVWdlW7f, slide 7 (1231×1720) | uncropped |
+| Over the years · 2026 | `CX6014` | Subaru Impreza GC8 | 1800×2700 | 600, 1200, 1800 | Library original `2026\COMPLEX\Edited\Rachel-3.jpg` (1800×2700) | uncropped |
+| Over the years · 2026 | `Db_DgIDFcCf-03` | Porsche, Yellow & Black | 1520×2026 | 570, 1500 | Instagram post Db_DgIDFcCf, slide 3 (1520×2026) | uncropped |
+| Over the years · 2026 | `CX6005` | Complex Union 2026 | 2700×1519 | 900, 1800, 2700 | Library original `2026\COMPLEX\Edited\complex-5.jpg` (2700×1519) | uncropped |
+| Over the years · 2026 | `TK6031` | MX-5 Poster Series | 1688×3000 | 506, 1013, 1519 | Library original `2026\TECHNICALLY 2025\DSC01533.jpg` (3376×6000) | uncropped |
+| Over the years · same shot, two edits | `CtnZTYqtjO3-02` | YFC Autofest 2023 | 1080×864 | 540, 1080 | Instagram post CtnZTYqtjO3, slide 2 (1080×864) | uncropped |
+| Over the years · same shot, two edits | `DHqrMjduedL-03` | 2025 Season | 1080×1350 | 540, 1080 | Instagram post DHqrMjduedL, slide 3 (1080×1350) | uncropped |
 
 Video: `media/yfc26-floor.mp4` (1280×720) and `media/yfc26-floor-1080.mp4`, from `2026\YFC\edited\Timeline 1_00008198.mov`, slowed to half speed, no audio.
 
@@ -70,4 +110,5 @@ Posters and cover layouts are always shown uncropped (`object-fit: contain` or n
 
 - MX-5 Poster Series: `TK6009`, `TK6035`, `TK6031`, `TK6033`, `TK6007`, `TK6015`, `TK6011`
 - 2025 Season Recap: `DUiwiDAlfu7-05`, `DUiwiDAlfu7-02`, `DUiwiDAlfu7-04`, `DUiwiDAlfu7-01`, `DUiwiDAlfu7-03`, `DUiwiDAlfu7-06`, `DUiwiDAlfu7-07`
+- Early Posters: `C18so2SOxdb-01`, `C1G1Z5GOjPw-01`, `C18so2SOxdb-02`, `C18so2SOxdb-03`, `C2DcErqv2wD-01`, `C2DcErqv2wD-02`, `C274WkQOfRa-01`, `C274WkQOfRa-02`, `C3WtCjsNj8c-01`, `C5yxTGBO_2P-01`, `C57G9pwN0Zf-01`, `C8E5iC8Oo__-01`, `C8Ie9hMv2Dj-01`, `C8KPqfKOyfu-01`, `C8iifQXNxIZ-01`, `C8iifQXNxIZ-02`, `C8iifQXNxIZ-03`, `C8km2w8P6aj-01`, `C8km2w8P6aj-02`, `C8km2w8P6aj-03`, `C8km2w8P6aj-04`, `C8km2w8P6aj-05`
 - Honda Accord Cover: `C5elEijLN43-01`
