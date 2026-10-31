@@ -12,7 +12,10 @@ Widths are the real pixel widths of the published variants. Crops use the car bo
 | Home tile · events | `CX6009` | Complex Union 2026 | 2700×1519 | 900, 1800, 2700 | Library original `2026\COMPLEX\Edited\complex-9.jpg` (2700×1519) | bleed |
 | Home tile · events (phones) | `CU5009` | Complex Union 2025 | 1800×2700 | 600, 1200, 1800 | Library original `2025\COMPLEX UNION\Edited\rae-11.jpg` (1800×2700) | bleed |
 | Home tile · editorial | `TK6031` | MX-5 Poster Series | 1688×3000 | 506, 1013, 1519 | Library original `2026\TECHNICALLY 2025\DSC01533.jpg` (3376×6000) | poster, uncropped |
-| Home tile · years | `CeRVJ7MLxBT-01` | The First Posts | 1080×1350 | 540, 1080 | Instagram post CeRVJ7MLxBT, slide 1 (1080×1350) | framed |
+| Home tile · editorial | `DUiwiDAlfu7-05` | 2025 Season Recap | 1440×1920 | 570, 1440 | Instagram post DUiwiDAlfu7, slide 5 (1440×1920) | poster, uncropped |
+| Home tile · editorial | `C2DcErqv2wD-02` | Early Posters | 1080×1080 | 540, 1080 | Instagram post C2DcErqv2wD, slide 2 (1080×1080) | poster, uncropped |
+| Home tile · years · 2022 | `CeRVJ7MLxBT-01` | The First Posts | 1080×1350 | 540, 1080 | Instagram post CeRVJ7MLxBT, slide 1 (1080×1350) | uncropped |
+| Home tile · years · 2026 | `CX6014` | Subaru Impreza GC8 | 1800×2700 | 600, 1200, 1800 | Library original `2026\COMPLEX\Edited\Rachel-3.jpg` (1800×2700) | uncropped |
 | Home carousel · Audi R8 | `Y23007` | YFC Autofest 2023 | 3499×1489 | 900, 1800, 2700 | Library original `2023\Edited\Edited\2023musictypeshit-2.png` (3499×1489) |  |
 | Home carousel · Nissan Skyline | `DP39bzrjBtq-09-10` | YFC Oktoberfest 2025 | 2879×1224 | 1000, 2000, 2879 | Instagram carousel DP39bzrjBtq, 2 slides joined (2879×1224) |  |
 | Home carousel · Corvette C5 | `DPz0lGFjDt9-02-03` | Corvette C5 | 2880×1920 | 1000, 2000, 2880 | Instagram carousel DPz0lGFjDt9, 2 slides joined (2880×1920) |  |

@@ -298,12 +298,20 @@ a:hover .i-chev{transform:translateX(2px)}
 .tile.is-framed .tile-media img{width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;border-radius:var(--r-sm);box-shadow:0 20px 50px rgba(0,0,0,.35)}
 .tile.is-framed .tile-shade{display:none}
 .tile.is-framed:hover .tile-media img{transform:translateY(-4px)}
-.tile.is-posters .tile-media img{flex:0 1 auto;min-width:0;border-radius:4px}
+/* posters: the media box is a size container, so the set can be as tall as the box allows; each poster takes width in
+   proportion to its shape, so all of them share one height and none is cropped */
+.tile.is-posters .tile-media{container-type:size}
+.poster-set{--pg:clamp(10px,1.4vw,20px);display:flex;align-items:flex-end;gap:var(--pg);width:min(100cqw,calc(100cqh * var(--sum) + var(--pg) * (var(--n) - 1)))}
+.poster-set img{flex:var(--ar) 1 0;min-width:0;width:100%!important;height:auto!important;max-width:none!important;max-height:none!important;aspect-ratio:var(--ar);border-radius:4px}
+.poster-set.only-s{display:none}
+@media (max-width:734px){.poster-set.only-s{display:flex}.poster-set.only-l{display:none}}
 /* then and now: two photographs at one height with their years under them */
 .tile-pair{align-items:stretch!important}
 .pair-item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;min-width:0;height:100%}
 .pair-item img{flex:0 1 auto;min-height:0;width:auto!important;max-width:100%;max-height:calc(100% - 30px)!important;object-fit:contain;border-radius:var(--r-sm)}
 .pair-item figcaption{font-family:var(--font-display);font-size:1.0625rem;font-weight:600;color:var(--fg-2);font-variant-numeric:tabular-nums}
+/* phones: the pair is limited by width, so each photograph takes width in proportion to its shape and both end up one height */
+@media (max-width:734px){.tile-pair{align-items:flex-start!important}.pair-item{flex:var(--ar) 1 0;height:auto}.pair-item img{width:100%!important;height:auto;max-height:none!important}}
 
 
 /* media carousel ("Endless entertainment" on apple.com) */
